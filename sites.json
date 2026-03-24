@@ -1,0 +1,50 @@
+[
+  {
+    "name": "GitHub",
+    "url": "https://github.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "titleContains": "· GitHub",
+    "weight": 10
+  },
+  {
+    "name": "Reddit",
+    "url": "https://www.reddit.com/user/{}",
+    "errorType": "message",
+    "errorMsg": "Sorry, nobody on Reddit goes by that name.",
+    "titleContains": "u/{} -",
+    "weight": 9
+  },
+  {
+    "name": "HackerNews",
+    "url": "https://news.ycombinator.com/user?id={}",
+    "errorType": "message",
+    "errorMsg": "No such user.",
+    "titleContains": "Profile:",
+    "weight": 8
+  },
+  {
+    "name": "Twitter",
+    "url": "https://twitter.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "titleContains": "",
+    "weight": 9
+  },
+  {
+    "name": "Instagram",
+    "url": "https://www.instagram.com/{}",
+    "errorType": "message",
+    "errorMsg": "Sorry, this page isn't available.",
+    "titleContains": "",
+    "weight": 9
+  },
+  {
+    "name": "GitLab",
+    "url": "https://gitlab.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "titleContains": "GitLab",
+    "weight": 8
+  }
+]
