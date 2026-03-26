@@ -79,8 +79,10 @@ func Check(client *http.Client, site loader.Site, username string, maxRetries in
 
 	//read body with limit to 64kb
 	bodyBytes, _ := io.ReadAll(io.LimitReader(resp.Body, 64*1024))
-	body = string(bodyBytes)
-	return result
+    body = string(bodyBytes)
+
+    result.Found, result.Confidence, result.Evidence = score(site, username, resp, body)
+    return result
 }
 
 
@@ -160,7 +162,7 @@ func CheckAll(client *http.Client, sites []loader.Site, username string, workers
 	for i := 0; i < workers; i++ {
         go func() {
             for j := range jobs {
-                <-limiter.C
+                <-limiter.C 
                 results <- Check(client, j.site, username, maxRetries, 500*time.Millisecond)
             }
         }()
