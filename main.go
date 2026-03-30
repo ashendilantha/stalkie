@@ -28,6 +28,7 @@ func main() {
 	outCSV := flag.String("csv", "", "Save results as .csv")
 	outJSON := flag.String("json", "", "Save results as .json")
 	minScore := flag.Int("min-score", 50, "Minimum confidence score to report as found")
+	useBrowser := flag.Bool("browser", false, "Use headless browser mode for JS-heavy sites")
 	flag.Parse()
 
 	output.PrintBanner()
@@ -86,8 +87,22 @@ func main() {
 
 		start := time.Now()
 
-		//run concurrent search wih rate limiting
-		results := checker.CheckAll(httpClient, sites, uname, *workers, rateLimit, *retries)
+		//run concurrent search with rate limiting
+		var results []checker.Result
+		if *useBrowser {
+			results = checker.CheckAllWithBrowser(
+				sites,
+				uname,
+				*workers,
+				rateLimit,
+				*retries,
+				time.Duration(*timeout)*time.Second,
+				*proxyType,
+				*proxyAddr,
+			)
+		} else {
+			results = checker.CheckAll(httpClient, sites, uname, *workers, rateLimit, *retries)
+		}
 
 		bar.Finish()
 
