@@ -90,6 +90,10 @@ func score(site loader.Site, username string, resp *http.Response, body string) 
 	var signals []string
 	score := 0
 
+	if hasNotFoundContent(site, body) {
+		return false, 0, "profile not found (not-found markers detected)"
+	}
+
 	//check status code
 	switch site.ErrorType {
 	case "status_code":
@@ -100,7 +104,7 @@ func score(site loader.Site, username string, resp *http.Response, body string) 
 			return false, 0, "profile not found (status code)"
 		}
 	case "message":
-		if strings.Contains(body, site.ErrorMsg) {
+		if strings.Contains(normalizeForMatch(body), normalizeForMatch(site.ErrorMsg)) {
 			return false, 0, "profile not found (error message detected)"
 		}
 		score += 40
@@ -116,8 +120,8 @@ func score(site loader.Site, username string, resp *http.Response, body string) 
 		}
 	}
 
-	//useername appear in page body
-	if strings.Contains(strings.ToLower(body), strings.ToLower(username)) {
+	//username should appear multiple times in real profile pages; single mention is often just URL echo
+	if countUsernameMentions(body, username) >= 2 {
 		score += 15
 		signals = append(signals, "username in body")
 	}
@@ -144,6 +148,57 @@ func titleContains(body, expected string) bool {
 	}
 	title := strings.ToLower(body[start+7 : end])
 	return strings.Contains(title, strings.ToLower(expected))
+}
+
+func hasNotFoundContent(site loader.Site, body string) bool {
+	normalizedBody := normalizeForMatch(body)
+
+	if site.ErrorMsg != "" && strings.Contains(normalizedBody, normalizeForMatch(site.ErrorMsg)) {
+		return true
+	}
+
+	commonNotFoundMarkers := []string{
+		"page not found",
+		"404",
+		"not found",
+		"couldn't find the page",
+		"we couldn't find that page",
+		"profile not found",
+		"this page isn't available",
+		"this page doesn't exist",
+		"this page does not exist",
+		"account doesn't exist",
+	}
+
+	for _, marker := range commonNotFoundMarkers {
+		if strings.Contains(normalizedBody, normalizeForMatch(marker)) {
+			return true
+		}
+	}
+
+	return false
+}
+
+func countUsernameMentions(body, username string) int {
+	if username == "" {
+		return 0
+	}
+	return strings.Count(strings.ToLower(body), strings.ToLower(username))
+}
+
+func normalizeForMatch(text string) string {
+	normalized := strings.ToLower(text)
+	replacer := strings.NewReplacer(
+		"’", "'",
+		"‘", "'",
+		"`", "'",
+		"“", "\"",
+		"”", "\"",
+		"\u00a0", " ",
+	)
+	normalized = replacer.Replace(normalized)
+	normalized = strings.Join(strings.Fields(normalized), " ")
+	return normalized
 }
 
 func CheckAll(client *http.Client, sites []loader.Site, username string, workers int, ratelimit time.Duration, maxRetries int) []Result {
