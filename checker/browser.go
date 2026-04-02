@@ -120,10 +120,13 @@ func scoreBrowser(site loader.Site, username string, body string) (found bool, c
 	signals = append(signals, "browser render")
 
 	lowerBody := strings.ToLower(body)
+	if hasNotFoundContent(site, body) {
+		return false, 0, "profile not found (not-found markers detected)"
+	}
 
 	switch site.ErrorType {
 	case "message":
-		if site.ErrorMsg != "" && strings.Contains(lowerBody, strings.ToLower(site.ErrorMsg)) {
+		if site.ErrorMsg != "" && strings.Contains(normalizeForMatch(body), normalizeForMatch(site.ErrorMsg)) {
 			return false, 0, "profile not found (error message detected)"
 		}
 		score += 25
@@ -144,7 +147,7 @@ func scoreBrowser(site loader.Site, username string, body string) (found bool, c
 		}
 	}
 
-	if strings.Contains(lowerBody, strings.ToLower(username)) {
+	if countUsernameMentions(body, username) >= 2 {
 		score += 15
 		signals = append(signals, "username in body")
 	}
