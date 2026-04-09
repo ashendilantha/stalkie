@@ -110,10 +110,7 @@ func checkWithBrowser(browser *rod.Browser, site loader.Site, username string, m
 		return result
 	}
 
-	// FIX: check for login wall in browser mode too.
-	// Even with a real browser, heavily bot-protected sites (Instagram,
-	// LinkedIn, TikTok) detect headless Chromium and serve a login page.
-	// A login wall page returns no profile data and no proper error message.
+	
 	if isLoginWall(body) {
 		result.Error = "login wall detected in browser mode — site is blocking headless Chromium (try adding delays or using a real proxy)"
 		return result
@@ -126,17 +123,10 @@ func checkWithBrowser(browser *rod.Browser, site loader.Site, username string, m
 func scoreBrowser(site loader.Site, username string, body string) (found bool, confidence int, evidence string) {
 	var signals []string
 
-	// FIX: raised base score from 20 to 30.
-	// A successful browser render is stronger evidence than a plain HTTP
-	// response — the page fully loaded with JS executed, which means we
-	// can trust the content more. The old score of 20 was too low and
-	// caused valid profiles to fall below the 50-point threshold.
+	
 	score := 30
 	signals = append(signals, "browser render")
 
-	// FIX: strip scripts before all text checks — same reason as checker.go.
-	// Even in browser mode the MustHTML() output still contains <script> tags
-	// with bundled JS that includes "not found", "404" etc.
 	cleanBody := stripScripts(body)
 
 	if hasNotFoundContent(site, cleanBody) {
