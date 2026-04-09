@@ -47,7 +47,6 @@ func Check(client *http.Client, site loader.Site, username string, maxRetries in
 	var err error
 	start := time.Now()
 
-	//retry logic
 	for attempt := 0; attempt <= maxRetries; attempt++ {
 		if attempt > 0 {
 			time.Sleep(retryDelay)
@@ -64,7 +63,7 @@ func Check(client *http.Client, site loader.Site, username string, maxRetries in
 
 		resp, err = client.Do(req)
 		if err == nil {
-			break // successfull req
+			break
 		}
 	}
 
@@ -77,41 +76,46 @@ func Check(client *http.Client, site loader.Site, username string, maxRetries in
 
 	defer resp.Body.Close()
 
-	//read body with limit to 64kb
 	bodyBytes, _ := io.ReadAll(io.LimitReader(resp.Body, 64*1024))
 	body = string(bodyBytes)
+
+	
+	if isLoginWall(body) {
+		result.Error = "login wall detected — site blocked the request (try -browser or wait before retrying)"
+		return result
+	}
 
 	result.Found, result.Confidence, result.Evidence = score(site, username, resp, body)
 	return result
 }
 
-// score confidence level
 func score(site loader.Site, username string, resp *http.Response, body string) (found bool, confidence int, evidence string) {
 	var signals []string
 	score := 0
 
-	if hasNotFoundContent(site, body) {
+	
+	cleanBody := stripScripts(body)
+
+	if hasNotFoundContent(site, cleanBody) {
 		return false, 0, "profile not found (not-found markers detected)"
 	}
 
-	//check status code
 	switch site.ErrorType {
-	case "status_code":
-		if resp.StatusCode == 200 {
+		case "status_code":
+			if resp.StatusCode == 200 {
+				score += 40
+				signals = append(signals, "HTTP 200")
+			} else if resp.StatusCode == site.ErrorCode {
+				return false, 0, "profile not found (status code)"
+			}
+		case "message":
+			if strings.Contains(normalizeForMatch(cleanBody), normalizeForMatch(site.ErrorMsg)) {
+				return false, 0, "profile not found (error message detected)"
+			}
 			score += 40
-			signals = append(signals, "HTTP 200")
-		} else if resp.StatusCode == site.ErrorCode {
-			return false, 0, "profile not found (status code)"
-		}
-	case "message":
-		if strings.Contains(normalizeForMatch(body), normalizeForMatch(site.ErrorMsg)) {
-			return false, 0, "profile not found (error message detected)"
-		}
-		score += 40
-		signals = append(signals, "No error msg")
+			signals = append(signals, "no error msg")
 	}
 
-	//page title signal
 	if site.TitleContains != "" {
 		expected := strings.ReplaceAll(site.TitleContains, "{}", username)
 		if titleContains(body, expected) {
@@ -120,13 +124,12 @@ func score(site loader.Site, username string, resp *http.Response, body string) 
 		}
 	}
 
-	//username should appear multiple times in real profile pages; single mention is often just URL echo
+	
 	if countUsernameMentions(body, username) >= 2 {
 		score += 15
 		signals = append(signals, "username in body")
 	}
 
-	//apply site weight as a small confidence boost (weights in sites.json are 1-10)
 	if site.Weight > 0 {
 		score += site.Weight
 	}
@@ -137,7 +140,83 @@ func score(site loader.Site, username string, resp *http.Response, body string) 
 
 	found = score >= 50
 	return found, score, strings.Join(signals, ", ")
+}
 
+
+func stripScripts(body string) string {
+	result := body
+	lower := strings.ToLower(result)
+	for {
+		start := strings.Index(lower, "<script")
+		if start == -1 {
+			break
+		}
+		end := strings.Index(lower[start:], "</script>")
+		if end == -1 {
+			break
+		}
+		end = start + end + 9 // len("</script>") == 9
+		result = result[:start] + result[end:]
+		lower = strings.ToLower(result)
+	}
+	return result
+}
+
+
+func hasNotFoundContent(site loader.Site, cleanBody string) bool {
+	normalizedBody := normalizeForMatch(cleanBody)
+
+	// Site-specific error message is the most reliable signal
+	if site.ErrorMsg != "" {
+		if strings.Contains(normalizedBody, normalizeForMatch(site.ErrorMsg)) {
+			return true
+		}
+
+		return false
+	}
+
+
+	conservativeMarkers := []string{
+		"page not found",
+		"profile not found",
+		"this page doesn't exist",
+		"this page does not exist",
+		"account doesn't exist",
+		"couldn't find the page",
+		"we couldn't find that page",
+	}
+
+	for _, marker := range conservativeMarkers {
+		if strings.Contains(normalizedBody, normalizeForMatch(marker)) {
+			return true
+		}
+	}
+
+	return false
+}
+
+
+func isLoginWall(body string) bool {
+	lower := strings.ToLower(body)
+	loginMarkers := []string{
+		"log in to instagram",
+		"log into instagram",
+		"log in to facebook",
+		"log into facebook",
+		"sign in to tiktok",
+		"join tiktok",
+		"join linkedin",
+		"sign in to linkedin",
+		"authwall",
+		"you must be logged in",
+		"please log in to continue",
+	}
+	for _, marker := range loginMarkers {
+		if strings.Contains(lower, marker) {
+			return true
+		}
+	}
+	return false
 }
 
 func titleContains(body, expected string) bool {
@@ -150,35 +229,6 @@ func titleContains(body, expected string) bool {
 	return strings.Contains(title, strings.ToLower(expected))
 }
 
-func hasNotFoundContent(site loader.Site, body string) bool {
-	normalizedBody := normalizeForMatch(body)
-
-	if site.ErrorMsg != "" && strings.Contains(normalizedBody, normalizeForMatch(site.ErrorMsg)) {
-		return true
-	}
-
-	commonNotFoundMarkers := []string{
-		"page not found",
-		"404",
-		"not found",
-		"couldn't find the page",
-		"we couldn't find that page",
-		"profile not found",
-		"this page isn't available",
-		"this page doesn't exist",
-		"this page does not exist",
-		"account doesn't exist",
-	}
-
-	for _, marker := range commonNotFoundMarkers {
-		if strings.Contains(normalizedBody, normalizeForMatch(marker)) {
-			return true
-		}
-	}
-
-	return false
-}
-
 func countUsernameMentions(body, username string) int {
 	if username == "" {
 		return 0
@@ -189,11 +239,11 @@ func countUsernameMentions(body, username string) int {
 func normalizeForMatch(text string) string {
 	normalized := strings.ToLower(text)
 	replacer := strings.NewReplacer(
-		"’", "'",
-		"‘", "'",
-		"`", "'",
-		"“", "\"",
-		"”", "\"",
+		"\u2019", "'",
+		"\u2018", "'",
+		"`",      "'",
+		"\u201c", "\"",
+		"\u201d", "\"",
 		"\u00a0", " ",
 	)
 	normalized = replacer.Replace(normalized)
