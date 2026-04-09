@@ -43,8 +43,8 @@
     "name": "LinkedIn",
     "url": "https://www.linkedin.com/in/{}",
     "errorType": "message",
-    "errorMsg": "Page not found",
-    "titleContains": "LinkedIn",
+    "errorMsg": "This page doesn't exist",
+    "titleContains": "",
     "weight": 3
   },
   {
@@ -78,14 +78,6 @@
     "errorMsg": "Not Found",
     "titleContains": "",
     "weight": 6
-  },
-  {
-    "name": "StackOverflow",
-    "url": "https://stackoverflow.com/users/{}",
-    "errorType": "message",
-    "errorMsg": "We couldn't find that user.",
-    "titleContains": "",
-    "weight": 8
   },
   {
     "name": "Medium",
