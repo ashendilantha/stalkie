@@ -28,8 +28,8 @@ func CheckAllWithBrowser(
 				Username: username,
 				Site:     site.Name,
 				URL:      loader.BuildURL(site.URL, username),
-				Found:    false,
-				Error:    fmt.Sprintf("browser launch failed: %v", err),
+					Found:    false,
+					Error:    fmt.Sprintf("browser launch failed: %v", err),
 			})
 		}
 		return failed
@@ -110,33 +110,58 @@ func checkWithBrowser(browser *rod.Browser, site loader.Site, username string, m
 		return result
 	}
 
+	// FIX: check for login wall in browser mode too.
+	// Even with a real browser, heavily bot-protected sites (Instagram,
+	// LinkedIn, TikTok) detect headless Chromium and serve a login page.
+	// A login wall page returns no profile data and no proper error message.
+	if isLoginWall(body) {
+		result.Error = "login wall detected in browser mode — site is blocking headless Chromium (try adding delays or using a real proxy)"
+		return result
+	}
+
 	result.Found, result.Confidence, result.Evidence = scoreBrowser(site, username, body)
 	return result
 }
 
 func scoreBrowser(site loader.Site, username string, body string) (found bool, confidence int, evidence string) {
 	var signals []string
-	score := 20 // base score: page rendered in browser
+
+	// FIX: raised base score from 20 to 30.
+	// A successful browser render is stronger evidence than a plain HTTP
+	// response — the page fully loaded with JS executed, which means we
+	// can trust the content more. The old score of 20 was too low and
+	// caused valid profiles to fall below the 50-point threshold.
+	score := 30
 	signals = append(signals, "browser render")
 
-	lowerBody := strings.ToLower(body)
-	if hasNotFoundContent(site, body) {
+	// FIX: strip scripts before all text checks — same reason as checker.go.
+	// Even in browser mode the MustHTML() output still contains <script> tags
+	// with bundled JS that includes "not found", "404" etc.
+	cleanBody := stripScripts(body)
+
+	if hasNotFoundContent(site, cleanBody) {
 		return false, 0, "profile not found (not-found markers detected)"
 	}
 
+	lowerClean := strings.ToLower(cleanBody)
+
 	switch site.ErrorType {
-	case "message":
-		if site.ErrorMsg != "" && strings.Contains(normalizeForMatch(body), normalizeForMatch(site.ErrorMsg)) {
-			return false, 0, "profile not found (error message detected)"
-		}
-		score += 25
-		signals = append(signals, "no error msg")
-	case "status_code":
-		if strings.Contains(lowerBody, "404") || strings.Contains(lowerBody, "not found") {
-			return false, 0, "profile not found (404/not found in rendered page)"
-		}
-		score += 25
-		signals = append(signals, "no 404 marker")
+		case "message":
+			if site.ErrorMsg != "" && strings.Contains(normalizeForMatch(cleanBody), normalizeForMatch(site.ErrorMsg)) {
+				return false, 0, "profile not found (error message detected)"
+			}
+			score += 25
+			signals = append(signals, "no error msg")
+		case "status_code":
+			// In browser mode we don't have the raw HTTP status, so check
+			// rendered content for clear 404 indicators in the visible page body
+			if strings.Contains(lowerClean, "page not found") ||
+				strings.Contains(lowerClean, "this page doesn't exist") ||
+				strings.Contains(lowerClean, "account doesn't exist") {
+					return false, 0, "profile not found (404/not found in rendered page)"
+				}
+				score += 25
+				signals = append(signals, "no 404 marker")
 	}
 
 	if site.TitleContains != "" {
@@ -168,23 +193,23 @@ func launchBrowser(proxyType string, proxyAddr string) (*rod.Browser, error) {
 	l := launcher.New().Headless(true)
 
 	switch proxyType {
-	case "http":
-		if proxyAddr != "" {
-			l = l.Proxy(proxyAddr)
-		}
-	case "tor", "socks", "socks5":
-		addr := proxyAddr
-		if addr == "" {
-			addr = "127.0.0.1:9050"
-		}
-		if !strings.HasPrefix(addr, "socks5://") {
-			addr = "socks5://" + addr
-		}
-		l = l.Proxy(addr)
-	case "none", "":
-		// direct
-	default:
-		return nil, fmt.Errorf("unsupported proxy type for browser mode: %s", proxyType)
+		case "http":
+			if proxyAddr != "" {
+				l = l.Proxy(proxyAddr)
+			}
+		case "tor", "socks", "socks5":
+			addr := proxyAddr
+			if addr == "" {
+				addr = "127.0.0.1:9050"
+			}
+			if !strings.HasPrefix(addr, "socks5://") {
+				addr = "socks5://" + addr
+			}
+			l = l.Proxy(addr)
+		case "none", "":
+			// direct
+		default:
+			return nil, fmt.Errorf("unsupported proxy type for browser mode: %s", proxyType)
 	}
 
 	controlURL, err := l.Launch()
