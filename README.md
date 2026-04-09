@@ -132,8 +132,6 @@ Stalkie is intended for lawful OSINT investigations and educational use only. Al
 
 ---
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=ashendilantha&label=Profile%20views&color=0e75b6&style=flat" alt="profile views" />
-</p>
+<img src="https://img.shields.io/badge/Profile%20views-0-blue" />
 
 **Built by [Ashen Dilantha](https://github.com/ashendilantha)**
