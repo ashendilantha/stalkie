@@ -4,7 +4,7 @@ go 1.26.1
 
 require (
 	github.com/go-rod/rod v0.116.2
-	github.com/schollz/progressbar/v3 v3.19.0
+	github.com/schollz/progressbar/v3 v3.19.1
 	golang.org/x/net v0.57.0
 )
 
