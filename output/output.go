@@ -59,6 +59,18 @@ func PrintResult(r checker.Result) {
 	fmt.Printf("      %sconfidence:%s %s  %s(%s)%s\n",
 		cyan, reset, confidenceBar(r.Confidence),
 		yellow, r.Evidence, reset)
+	if r.Metadata.DisplayName != "" {
+		fmt.Printf("      %sname:%s %s\n", cyan, reset, r.Metadata.DisplayName)
+	}
+	if r.Metadata.Bio != "" {
+		fmt.Printf("      %sbio:%s %s\n", cyan, reset, r.Metadata.Bio)
+	}
+	if r.Metadata.Followers != "" {
+		fmt.Printf("      %sfollowers:%s %s\n", cyan, reset, r.Metadata.Followers)
+	}
+	if r.Metadata.Location != "" {
+		fmt.Printf("      %slocation:%s %s\n", cyan, reset, r.Metadata.Location)
+	}
 }
 
 func PrintSummary(results []checker.Result, username string, elapsed time.Duration) {
@@ -89,7 +101,14 @@ func SaveTXT(results []checker.Result, username, path string) error {
 	fmt.Fprintf(f, "Stalkie results for: %s\n\n", username)
 	for _, r := range results {
 		if r.Found {
-			fmt.Fprintf(f, "[+] %-20s %s (confidence: %d%%)\n", r.Site, r.URL, r.Confidence)
+			line := fmt.Sprintf("[+] %-20s %s (confidence: %d%%)", r.Site, r.URL, r.Confidence)
+			if r.Metadata.DisplayName != "" {
+				line += fmt.Sprintf(" | name: %s", r.Metadata.DisplayName)
+			}
+			if r.Metadata.Followers != "" {
+				line += fmt.Sprintf(" | followers: %s", r.Metadata.Followers)
+			}
+			fmt.Fprintln(f, line)
 		}
 	}
 	return nil
@@ -105,17 +124,43 @@ func SaveCSV(results []checker.Result, path string) error {
 	w := csv.NewWriter(f)
 	defer w.Flush()
 
-	if err := w.Write([]string{"username", "site", "url", "found", "confidence", "evidence", "error", "duration_ms"}); err != nil {
+	header := []string{
+		"username",
+		"site",
+		"url",
+		"found",
+		"confidence",
+		"evidence",
+		"display_name",
+		"avatar_url",
+		"bio",
+		"followers",
+		"created_at",
+		"location",
+		"error",
+		"duration_ms",
+	}
+	if err := w.Write(header); err != nil {
 		return err
 	}
 	for _, r := range results {
-		if err := w.Write([]string{
-			r.Username, r.Site, r.URL,
+		row := []string{
+			r.Username,
+			r.Site,
+			r.URL,
 			strconv.FormatBool(r.Found),
 			strconv.Itoa(r.Confidence),
-			r.Evidence, r.Error,
+			r.Evidence,
+			r.Metadata.DisplayName,
+			r.Metadata.AvatarURL,
+			r.Metadata.Bio,
+			r.Metadata.Followers,
+			r.Metadata.CreatedAt,
+			r.Metadata.Location,
+			r.Error,
 			strconv.FormatInt(r.Duration.Milliseconds(), 10),
-		}); err != nil {
+		}
+		if err := w.Write(row); err != nil {
 			return err
 		}
 	}

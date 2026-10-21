@@ -6,8 +6,8 @@ Stalkie is an actively maintained open-source OSINT tool. Only the latest releas
 
 | Version | Supported |
 | ------- | --------- |
-| latest  | ✅        |
-| older   | ❌        |
+| latest  | Yes       |
+| older   | No        |
 
 ## Scope
 

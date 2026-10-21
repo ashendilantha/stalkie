@@ -24,6 +24,7 @@ func TestNormalizeWMNSite(t *testing.T) {
 		expectMsg   string
 		expectTitle string
 		expectW     int
+		expectCat   string
 	}{
 		{
 			name: "Standard site with account placeholder",
@@ -42,6 +43,7 @@ func TestNormalizeWMNSite(t *testing.T) {
 			expectMsg:   "User not found",
 			expectTitle: "User profile",
 			expectW:     8,
+			expectCat:   "coding",
 		},
 		{
 			name: "Site with message error type",
@@ -59,6 +61,7 @@ func TestNormalizeWMNSite(t *testing.T) {
 			expectMsg:   "No such account exists",
 			expectTitle: "",
 			expectW:     7,
+			expectCat:   "social",
 		},
 		{
 			name: "Invalid missing placeholder",
@@ -113,7 +116,25 @@ func TestNormalizeWMNSite(t *testing.T) {
 			if site.Weight != tc.expectW {
 				t.Errorf("expected Weight %d, got %d", tc.expectW, site.Weight)
 			}
+			if site.Category != tc.expectCat {
+				t.Errorf("expected Category %q, got %q", tc.expectCat, site.Category)
+			}
 		})
+	}
+}
+
+func TestNormalizeCategory(t *testing.T) {
+	if c := NormalizeCategory("coding", "git", "https://github.com/{}"); c != "coding" {
+		t.Errorf("expected coding, got %s", c)
+	}
+	if c := NormalizeCategory("art", "Behance", "https://behance.net/{}"); c != "design" {
+		t.Errorf("expected design, got %s", c)
+	}
+	if c := NormalizeCategory("gaming", "Chess", "https://chess.com/{}"); c != "gaming" {
+		t.Errorf("expected gaming, got %s", c)
+	}
+	if c := NormalizeCategory("finance", "PayPal", "https://paypal.me/{}"); c != "finance" {
+		t.Errorf("expected finance, got %s", c)
 	}
 }
 
@@ -129,6 +150,7 @@ func TestSyncPipeline(t *testing.T) {
 			ErrorCode:     404,
 			TitleContains: "GitHub",
 			Weight:        10,
+			Category:      "coding",
 		},
 	}
 	curatedData, err := json.Marshal(initialCurated)
@@ -216,5 +238,7 @@ func TestSyncPipeline(t *testing.T) {
 	if docker.URL != "https://hub.docker.com/u/{}/" {
 		t.Errorf("expected normalized DockerHub URL, got %q", docker.URL)
 	}
+	if docker.Category != "coding" {
+		t.Errorf("expected DockerHub category coding, got %q", docker.Category)
+	}
 }
-

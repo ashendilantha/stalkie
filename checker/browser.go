@@ -155,6 +155,9 @@ func checkWithBrowser(browser *rod.Browser, site loader.Site, username string, m
 	}
 
 	result.Found, result.Confidence, result.Evidence = evaluateBrowserRender(site, username, body)
+	if result.Found {
+		result.Metadata = ExtractProfileMetadata(body)
+	}
 	return result
 }
 

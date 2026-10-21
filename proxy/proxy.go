@@ -21,6 +21,8 @@ type Config struct {
 	Type        string
 	Address     string
 	DisableUTLS bool
+	TorControl  string
+	TorPassword string
 }
 
 type UTLSTransport struct {

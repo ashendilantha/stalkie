@@ -6,7 +6,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003e247Sports\u003c/title\u003e",
     "titleContains": "staff-header-container",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "35photo",
@@ -15,7 +16,8 @@
     "errorCode": 302,
     "errorMsg": "",
     "titleContains": "userNameBlock",
-    "weight": 6
+    "weight": 6,
+    "category": "design"
   },
   {
     "name": "3dtoday",
@@ -24,7 +26,8 @@
     "errorCode": 302,
     "errorMsg": "",
     "titleContains": "class=\"header_user_name",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "7cup",
@@ -33,7 +36,8 @@
     "errorCode": 404,
     "errorMsg": "Oops! The content you're attempting to access could not be found.",
     "titleContains": "Profile - 7 Cups",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "7dach",
@@ -42,7 +46,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003eОшибка / 7dach.ru",
     "titleContains": "Информация / Профиль",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "about.me",
@@ -51,7 +56,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003eabout.me\u003c/title\u003e",
     "titleContains": "| about.me",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "ACF",
@@ -60,7 +66,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003ePage Not Found - ACF Support\u003c/title\u003e",
     "titleContains": "bbp-user-body",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "AdmireMe.VIP",
@@ -69,7 +76,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003ePage Not Found |",
     "titleContains": "creator-stat subscriber",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "adultism",
@@ -78,7 +86,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003e Not Found",
     "titleContains": "Last login:",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "ADVFN",
@@ -87,7 +96,8 @@
     "errorCode": 404,
     "errorMsg": "ADVFN ERROR - Page Not Found",
     "titleContains": "Profile | ADVFN",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "alik",
@@ -96,7 +106,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003eVizitka nenalezena",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Alura",
@@ -105,7 +116,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":\"Not Found\"",
     "titleContains": "Perfil de",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Ameblo",
@@ -114,7 +126,8 @@
     "errorCode": 404,
     "errorMsg": "削除された可能性がございます。",
     "titleContains": "画像一覧",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "AmericanThinker",
@@ -123,7 +136,8 @@
     "errorCode": 404,
     "errorMsg": "title\u003e404 Not Found\u003c/title\u003e",
     "titleContains": "class=\"author_image\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Aparat",
@@ -132,7 +146,8 @@
     "errorCode": 404,
     "errorMsg": "\"status\":404",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Apex Legends",
@@ -141,7 +156,8 @@
     "errorCode": 404,
     "errorMsg": "CollectorResultStatus::NotFound",
     "titleContains": "platformInfo",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "appian Community",
@@ -150,7 +166,8 @@
     "errorCode": 302,
     "errorMsg": "",
     "titleContains": "class=\"avatar-container",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Arch Linux GitLab",
@@ -159,7 +176,8 @@
     "errorCode": 0,
     "errorMsg": "[]",
     "titleContains": "\"username\":",
-    "weight": 7
+    "weight": 7,
+    "category": "coding"
   },
   {
     "name": "Arduino (Forum)",
@@ -168,7 +186,8 @@
     "errorCode": 404,
     "errorMsg": "\"error_type\":\"not_found\"",
     "titleContains": "\"id\":",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Arduino (Project Hub)",
@@ -177,7 +196,8 @@
     "errorCode": 0,
     "errorMsg": "\"userInfo\":null",
     "titleContains": "",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "ArmorGames",
@@ -186,7 +206,8 @@
     "errorCode": 302,
     "errorMsg": "404: Oh Noes!",
     "titleContains": "about",
-    "weight": 6
+    "weight": 6,
+    "category": "gaming"
   },
   {
     "name": "Arsmate",
@@ -195,7 +216,8 @@
     "errorCode": 404,
     "errorMsg": "404,\"Server Error",
     "titleContains": "\"success\":true",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Artbreeder",
@@ -204,7 +226,8 @@
     "errorCode": 404,
     "errorMsg": "error: {message:\"User not found\"",
     "titleContains": "data-tutorial=\"profile-filter\"",
-    "weight": 6
+    "weight": 6,
+    "category": "design"
   },
   {
     "name": "ArtStation",
@@ -213,7 +236,8 @@
     "errorCode": 404,
     "errorMsg": "\"message\":\"User with username:",
     "titleContains": "\"id\":",
-    "weight": 6
+    "weight": 6,
+    "category": "design"
   },
   {
     "name": "asciinema",
@@ -222,7 +246,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ch1\u003e404 Not Found\u003c/h1\u003e",
     "titleContains": "class=\"profile-page\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "AtCoder",
@@ -231,7 +256,8 @@
     "errorCode": 404,
     "errorMsg": "\u003e404 Page Not Found\u003c/h1\u003e",
     "titleContains": "",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "au.ru",
@@ -240,7 +266,8 @@
     "errorCode": 404,
     "errorMsg": "Пользователь не найден",
     "titleContains": "Лоты пользователя",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Audiojungle",
@@ -249,7 +276,8 @@
     "errorCode": 404,
     "errorMsg": "404 - Nothing to see here",
     "titleContains": "s profile on AudioJungle",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Avid Community",
@@ -258,7 +286,8 @@
     "errorCode": 302,
     "errorMsg": "The user you requested cannot be found.",
     "titleContains": "My Activity",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "babepedia",
@@ -267,7 +296,8 @@
     "errorCode": 404,
     "errorMsg": "Profile not found",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "BabyPips",
@@ -276,7 +306,8 @@
     "errorCode": 404,
     "errorMsg": "The requested URL or resource could not be found",
     "titleContains": "user_badges",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Bandcamp",
@@ -285,7 +316,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ch2\u003eSorry, that something isn’t here.\u003c/h2\u003e",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Bandlab",
@@ -294,7 +326,8 @@
     "errorCode": 404,
     "errorMsg": "Couldn’t find any matching element, it might be deleted",
     "titleContains": "\"username\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "bblog_ru",
@@ -303,7 +336,8 @@
     "errorCode": 0,
     "errorMsg": "БэбиБлог - беременность, календарь беременности, дневники",
     "titleContains": ") — дневник на Babyblog.ru",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "bdsmsingles",
@@ -312,7 +346,8 @@
     "errorCode": 302,
     "errorMsg": "",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Beacons",
@@ -321,7 +356,8 @@
     "errorCode": 0,
     "errorMsg": "The page you are looking for does not seem to exist anymore",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Behance",
@@ -330,7 +366,8 @@
     "errorCode": 404,
     "errorMsg": "",
     "titleContains": "Behance",
-    "weight": 8
+    "weight": 8,
+    "category": "design"
   },
   {
     "name": "Bentbox",
@@ -339,7 +376,8 @@
     "errorCode": 0,
     "errorMsg": "This user is currently not available",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "BiggerPockets",
@@ -348,7 +386,8 @@
     "errorCode": 404,
     "errorMsg": "Page not found",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "BIGO Live",
@@ -357,7 +396,8 @@
     "errorCode": 0,
     "errorMsg": "userInfo:{}",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "gaming"
   },
   {
     "name": "Bimpos",
@@ -366,7 +406,8 @@
     "errorCode": 404,
     "errorMsg": "Page not found",
     "titleContains": "",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Bio Site",
@@ -375,7 +416,8 @@
     "errorCode": 404,
     "errorMsg": "This Bio Site doesn’t exist — Bio Site\u003c/title\u003e",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "biolink",
@@ -384,7 +426,8 @@
     "errorCode": 404,
     "errorMsg": "The page you’re looking for doesn’t exist",
     "titleContains": "profile:username",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Bitbucket",
@@ -393,7 +436,8 @@
     "errorCode": 404,
     "errorMsg": "\"message\":\"No workspace with identifier",
     "titleContains": "\"full_name\":",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "blogi.pl",
@@ -402,7 +446,8 @@
     "errorCode": 0,
     "errorMsg": "Niepoprawny adres.",
     "titleContains": "Informacje ogólne",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Blogmarks",
@@ -411,7 +456,8 @@
     "errorCode": 0,
     "errorMsg": "",
     "titleContains": "Public marks from",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Bluesky Domain as User",
@@ -420,7 +466,8 @@
     "errorCode": 0,
     "errorMsg": "\u003ctitle\u003eBluesky\u003c/title\u003e",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Bluesky Username",
@@ -429,7 +476,8 @@
     "errorCode": 400,
     "errorMsg": "\"message\":\"Profile not found\"",
     "titleContains": "\"handle\":\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "BoardGameGeek",
@@ -438,7 +486,8 @@
     "errorCode": 0,
     "errorMsg": "\"isValid\":true",
     "titleContains": "\"message\":\"Sorry, this username is already taken.\"",
-    "weight": 6
+    "weight": 6,
+    "category": "gaming"
   },
   {
     "name": "Bookcrossing",
@@ -447,7 +496,8 @@
     "errorCode": 404,
     "errorMsg": "BookCrossing - Not Found",
     "titleContains": "membersbycity/",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Booknode",
@@ -456,7 +506,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003ePage non trouvée",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Boosty",
@@ -465,7 +516,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":\"blog_not_found\"",
     "titleContains": "\"id\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Brickset",
@@ -474,7 +526,8 @@
     "errorCode": 0,
     "errorMsg": "{name}\u003c/h1\u003e",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Bugcrowd",
@@ -483,7 +536,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":\"Not Found\"",
     "titleContains": "\"username\":",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Bunpro",
@@ -492,7 +546,8 @@
     "errorCode": 404,
     "errorMsg": "The requested URL or resource could not be found.",
     "titleContains": "username",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "BuzzFeed",
@@ -501,7 +556,8 @@
     "errorCode": 404,
     "errorMsg": "We can't find the page you're looking for",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "cafecito",
@@ -510,7 +566,8 @@
     "errorCode": 404,
     "errorMsg": "Es posible que el enlace que seleccionaste esté roto o que se haya eliminado la página",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Calendy",
@@ -519,7 +576,8 @@
     "errorCode": 404,
     "errorMsg": "\"message\":\"not found\"",
     "titleContains": "\"id\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Cameo",
@@ -528,7 +586,8 @@
     "errorCode": 404,
     "errorMsg": "\"message\":\"We could not find the user:",
     "titleContains": "\"_id\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Career.habr",
@@ -537,7 +596,8 @@
     "errorCode": 404,
     "errorMsg": "Ошибка 404",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "CastingCallClub",
@@ -546,7 +606,8 @@
     "errorCode": 302,
     "errorMsg": "",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "cda.pl",
@@ -555,7 +616,8 @@
     "errorCode": 0,
     "errorMsg": "Strona na którą chcesz wejść nie istnieje",
     "titleContains": "Foldery",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Cent",
@@ -564,7 +626,8 @@
     "errorCode": 0,
     "errorMsg": "\"results\":[]",
     "titleContains": "\"id\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "cfx.re",
@@ -573,7 +636,8 @@
     "errorCode": 404,
     "errorMsg": "The requested URL or resource could not be found.",
     "titleContains": "created_at",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "championat",
@@ -582,7 +646,8 @@
     "errorCode": 404,
     "errorMsg": "Извините, запрашиваемая страница не найдена",
     "titleContains": "Личный профил",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Chamsko",
@@ -591,7 +656,8 @@
     "errorCode": 404,
     "errorMsg": "Strona nie istnieje.",
     "titleContains": "W serwisie od",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "CHEEZburger",
@@ -600,7 +666,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003e404 Not Found\u003c/title\u003e",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Chess.com",
@@ -609,7 +676,8 @@
     "errorCode": 404,
     "errorMsg": "\"code\":0",
     "titleContains": "\"player_id\":",
-    "weight": 6
+    "weight": 6,
+    "category": "gaming"
   },
   {
     "name": "Chocolatey",
@@ -618,7 +686,8 @@
     "errorCode": 404,
     "errorMsg": "id=\"error404Message\"",
     "titleContains": "id =\"bioSection\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Choko.Link",
@@ -627,7 +696,8 @@
     "errorCode": 404,
     "errorMsg": "The link might be incorrect or the profile has been deleted.",
     "titleContains": "--title-font-family: Roboto;",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Chomikuj.pl",
@@ -636,7 +706,8 @@
     "errorCode": 404,
     "errorMsg": "Chomik o takiej nazwie nie istnieje",
     "titleContains": "Foldery",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Chyoa",
@@ -645,7 +716,8 @@
     "errorCode": 404,
     "errorMsg": "Sorry, I got distracted...",
     "titleContains": "When I'm not reading erotica I like to read",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Cloudflare",
@@ -654,7 +726,8 @@
     "errorCode": 404,
     "errorMsg": "The requested URL or resource could not be found",
     "titleContains": "user_avatar",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Clubhouse",
@@ -663,7 +736,8 @@
     "errorCode": 404,
     "errorMsg": "404",
     "titleContains": "\"user\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "cnet",
@@ -672,7 +746,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003ePage Not Found - CNET",
     "titleContains": "class=\"author-header__stat-label\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Coda",
@@ -681,7 +756,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003eCoda | Page not found - Coda\u003c/title\u003e",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Codeberg",
@@ -690,7 +766,8 @@
     "errorCode": 404,
     "errorMsg": "user redirect does not exist",
     "titleContains": "\"id\":",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "Codecademy",
@@ -699,7 +776,8 @@
     "errorCode": 0,
     "errorMsg": "\"type\":\"UserNotFound\"",
     "titleContains": "\"type\":\"User\"",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "CodeChef",
@@ -708,7 +786,8 @@
     "errorCode": 302,
     "errorMsg": "",
     "titleContains": "class=\"user-profile-container\"",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "Codeforces",
@@ -717,7 +796,8 @@
     "errorCode": 400,
     "errorMsg": "\"status\":\"FAILED\"",
     "titleContains": "\"status\":\"OK\"",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "codementor",
@@ -726,7 +806,8 @@
     "errorCode": 404,
     "errorMsg": "404/favicon.png",
     "titleContains": "ABOUT ME",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "CodePen",
@@ -735,7 +816,8 @@
     "errorCode": 404,
     "errorMsg": "data-test-id=\"text-404\"",
     "titleContains": "property=\"og:url\"",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "Coderwall",
@@ -744,7 +826,8 @@
     "errorCode": 404,
     "errorMsg": "404! Our feels when that url is used",
     "titleContains": "s profile |",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "CodeSandbox",
@@ -753,7 +836,8 @@
     "errorCode": 422,
     "errorMsg": "Could not find user with username",
     "titleContains": "\"data\":",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "Codewars",
@@ -762,7 +846,8 @@
     "errorCode": 404,
     "errorMsg": "\"reason\":\"not found\"",
     "titleContains": "\"id\":",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "Commudle",
@@ -771,7 +856,8 @@
     "errorCode": 404,
     "errorMsg": "\"status\":404",
     "titleContains": "\"status\":200",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Community Adobe",
@@ -780,7 +866,8 @@
     "errorCode": 0,
     "errorMsg": "No search results found.",
     "titleContains": "UserSearchItemContainer",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "coroflot",
@@ -789,7 +876,8 @@
     "errorCode": 404,
     "errorMsg": "Looking for something?",
     "titleContains": "portfolio",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Coub",
@@ -798,7 +886,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":\"Unhandled exception\"",
     "titleContains": "\"user_id\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "cowboys4angels",
@@ -807,7 +896,8 @@
     "errorCode": 404,
     "errorMsg": "Error Page not found",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Cracked",
@@ -816,7 +906,8 @@
     "errorCode": 302,
     "errorMsg": "",
     "titleContains": "Member Since",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Cropty",
@@ -825,7 +916,8 @@
     "errorCode": 404,
     "errorMsg": "\"errors\":",
     "titleContains": "\"name\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Crowdin",
@@ -834,7 +926,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"error-page\"",
     "titleContains": "id=\"profile-page\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Cults3D",
@@ -843,7 +936,8 @@
     "errorCode": 404,
     "errorMsg": "Oh dear, this page is not working!",
     "titleContains": "All the 3D models of",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Cytoid",
@@ -852,7 +946,8 @@
     "errorCode": 404,
     "errorMsg": "Profile not found",
     "titleContains": "Joined",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Daily Kos",
@@ -861,7 +956,8 @@
     "errorCode": 404,
     "errorMsg": "Page not found! (404)",
     "titleContains": "\"@type\":\"ProfilePage\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Dailymotion",
@@ -870,7 +966,8 @@
     "errorCode": 404,
     "errorMsg": "\"code\":404",
     "titleContains": "\"id\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "darudar",
@@ -879,7 +976,8 @@
     "errorCode": 404,
     "errorMsg": "404. Дару~дар: миру~мир!",
     "titleContains": ". Дарудар",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "dateinasia",
@@ -888,7 +986,8 @@
     "errorCode": 404,
     "errorMsg": "The page you are looking for does not exist",
     "titleContains": "About me",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "datezone",
@@ -897,7 +996,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003ePage not found\u003c/title\u003e",
     "titleContains": "property=\"og:url\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Dating.ru",
@@ -906,7 +1006,8 @@
     "errorCode": 404,
     "errorMsg": "Такой страницы не существует.",
     "titleContains": "| dating.ru",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Demotywatory",
@@ -915,7 +1016,8 @@
     "errorCode": 0,
     "errorMsg": "Użytkownik o podanym pseudonimie nie istnieje.",
     "titleContains": "Z nami od:",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "depop",
@@ -924,7 +1026,8 @@
     "errorCode": 404,
     "errorMsg": "Sorry, that page doesn't exist",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Designspriation",
@@ -933,7 +1036,8 @@
     "errorCode": 404,
     "errorMsg": "Content Not Found",
     "titleContains": "has discovered on Designspiration",
-    "weight": 6
+    "weight": 6,
+    "category": "design"
   },
   {
     "name": "destream",
@@ -942,7 +1046,8 @@
     "errorCode": 404,
     "errorMsg": "",
     "titleContains": "\"userName\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Dev.to",
@@ -951,7 +1056,8 @@
     "errorCode": 404,
     "errorMsg": "",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "coding"
   },
   {
     "name": "DeviantArt",
@@ -960,7 +1066,8 @@
     "errorCode": 404,
     "errorMsg": "DeviantArt: 404",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "coding"
   },
   {
     "name": "devRant",
@@ -969,7 +1076,8 @@
     "errorCode": 400,
     "errorMsg": "\"success\":false",
     "titleContains": "\"success\":true",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "DFG",
@@ -978,7 +1086,8 @@
     "errorCode": 404,
     "errorMsg": "content=\"https://www.dfg.com.br/Layout/HandleStatusCode/404\"",
     "titleContains": "class=\"container user-information\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Diablo",
@@ -987,7 +1096,8 @@
     "errorCode": 404,
     "errorMsg": "The requested user does not exist",
     "titleContains": "Viewing profile -",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "DIBIZ",
@@ -996,7 +1106,8 @@
     "errorCode": 404,
     "errorMsg": "An Error Has Occurred",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Digitalspy",
@@ -1005,7 +1116,8 @@
     "errorCode": 404,
     "errorMsg": "User not found",
     "titleContains": "About",
-    "weight": 7
+    "weight": 7,
+    "category": "coding"
   },
   {
     "name": "diigo",
@@ -1014,7 +1126,8 @@
     "errorCode": 0,
     "errorMsg": "{}",
     "titleContains": "regist_at",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Discogs",
@@ -1023,7 +1136,8 @@
     "errorCode": 404,
     "errorMsg": "\"message\": \"User does not exist or may have been deleted.\"",
     "titleContains": "\"id\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Discord (Invite)",
@@ -1032,7 +1146,8 @@
     "errorCode": 404,
     "errorMsg": "\"message\": \"Unknown Invite\"",
     "titleContains": "\"channel\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Discourse",
@@ -1041,7 +1156,8 @@
     "errorCode": 404,
     "errorMsg": "The requested URL or resource could not be found.",
     "titleContains": "topics",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "discuss.elastic.co",
@@ -1050,7 +1166,8 @@
     "errorCode": 404,
     "errorMsg": "Oops!",
     "titleContains": "",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Disqus",
@@ -1059,7 +1176,8 @@
     "errorCode": 400,
     "errorMsg": "\"code\":2",
     "titleContains": "\"code\":0",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Docker Hub (Organization)",
@@ -1068,7 +1186,8 @@
     "errorCode": 404,
     "errorMsg": "\"orgname\":[\"",
     "titleContains": "\"uuid\":",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "Docker Hub (User)",
@@ -1077,7 +1196,8 @@
     "errorCode": 404,
     "errorMsg": "\"message\":\"User not found\"",
     "titleContains": "\"uuid\":",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "DockerHub",
@@ -1086,7 +1206,8 @@
     "errorCode": 404,
     "errorMsg": "",
     "titleContains": "",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "Dojoverse",
@@ -1095,7 +1216,8 @@
     "errorCode": 404,
     "errorMsg": "Looks like you got lost!.",
     "titleContains": "Joined",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "donate.stream",
@@ -1104,7 +1226,8 @@
     "errorCode": 0,
     "errorMsg": "\"message\":\"Not found\"",
     "titleContains": "\"response\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Donatello",
@@ -1113,7 +1236,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003eСторінку не знайдено (404) - Donatello\u003c/title\u003e",
     "titleContains": "UserPage.init",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Donation Alerts",
@@ -1122,7 +1246,8 @@
     "errorCode": 202,
     "errorMsg": "\"success\":false",
     "titleContains": "\"data\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "DonationPay",
@@ -1131,7 +1256,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003e404 Not Found\u003c/title\u003e",
     "titleContains": "id=\"dp-payment-form\"",
-    "weight": 6
+    "weight": 6,
+    "category": "finance"
   },
   {
     "name": "Donatty",
@@ -1140,7 +1266,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":\"internal error\"",
     "titleContains": "\"response\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "dot.cards",
@@ -1149,7 +1276,8 @@
     "errorCode": 0,
     "errorMsg": "\"status\":\"username_not_found",
     "titleContains": "\"user_id\":\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Dota2.ru",
@@ -1158,7 +1286,8 @@
     "errorCode": 0,
     "errorMsg": "id=\"no-activity-posts\"",
     "titleContains": "class=\"forum-section__item forum-section__item--first\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "DOTAFire",
@@ -1167,7 +1296,8 @@
     "errorCode": 0,
     "errorMsg": "\u003eNo results found\u003c/span\u003e",
     "titleContains": "href=\"/profile/",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "DOU",
@@ -1176,7 +1306,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"page-error\"",
     "titleContains": "class=\"page-profile\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Dribbble",
@@ -1185,7 +1316,8 @@
     "errorCode": 404,
     "errorMsg": "(404)\u003c/title\u003e",
     "titleContains": "| Dribbble",
-    "weight": 6
+    "weight": 6,
+    "category": "design"
   },
   {
     "name": "DRIVE2.RU",
@@ -1194,7 +1326,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003e404 — Страница не найдена\u003c/title\u003e",
     "titleContains": "itemprop=\"name\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Droners",
@@ -1203,7 +1336,8 @@
     "errorCode": 302,
     "errorMsg": "(404)\u003c/title\u003e",
     "titleContains": "- Professional Drone Pilot",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Duolingo",
@@ -1212,7 +1346,8 @@
     "errorCode": 0,
     "errorMsg": "\"users\" : []",
     "titleContains": "joinedClassroomIds",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "easyen",
@@ -1221,7 +1356,8 @@
     "errorCode": 0,
     "errorMsg": "Пользователь не найден",
     "titleContains": "День рождения",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "eBay",
@@ -1230,7 +1366,8 @@
     "errorCode": 0,
     "errorMsg": "Sorry, this store was not found.",
     "titleContains": "\"text\":\" followers\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "ebay_stores",
@@ -1239,7 +1376,8 @@
     "errorCode": 410,
     "errorMsg": "Sorry, this store was not found.",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Etoro",
@@ -1248,7 +1386,8 @@
     "errorCode": 404,
     "errorMsg": "\"ErrorCode\":\"NotFound\"",
     "titleContains": "\"gcid\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Etsy",
@@ -1257,7 +1396,8 @@
     "errorCode": 404,
     "errorMsg": "Sorry, the member you are looking for does not exist",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Evolution CMS",
@@ -1266,7 +1406,8 @@
     "errorCode": 0,
     "errorMsg": "",
     "titleContains": "id=\"user-search\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Expressional.social (Mastodon Instance)",
@@ -1275,7 +1416,8 @@
     "errorCode": 404,
     "errorMsg": "Record not found",
     "titleContains": "display_name",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Fabswingers",
@@ -1284,7 +1426,8 @@
     "errorCode": 0,
     "errorMsg": "The user you tried to view doesn't seem to be on the site any more",
     "titleContains": "View Profile",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Facebook",
@@ -1293,7 +1436,8 @@
     "errorCode": 0,
     "errorMsg": "\u003ctitle\u003eFacebook\u003c/title\u003e",
     "titleContains": "__isProfile",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "FACEIT",
@@ -1302,7 +1446,8 @@
     "errorCode": 404,
     "errorMsg": "\"message\":\"user not found\"",
     "titleContains": "\"result\":\"OK\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Faktopedia",
@@ -1311,7 +1456,8 @@
     "errorCode": 0,
     "errorMsg": "Nie znaleziono użytkownika o podanym loginie.",
     "titleContains": "Zamieszcza fakty od:",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "FanCentro",
@@ -1320,7 +1466,8 @@
     "errorCode": 0,
     "errorMsg": "\"status\":false",
     "titleContains": "\"status\":true",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Fandom",
@@ -1329,7 +1476,8 @@
     "errorCode": 404,
     "errorMsg": "Not Found",
     "titleContains": "| Profile | Fandom",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Fanslist (OnlyFans)",
@@ -1338,7 +1486,8 @@
     "errorCode": 0,
     "errorMsg": "No results found for query",
     "titleContains": "data-username=",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Fansly",
@@ -1347,7 +1496,8 @@
     "errorCode": 0,
     "errorMsg": "\"response\":[]",
     "titleContains": "\"id\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Federated.press (Mastodon Instance)",
@@ -1356,7 +1506,8 @@
     "errorCode": 404,
     "errorMsg": "Record not found",
     "titleContains": "display_name",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Figma",
@@ -1365,7 +1516,8 @@
     "errorCode": 404,
     "errorMsg": "\"status\":404",
     "titleContains": "\"status\":200",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Filmot Channel Search",
@@ -1374,7 +1526,8 @@
     "errorCode": 0,
     "errorMsg": "No channels found",
     "titleContains": "Subscribers",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Filmot Unlisted Videos",
@@ -1383,7 +1536,8 @@
     "errorCode": 0,
     "errorMsg": "No results",
     "titleContains": "clips found",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Filmweb",
@@ -1392,7 +1546,8 @@
     "errorCode": 204,
     "errorMsg": "",
     "titleContains": "\"userId\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "fine_art_america",
@@ -1401,7 +1556,8 @@
     "errorCode": 301,
     "errorMsg": "Browse through millions of independent artists in our extensive",
     "titleContains": "Shop for artwork by",
-    "weight": 6
+    "weight": 6,
+    "category": "design"
   },
   {
     "name": "FL.ru",
@@ -1410,7 +1566,8 @@
     "errorCode": 404,
     "errorMsg": "content=\"404 Not Found\"",
     "titleContains": "class=\"page-profile\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Flickr",
@@ -1419,7 +1576,8 @@
     "errorCode": 404,
     "errorMsg": "",
     "titleContains": "| Flickr",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Flightradar24",
@@ -1428,7 +1586,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"main page-not-found-main",
     "titleContains": "class=\"profile-card\" data-profile-user=",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Flipboard",
@@ -1437,7 +1596,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003e\u003c/title\u003e",
     "titleContains": ") on Flipboard",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "flowcode",
@@ -1446,7 +1606,8 @@
     "errorCode": 404,
     "errorMsg": "\"page\":null",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "coding"
   },
   {
     "name": "Fodors Forum",
@@ -1455,7 +1616,8 @@
     "errorCode": 302,
     "errorMsg": "Plan Your Trip Online\u003c/title\u003e",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Folkd",
@@ -1464,7 +1626,8 @@
     "errorCode": 0,
     "errorMsg": "\"result\":\"ok\"",
     "titleContains": "\"message\":\"That display name is in use by another member.\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Fortnite Tracker",
@@ -1473,7 +1636,8 @@
     "errorCode": 404,
     "errorMsg": "Fortnite Player Stats -",
     "titleContains": "s Fortnite Stats - Fortnite Tracker",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Fosstodon.org (Mastodon Instance)",
@@ -1482,7 +1646,8 @@
     "errorCode": 404,
     "errorMsg": "Record not found",
     "titleContains": "display_name",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "fotka",
@@ -1491,7 +1656,8 @@
     "errorCode": 0,
     "errorMsg": "\"status\":\"ERROR\"",
     "titleContains": "\"profil\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Fotolog Archived Profile",
@@ -1500,7 +1666,8 @@
     "errorCode": 0,
     "errorMsg": "\"archived_snapshots\": {}",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Foursquare",
@@ -1509,7 +1676,8 @@
     "errorCode": 308,
     "errorMsg": "",
     "titleContains": "class=\"userProfile2Page\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "freeCodeCamp",
@@ -1518,7 +1686,8 @@
     "errorCode": 404,
     "errorMsg": "{}",
     "titleContains": "\"user\":",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "Freelance.RU",
@@ -1527,7 +1696,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"msg_error alert alert-danger\"",
     "titleContains": "class=\" user-top-container user-portfolio\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Freelance.ua",
@@ -1536,7 +1706,8 @@
     "errorCode": 404,
     "errorMsg": "Схоже, дана сторінка не знайдена",
     "titleContains": "p-profile-avatar",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Freelancehunt (Employer)",
@@ -1545,7 +1716,8 @@
     "errorCode": 404,
     "errorMsg": "User not found.",
     "titleContains": "\"@id\":\"https://freelancehunt.com/en/employers\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Freelancehunt (Freelancer)",
@@ -1554,7 +1726,8 @@
     "errorCode": 404,
     "errorMsg": "User not found.",
     "titleContains": "\"@id\":\"https://freelancehunt.com/en/freelancers\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Freelancer",
@@ -1563,7 +1736,8 @@
     "errorCode": 0,
     "errorMsg": "\"users\":{}",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "finance"
   },
   {
     "name": "freesound",
@@ -1572,7 +1746,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ch1\u003ePage not found\u003c/h1\u003e",
     "titleContains": "forum posts",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "FriendFinder",
@@ -1581,7 +1756,8 @@
     "errorCode": 302,
     "errorMsg": "302 Found",
     "titleContains": "Last Visit:",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "FriendFinder-X",
@@ -1590,7 +1766,8 @@
     "errorCode": 302,
     "errorMsg": "The document has moved",
     "titleContains": "'s Dating Profile on FriendFinder-x",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Fur Affinity",
@@ -1599,7 +1776,8 @@
     "errorCode": 0,
     "errorMsg": "\u003ch2\u003eSystem Error\u003c/h2\u003e",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "design"
   },
   {
     "name": "Gab",
@@ -1608,7 +1786,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":\"Record not found\"",
     "titleContains": "\"id\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Game Jolt",
@@ -1617,7 +1796,8 @@
     "errorCode": 404,
     "errorMsg": "null,",
     "titleContains": "created_on",
-    "weight": 6
+    "weight": 6,
+    "category": "gaming"
   },
   {
     "name": "Gamer DVR",
@@ -1626,7 +1806,8 @@
     "errorCode": 302,
     "errorMsg": "\u003cbody\u003eYou are being \u003c",
     "titleContains": "class=\"gamerpic\"",
-    "weight": 6
+    "weight": 6,
+    "category": "gaming"
   },
   {
     "name": "Gamespot",
@@ -1635,7 +1816,8 @@
     "errorCode": 0,
     "errorMsg": "\"success\":false",
     "titleContains": "\"success\":true",
-    "weight": 6
+    "weight": 6,
+    "category": "gaming"
   },
   {
     "name": "Garmin Connect",
@@ -1644,7 +1826,8 @@
     "errorCode": 0,
     "errorMsg": "window.VIEWER_USERPREFERENCES = null",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "GDBrowser",
@@ -1653,7 +1836,8 @@
     "errorCode": 500,
     "errorMsg": "-1",
     "titleContains": "\"accountID\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "GeeksForGeeks",
@@ -1662,7 +1846,8 @@
     "errorCode": 400,
     "errorMsg": "\"message\":\"User not found!\"",
     "titleContains": "\"message\":\"data retrieved successfully\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Genius (Artist)",
@@ -1671,7 +1856,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"render_404\"",
     "titleContains": "class=\"profile_header\"",
-    "weight": 6
+    "weight": 6,
+    "category": "design"
   },
   {
     "name": "Genius (User)",
@@ -1680,7 +1866,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"render_404\"",
     "titleContains": "class=\"profile_header\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Geocaching",
@@ -1689,7 +1876,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"callout http-error\"",
     "titleContains": "class=\"hax-profile\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Gettr",
@@ -1698,7 +1886,8 @@
     "errorCode": 400,
     "errorMsg": "\"rc\":\"ERR\"",
     "titleContains": "\"rc\":\"OK\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Giphy (Channel)",
@@ -1707,7 +1896,8 @@
     "errorCode": 404,
     "errorMsg": "404 Not Found",
     "titleContains": "\\\"user_id\\\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Gitea",
@@ -1716,7 +1906,8 @@
     "errorCode": 404,
     "errorMsg": "\"message\":\"user redirect does not exist",
     "titleContains": "\"id\":",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "Gitee",
@@ -1725,7 +1916,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"container error midCenter\"",
     "titleContains": "class=\"ui container user_page\"",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "GitHub",
@@ -1734,7 +1926,8 @@
     "errorCode": 404,
     "errorMsg": "",
     "titleContains": "GitHub",
-    "weight": 10
+    "weight": 10,
+    "category": "coding"
   },
   {
     "name": "GitHub (Gists)",
@@ -1743,7 +1936,8 @@
     "errorCode": 404,
     "errorMsg": "\"status\": \"404\"",
     "titleContains": "\"id\":",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "GitHub (User)",
@@ -1752,7 +1946,8 @@
     "errorCode": 404,
     "errorMsg": "\"status\": \"404\"",
     "titleContains": "\"id\":",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "GitLab",
@@ -1761,7 +1956,8 @@
     "errorCode": 0,
     "errorMsg": "[]",
     "titleContains": "\"id\":",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "gloria.tv",
@@ -1770,7 +1966,8 @@
     "errorCode": 404,
     "errorMsg": "Page unavailable",
     "titleContains": "Last online",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "GNOME (GitLab)",
@@ -1779,7 +1976,8 @@
     "errorCode": 0,
     "errorMsg": "[]",
     "titleContains": "\"username\":",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "GNOME (Shell Extensions)",
@@ -1788,7 +1986,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ch3\u003e404 - Page not Found\u003c/h3\u003e",
     "titleContains": "class=\"user-details\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "GOG",
@@ -1797,7 +1996,8 @@
     "errorCode": 302,
     "errorMsg": "href=\"http://www.gog.com/404\"",
     "titleContains": "window.profilesData.profileUser",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Goodgame_Russia",
@@ -1806,7 +2006,8 @@
     "errorCode": 400,
     "errorMsg": "Такой страницы не существует",
     "titleContains": "channel_id",
-    "weight": 6
+    "weight": 6,
+    "category": "gaming"
   },
   {
     "name": "gpodder.net",
@@ -1815,7 +2016,8 @@
     "errorCode": 404,
     "errorMsg": "404 - Not found",
     "titleContains": "mdash; gpodder.net",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "grandprof",
@@ -1824,7 +2026,8 @@
     "errorCode": 404,
     "errorMsg": "Mauvaise pioche",
     "titleContains": "s Profile",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Graphics.social (Mastodon Instance)",
@@ -1833,7 +2036,8 @@
     "errorCode": 404,
     "errorMsg": "Record not found",
     "titleContains": "display_name",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Gravatar",
@@ -1842,7 +2046,8 @@
     "errorCode": 404,
     "errorMsg": "\"User not found\"",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Greasy Fork",
@@ -1851,7 +2056,8 @@
     "errorCode": 0,
     "errorMsg": "\u003cp\u003eNo users!\u003c/p\u003e",
     "titleContains": "class=\"user-list\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "GTAinside.com",
@@ -1860,7 +2066,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003ePage not found - 404\u003c/title\u003e",
     "titleContains": "class=\"user-profile-name\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Habbo.com",
@@ -1869,7 +2076,8 @@
     "errorCode": 404,
     "errorMsg": "error\": \"not-found",
     "titleContains": "uniqueId\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Habbo.com.br",
@@ -1878,7 +2086,8 @@
     "errorCode": 404,
     "errorMsg": "error\": \"not-found",
     "titleContains": "uniqueId\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Habbo.com.tr",
@@ -1887,7 +2096,8 @@
     "errorCode": 404,
     "errorMsg": "error\": \"not-found",
     "titleContains": "uniqueId\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Habbo.de",
@@ -1896,7 +2106,8 @@
     "errorCode": 404,
     "errorMsg": "error\": \"not-found",
     "titleContains": "uniqueId\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Habbo.es",
@@ -1905,7 +2116,8 @@
     "errorCode": 404,
     "errorMsg": "not-found",
     "titleContains": "uniqueId\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Habbo.fi",
@@ -1914,7 +2126,8 @@
     "errorCode": 404,
     "errorMsg": "error\": \"not-found",
     "titleContains": "uniqueId\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Habbo.fr",
@@ -1923,7 +2136,8 @@
     "errorCode": 404,
     "errorMsg": "error\": \"not-found",
     "titleContains": "uniqueId\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Habbo.it",
@@ -1932,7 +2146,8 @@
     "errorCode": 404,
     "errorMsg": "error\": \"not-found",
     "titleContains": "uniqueId\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Habbo.nl",
@@ -1941,7 +2156,8 @@
     "errorCode": 404,
     "errorMsg": "error\": \"not-found",
     "titleContains": "uniqueId\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Habr (Q\u0026A)",
@@ -1950,7 +2166,8 @@
     "errorCode": 404,
     "errorMsg": "icon_error_404",
     "titleContains": "class=\"page-header__info\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Habr (User)",
@@ -1959,7 +2176,8 @@
     "errorCode": 404,
     "errorMsg": "tm-error-message",
     "titleContains": "tm-page tm-user",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Habtium",
@@ -1968,7 +2186,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ch1 class=\"section red\"\u003eOops!",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Hackaday.io",
@@ -1977,7 +2196,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"error-nav\"",
     "titleContains": "class=\"following-container \"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "HackAdvisor",
@@ -1986,7 +2206,8 @@
     "errorCode": 404,
     "errorMsg": "{\"detail\":\"Username not found\"}",
     "titleContains": "\"username\":",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Hacker News",
@@ -1995,7 +2216,8 @@
     "errorCode": 0,
     "errorMsg": "null",
     "titleContains": "\"id\" :",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "hackerearth",
@@ -2004,7 +2226,8 @@
     "errorCode": 0,
     "errorMsg": "404 | HackerEarth",
     "titleContains": "| Developer Profile on HackerEarth",
-    "weight": 8
+    "weight": 8,
+    "category": "design"
   },
   {
     "name": "Hackernoon",
@@ -2013,7 +2236,8 @@
     "errorCode": 0,
     "errorMsg": "__N_REDIRECT",
     "titleContains": "\"profile\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "HackerRank",
@@ -2022,7 +2246,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":\"Not Found\"",
     "titleContains": "\"model\":",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Hackster",
@@ -2031,7 +2256,8 @@
     "errorCode": 404,
     "errorMsg": "id=\"error\"",
     "titleContains": "data-hypernova-key=\"UserProfile\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "hamaha",
@@ -2040,7 +2266,8 @@
     "errorCode": 0,
     "errorMsg": "content=\"HAMAHA  Биткоин форум. Торговля на бирже - ➨ Обучение Криптовалютам, Биткоин и NYSE \"",
     "titleContains": "id=\"profile\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Hanime",
@@ -2049,7 +2276,8 @@
     "errorCode": 302,
     "errorMsg": "DYNAMIC",
     "titleContains": "Channel Views",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Hcommons.social (Mastodon Instance)",
@@ -2058,7 +2286,8 @@
     "errorCode": 404,
     "errorMsg": "Record not found",
     "titleContains": "display_name",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Heylink",
@@ -2067,7 +2296,8 @@
     "errorCode": 404,
     "errorMsg": "We can't find the page that you're looking for :(",
     "titleContains": "HeyLink.me |",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "HiHello",
@@ -2076,7 +2306,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"utility-page-wrap-404\"",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Home Design 3D",
@@ -2085,7 +2316,8 @@
     "errorCode": 302,
     "errorMsg": "\u003ctitle\u003eCommunity\u003c/title\u003e",
     "titleContains": "id=\"user_content\"",
-    "weight": 6
+    "weight": 6,
+    "category": "design"
   },
   {
     "name": "Hometech.social (Mastodon Instance)",
@@ -2094,7 +2326,8 @@
     "errorCode": 404,
     "errorMsg": "Record not found",
     "titleContains": "display_name",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "hoo.be",
@@ -2103,7 +2336,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003ehoo.be\u003c/title\u003e",
     "titleContains": "ProfilePage\",\"mainEntity",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Hostux.social (Mastodon Instance)",
@@ -2112,7 +2346,8 @@
     "errorCode": 404,
     "errorMsg": "Record not found",
     "titleContains": "display_name",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Houzz",
@@ -2121,7 +2356,8 @@
     "errorCode": 404,
     "errorMsg": "Page Not Found",
     "titleContains": "Followers",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "HubPages",
@@ -2130,7 +2366,8 @@
     "errorCode": 404,
     "errorMsg": "Sorry, that user does not exist",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "coding"
   },
   {
     "name": "HudsonRock",
@@ -2139,7 +2376,8 @@
     "errorCode": 0,
     "errorMsg": "This username is not associated with a computer infected by an info-stealer",
     "titleContains": "",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "HuggingFace",
@@ -2148,7 +2386,8 @@
     "errorCode": 404,
     "errorMsg": "content=\"404 – Hugging Face\"",
     "titleContains": "data-target=\"UserProfile\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "HulkShare",
@@ -2157,7 +2396,8 @@
     "errorCode": 0,
     "errorMsg": "Invalid user.",
     "titleContains": "id=\"profile_image\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "icq-chat",
@@ -2166,7 +2406,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003eOops! We ran into some problems.",
     "titleContains": "class=\"memberHeader-mainContent",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "IFTTT",
@@ -2175,7 +2416,8 @@
     "errorCode": 404,
     "errorMsg": "The requested page or file does not exist",
     "titleContains": "Joined",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "ifunny",
@@ -2184,7 +2426,8 @@
     "errorCode": 404,
     "errorMsg": "404 - page not found",
     "titleContains": "subscribers",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "igromania",
@@ -2193,7 +2436,8 @@
     "errorCode": 0,
     "errorMsg": "Пользователь не зарегистрирован и не имеет профиля для просмотра.",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "ILGM Growers Forum",
@@ -2202,7 +2446,8 @@
     "errorCode": 404,
     "errorMsg": "errors\":[\"The requested URL",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "imagefap",
@@ -2211,7 +2456,8 @@
     "errorCode": 0,
     "errorMsg": "Invalid uid",
     "titleContains": "s Profile",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "ImageShack",
@@ -2220,7 +2466,8 @@
     "errorCode": 302,
     "errorMsg": "",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "iMGSRC.RU",
@@ -2229,7 +2476,8 @@
     "errorCode": 302,
     "errorMsg": "",
     "titleContains": "Присоединился",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Imgur",
@@ -2238,7 +2486,8 @@
     "errorCode": 404,
     "errorMsg": "\"code\":\"404\"",
     "titleContains": "\"username\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Immunefi",
@@ -2247,7 +2496,8 @@
     "errorCode": 404,
     "errorMsg": "id=\"__next_error__\"",
     "titleContains": "content=\"profile\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "inaturalist",
@@ -2256,7 +2506,8 @@
     "errorCode": 404,
     "errorMsg": "\"status\":404",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Independent academia",
@@ -2265,7 +2516,8 @@
     "errorCode": 404,
     "errorMsg": "Academia.edu",
     "titleContains": "- Academia.edu",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "InkBunny",
@@ -2274,7 +2526,8 @@
     "errorCode": 302,
     "errorMsg": "\u003ctitle\u003eMembers | Inkbunny, the Furry Art Community\u003c/title\u003e",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Instagram",
@@ -2283,7 +2536,8 @@
     "errorCode": 0,
     "errorMsg": "\"routePath\":null",
     "titleContains": "Posts - See Instagram photos and videos from",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Instagram (Imginn)",
@@ -2292,7 +2546,8 @@
     "errorCode": 410,
     "errorMsg": "class=\"page-error notfound\"",
     "titleContains": "class=\"userinfo\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Instagram_archives",
@@ -2301,7 +2556,8 @@
     "errorCode": 0,
     "errorMsg": "\"archived_snapshots\": {}}",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Instructables",
@@ -2310,7 +2566,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\": \"Sorry, we couldn't find that one!\"",
     "titleContains": "\"exists\": true",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Internet Archive User Contribution Search",
@@ -2319,7 +2576,8 @@
     "errorCode": 0,
     "errorMsg": "numFound\":0",
     "titleContains": "backup_location",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Internet Archive Username Mentions",
@@ -2328,7 +2586,8 @@
     "errorCode": 0,
     "errorMsg": "numFound\":0",
     "titleContains": "backup_location",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "interpals",
@@ -2337,7 +2596,8 @@
     "errorCode": 0,
     "errorMsg": "User not found",
     "titleContains": "Looking for",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Intigriti",
@@ -2346,7 +2606,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"error-page-container\"",
     "titleContains": "\"userName\":",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "itch.io",
@@ -2355,7 +2616,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"not_found_page page_widget base_widget\"",
     "titleContains": "class=\"user_data\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "JapanDict",
@@ -2364,7 +2626,8 @@
     "errorCode": 404,
     "errorMsg": "The page you requested could not be found.",
     "titleContains": "class=\"UserPage\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "JBZD",
@@ -2373,7 +2636,8 @@
     "errorCode": 404,
     "errorMsg": "Błąd 404",
     "titleContains": "Dzidy użytkownika",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "jeja.pl",
@@ -2382,7 +2646,8 @@
     "errorCode": 0,
     "errorMsg": "Niepoprawny login",
     "titleContains": "Profil użytkownika",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Jeuxvideo",
@@ -2391,7 +2656,8 @@
     "errorCode": 404,
     "errorMsg": "rence des gamers",
     "titleContains": "- jeuxvideo.com",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Joe Monster",
@@ -2400,7 +2666,8 @@
     "errorCode": 0,
     "errorMsg": "Nie wiem jak ci to powiedzieć",
     "titleContains": "jest prywatny",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Justforfans",
@@ -2409,7 +2676,8 @@
     "errorCode": 302,
     "errorMsg": "",
     "titleContains": "@ JustFor.Fans",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Kaggle",
@@ -2418,7 +2686,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003eKaggle: Your Home for Data Science\u003c/title\u003e",
     "titleContains": "property=\"og:username\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Keybase",
@@ -2427,7 +2696,8 @@
     "errorCode": 0,
     "errorMsg": "\"them\":[null]",
     "titleContains": "\"id\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Kick",
@@ -2436,7 +2706,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003eNot Found\u003c/title\u003e",
     "titleContains": "\"id\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Kickstarter",
@@ -2445,7 +2716,8 @@
     "errorCode": 404,
     "errorMsg": "Oops, Something went missing",
     "titleContains": "projects",
-    "weight": 6
+    "weight": 6,
+    "category": "design"
   },
   {
     "name": "kik",
@@ -2454,7 +2726,8 @@
     "errorCode": 0,
     "errorMsg": "\u003ch1 class=\"display-name\"\u003e \u003c/h1\u003e",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "KnowYourMeme",
@@ -2463,7 +2736,8 @@
     "errorCode": 400,
     "errorMsg": "404, File Not Found!",
     "titleContains": "Contributions",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Ko-Fi",
@@ -2472,7 +2746,8 @@
     "errorCode": 302,
     "errorMsg": "\u003ctitle\u003eObject moved\u003c/title\u003e",
     "titleContains": "id=\"profile-header\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "komi",
@@ -2481,7 +2756,8 @@
     "errorCode": 404,
     "errorMsg": "The talent profile was not found",
     "titleContains": "accountStatus\":\"active",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Kongregate",
@@ -2490,7 +2766,8 @@
     "errorCode": 404,
     "errorMsg": "Sorry, no account with that name was found",
     "titleContains": "Member Since",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Kwai",
@@ -2499,7 +2776,8 @@
     "errorCode": 0,
     "errorMsg": "\u003ctitle\u003eKwai\u003c/title\u003e",
     "titleContains": "name=\"title\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "kwejk.pl",
@@ -2508,7 +2786,8 @@
     "errorCode": 404,
     "errorMsg": "404 - strona nie została znaleziona - KWEJK.pl",
     "titleContains": "Kwejki użytkownika",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Kwork",
@@ -2517,7 +2796,8 @@
     "errorCode": 0,
     "errorMsg": "\"success\":false",
     "titleContains": "\"success\":true",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Last.fm",
@@ -2526,7 +2806,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ch1\u003e404 - Page Not Found\u003c/h1\u003e",
     "titleContains": "class=\"header-info\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "LeakIX",
@@ -2535,7 +2816,8 @@
     "errorCode": 500,
     "errorMsg": "\u003ctitle\u003eLeakIX - Server error\u003c/title\u003e",
     "titleContains": "",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Lemon8",
@@ -2544,7 +2826,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"not_found_text\"",
     "titleContains": "id=\"user-description\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Letterboxd",
@@ -2553,7 +2836,8 @@
     "errorCode": 404,
     "errorMsg": "Sorry, we can’t find the page you’ve requested.",
     "titleContains": "’s profile on Letterboxd",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "LevelBlue",
@@ -2562,7 +2846,8 @@
     "errorCode": 0,
     "errorMsg": "{}",
     "titleContains": "\"username\": [\"This username is already taken\"]",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Liberapay",
@@ -2571,7 +2856,8 @@
     "errorCode": 404,
     "errorMsg": "Response code: 404",
     "titleContains": "class=\"profile-header\"",
-    "weight": 6
+    "weight": 6,
+    "category": "finance"
   },
   {
     "name": "LibraryThing",
@@ -2580,7 +2866,8 @@
     "errorCode": 0,
     "errorMsg": "Error: This user doesn't exist",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Libretooth.gr (Mastodon Instance)",
@@ -2589,7 +2876,8 @@
     "errorCode": 404,
     "errorMsg": "Record not found",
     "titleContains": "display_name",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "lichess.org",
@@ -2598,7 +2886,8 @@
     "errorCode": 0,
     "errorMsg": "false",
     "titleContains": "true",
-    "weight": 6
+    "weight": 6,
+    "category": "gaming"
   },
   {
     "name": "LINE",
@@ -2607,7 +2896,8 @@
     "errorCode": 404,
     "errorMsg": "404 Not Found",
     "titleContains": "Add LINE friend",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Linktree",
@@ -2616,7 +2906,8 @@
     "errorCode": 404,
     "errorMsg": "\"statusCode\":404",
     "titleContains": "\"uuid\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "linux.org.ru",
@@ -2625,7 +2916,8 @@
     "errorCode": 404,
     "errorMsg": "Пользователя не существует",
     "titleContains": "Дата регистрации",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "LiveJasmin",
@@ -2634,7 +2926,8 @@
     "errorCode": 0,
     "errorMsg": "\"success\":false",
     "titleContains": "\"success\":true",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "livemaster.ru",
@@ -2643,7 +2936,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003eВы попали на несуществующую страницу",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "lobste.rs",
@@ -2652,7 +2946,8 @@
     "errorCode": 404,
     "errorMsg": "The resource you requested was not found, or the story has been deleted.",
     "titleContains": "Joined",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "LoLProfile",
@@ -2661,7 +2956,8 @@
     "errorCode": 0,
     "errorMsg": "We could not find any results, please try again later or check your input.",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "gaming"
   },
   {
     "name": "Lor.sh (Mastodon Instance)",
@@ -2670,7 +2966,8 @@
     "errorCode": 404,
     "errorMsg": "Record not found",
     "titleContains": "display_name",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "lowcygier.pl",
@@ -2679,7 +2976,8 @@
     "errorCode": 404,
     "errorMsg": "Błąd 404 - Podana strona nie istnieje",
     "titleContains": "Zarejestrowany",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "MAGABOOK",
@@ -2688,7 +2986,8 @@
     "errorCode": 302,
     "errorMsg": "",
     "titleContains": "Timeline",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Magix",
@@ -2697,7 +2996,8 @@
     "errorCode": 0,
     "errorMsg": "Page not found",
     "titleContains": "About me",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Magnific",
@@ -2706,7 +3006,8 @@
     "errorCode": 404,
     "errorMsg": "\"message\":\"Creator not found\"",
     "titleContains": "\"creator\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Malpedia Actors",
@@ -2715,7 +3016,8 @@
     "errorCode": 404,
     "errorMsg": "Page not Found.",
     "titleContains": "href=\"/actors\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "MapMyTracks",
@@ -2724,7 +3026,8 @@
     "errorCode": 0,
     "errorMsg": "Sorry, there is nothing to see here!",
     "titleContains": "class=\"profile-header\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Mapstodon.space (Mastodon Instance)",
@@ -2733,7 +3036,8 @@
     "errorCode": 404,
     "errorMsg": "Record not found",
     "titleContains": "display_name",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Maroc_nl",
@@ -2742,7 +3046,8 @@
     "errorCode": 0,
     "errorMsg": "Deze gebruiker is niet geregistreerd",
     "titleContains": "Bekijk Profiel:",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Marshmallow",
@@ -2751,7 +3056,8 @@
     "errorCode": 404,
     "errorMsg": "For compensation, here are cats for you.",
     "titleContains": "さんにメッセージをおくる",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Martech",
@@ -2760,7 +3066,8 @@
     "errorCode": 404,
     "errorMsg": "Page not found",
     "titleContains": "twitter:site",
-    "weight": 6
+    "weight": 6,
+    "category": "design"
   },
   {
     "name": "Massage Anywhere",
@@ -2769,7 +3076,8 @@
     "errorCode": 0,
     "errorMsg": "\u003ctitle\u003eMassageAnywhere.com: Search Results\u003c/title\u003e",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "masto.ai",
@@ -2778,7 +3086,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":\"Record not found\"",
     "titleContains": "\"id\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Masto.nyc (Mastodon Instance)",
@@ -2787,7 +3096,8 @@
     "errorCode": 404,
     "errorMsg": "Record not found",
     "titleContains": "display_name",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Mastodon API",
@@ -2796,7 +3106,8 @@
     "errorCode": 404,
     "errorMsg": "\"accounts\":[]",
     "titleContains": "display_name",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Mastodon-101010.pl",
@@ -2805,7 +3116,8 @@
     "errorCode": 404,
     "errorMsg": "The page you are looking for isn\u0026#39;t here.",
     "titleContains": "@101010.pl",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Mastodon-C.IM",
@@ -2814,7 +3126,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003eThe page you are looking for isn\u0026#39;t here",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Mastodon-Chaos.social",
@@ -2823,7 +3136,8 @@
     "errorCode": 404,
     "errorMsg": "The page you are looking for isn\u0026#39;t here.",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Mastodon-Defcon",
@@ -2832,7 +3146,8 @@
     "errorCode": 404,
     "errorMsg": "The page you are looking for isn\u0026#39;t here.",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Mastodon-mastodon",
@@ -2841,7 +3156,8 @@
     "errorCode": 404,
     "errorMsg": "The page you are looking for isn't here.",
     "titleContains": "profile:username",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Mastodon-meow.social",
@@ -2850,7 +3166,8 @@
     "errorCode": 404,
     "errorMsg": "The page you are looking for isn\u0026#39;t here.",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Mastodon-mstdn.io",
@@ -2859,7 +3176,8 @@
     "errorCode": 404,
     "errorMsg": "The page you are looking for isn\u0026#39;t here.",
     "titleContains": "@mstdn.io) - Mastodon",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Mastodon-rigcz.club",
@@ -2868,7 +3186,8 @@
     "errorCode": 404,
     "errorMsg": "The page you are looking for isn't here.",
     "titleContains": "@rigcz.club",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Mastodon-social_tchncs",
@@ -2877,7 +3196,8 @@
     "errorCode": 301,
     "errorMsg": "The page you are looking for isn\u0026#39;t here",
     "titleContains": "profile:username",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Mastodon-Toot.Community",
@@ -2886,7 +3206,8 @@
     "errorCode": 404,
     "errorMsg": "The page you are looking for isn\u0026#39;t here.",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Mastodon.online",
@@ -2895,7 +3216,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003eThe page you are looking for isn\u0026#39;t here.",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Mastodonbooks.net (Mastodon Instance)",
@@ -2904,7 +3226,8 @@
     "errorCode": 404,
     "errorMsg": "Record not found",
     "titleContains": "display_name",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "MAX",
@@ -2913,7 +3236,8 @@
     "errorCode": 0,
     "errorMsg": "linkInfo:{}",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "MCUUID (Minecraft)",
@@ -2922,7 +3246,8 @@
     "errorCode": 0,
     "errorMsg": "minecraft.api_failure",
     "titleContains": "Successfully found player by given ID.",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Medium",
@@ -2931,7 +3256,8 @@
     "errorCode": 404,
     "errorMsg": "",
     "titleContains": "",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "meet me",
@@ -2940,7 +3266,8 @@
     "errorCode": 302,
     "errorMsg": "\u003ctitle\u003eMeetMe - Chat and Meet New People\u003c/title",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Meta-Wiki (Wikimedia)",
@@ -2949,7 +3276,8 @@
     "errorCode": 0,
     "errorMsg": "There is no global account for",
     "titleContains": "id='mw-centralauth-info'",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "metacritic",
@@ -2958,7 +3286,8 @@
     "errorCode": 404,
     "errorMsg": "re looking for. Sorry about that.\u003c/p\u003e",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Microsoft Learn",
@@ -2967,7 +3296,8 @@
     "errorCode": 404,
     "errorMsg": "",
     "titleContains": "\"userId\":",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Minds",
@@ -2976,7 +3306,8 @@
     "errorCode": 0,
     "errorMsg": "\"valid\":true",
     "titleContains": "\"valid\":false",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Minecraft List",
@@ -2985,7 +3316,8 @@
     "errorCode": 0,
     "errorMsg": "\"found\":false",
     "titleContains": "\"found\":true",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "mintme",
@@ -2994,7 +3326,8 @@
     "errorCode": 404,
     "errorMsg": "Page not found",
     "titleContains": "token | mintMe",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Mistrzowie",
@@ -3003,7 +3336,8 @@
     "errorCode": 0,
     "errorMsg": "Nie znaleziono użytkownika o podanym loginie.",
     "titleContains": "Profil użytkownika",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Mix",
@@ -3012,7 +3346,8 @@
     "errorCode": 302,
     "errorMsg": "The best content from the open web, personalized.",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Mixcloud",
@@ -3021,7 +3356,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":",
     "titleContains": "\"username\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Mixi",
@@ -3030,7 +3366,8 @@
     "errorCode": 0,
     "errorMsg": "データがありません",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Mixlr",
@@ -3039,7 +3376,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":\"Resource not found\"",
     "titleContains": "\"id\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Mmorpg",
@@ -3048,7 +3386,8 @@
     "errorCode": 404,
     "errorMsg": "404 Not Not_Found",
     "titleContains": "MMORPG.com Forums",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "MobileGTA.net",
@@ -3057,7 +3396,8 @@
     "errorCode": 0,
     "errorMsg": "\u003ch1\u003e404 Not Found",
     "titleContains": "userpage_user",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Mod DB",
@@ -3066,7 +3406,8 @@
     "errorCode": 0,
     "errorMsg": "\"available\":true",
     "titleContains": "\"available\":false",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "MODX.im",
@@ -3075,7 +3416,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"content-error\"",
     "titleContains": "class=\"profile\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Monkeytype",
@@ -3084,7 +3426,8 @@
     "errorCode": 404,
     "errorMsg": "\"message\":\"User not found\"",
     "titleContains": "\"message\":\"Profile retrieved\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Moto Trip",
@@ -3093,7 +3436,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ch1\u003ePage introuvable\u003c/h1\u003e",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Motokiller",
@@ -3102,7 +3446,8 @@
     "errorCode": 0,
     "errorMsg": "Nie znaleziono użytkownika o podanym loginie.",
     "titleContains": "Zamieszcza materiały od:",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Moxfield",
@@ -3111,7 +3456,8 @@
     "errorCode": 404,
     "errorMsg": "\"status\":404",
     "titleContains": "\"userName\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Muck Rack",
@@ -3120,7 +3466,8 @@
     "errorCode": 404,
     "errorMsg": "Oh no! Page not found.",
     "titleContains": "on Muck Rack",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Musician.social (Mastodon Instance)",
@@ -3129,7 +3476,8 @@
     "errorCode": 404,
     "errorMsg": "Record not found",
     "titleContains": "display_name",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "musictraveler",
@@ -3138,7 +3486,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003ePage Not found\u003c/title\u003e",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "MUYZORRAS",
@@ -3147,7 +3496,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003eError 404",
     "titleContains": "og:title",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "my_instants",
@@ -3156,7 +3506,8 @@
     "errorCode": 404,
     "errorMsg": "Page not found",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "MyAnimeList",
@@ -3165,7 +3516,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003e404 Not Found",
     "titleContains": "Profile - MyAnimeList.net",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "MyBuilder",
@@ -3174,7 +3526,8 @@
     "errorCode": 404,
     "errorMsg": "Sorry, we can't find that page.",
     "titleContains": "\"legalName\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "myfitnesspal Author",
@@ -3183,7 +3536,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003ePage not found | MyFitnessPal Blog\u003c/title\u003e",
     "titleContains": "\"isPartOf\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "myfitnesspal Community",
@@ -3192,7 +3546,8 @@
     "errorCode": 404,
     "errorMsg": "User Not Found",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "MyLot",
@@ -3201,7 +3556,8 @@
     "errorCode": 404,
     "errorMsg": "/ Whoops!",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "MYM",
@@ -3210,7 +3566,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"page page-404\"",
     "titleContains": "class=\"page profile\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "MyNickname",
@@ -3219,7 +3576,8 @@
     "errorCode": 0,
     "errorMsg": "\u003ch2\u003eNickname not found. Try searching for similar nicknames.\u003c/h2\u003e",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "MySpace",
@@ -3228,7 +3586,8 @@
     "errorCode": 404,
     "errorMsg": "\u003c!-- 404 --\u003e",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "myWishBoard",
@@ -3237,7 +3596,8 @@
     "errorCode": 404,
     "errorMsg": "User not found\u003c/span\u003e",
     "titleContains": "user.profile\\\",\\\"login\\\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "naija_planet",
@@ -3246,7 +3606,8 @@
     "errorCode": 0,
     "errorMsg": "- NaijaPlanet!",
     "titleContains": "dating Profile,",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "nairaland",
@@ -3255,7 +3616,8 @@
     "errorCode": 301,
     "errorMsg": "404: Page Not Found",
     "titleContains": "s Profile",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "NaturalNews",
@@ -3264,7 +3626,8 @@
     "errorCode": 0,
     "errorMsg": "The page you are looking for cannot be found or is no longer available.",
     "titleContains": "class=\"Headline\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Naver",
@@ -3273,7 +3636,8 @@
     "errorCode": 500,
     "errorMsg": "페이지를 찾을 수 없습니다",
     "titleContains": ": 네이버 블로그",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Neocities",
@@ -3282,7 +3646,8 @@
     "errorCode": 404,
     "errorMsg": "- Not Found\u003c/title\u003e",
     "titleContains": "noindex, follow",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "newmeet",
@@ -3291,7 +3656,8 @@
     "errorCode": 0,
     "errorMsg": "Chat with , , ,  -",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Nifty Gateway",
@@ -3300,7 +3666,8 @@
     "errorCode": 400,
     "errorMsg": "\u0026quot;didSucceed\u0026quot;: false",
     "titleContains": "\u0026quot;didSucceed\u0026quot;: true",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Nightbot",
@@ -3309,7 +3676,8 @@
     "errorCode": 404,
     "errorMsg": "\"status\":404",
     "titleContains": "\"status\":200",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Nih Buat Jajan",
@@ -3318,7 +3686,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":\"Creator not found\"",
     "titleContains": "\"name\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Nitecrew (Mastodon Instance)",
@@ -3327,7 +3696,8 @@
     "errorCode": 404,
     "errorMsg": "Record not found",
     "titleContains": "display_name",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "NotABug",
@@ -3336,7 +3706,8 @@
     "errorCode": 404,
     "errorMsg": "alt=\"404\"",
     "titleContains": "class=\"user profile\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Note",
@@ -3345,7 +3716,8 @@
     "errorCode": 404,
     "errorMsg": "\"data\":\"リソースが見つかりません\"",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "npm",
@@ -3354,7 +3726,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ch1\u003enot found\u003c/h1\u003e",
     "titleContains": "\"id\":",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "oglaszamy24h.pl",
@@ -3363,7 +3736,8 @@
     "errorCode": 404,
     "errorMsg": "Nieprawidłowy link, w bazie danych nie istnieje użytkownik o podanym loginie",
     "titleContains": "Profil użytkownika:",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "ok.ru",
@@ -3372,7 +3746,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"p404_t",
     "titleContains": "| OK",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "okidoki",
@@ -3381,7 +3756,8 @@
     "errorCode": 404,
     "errorMsg": "Страница не найдена",
     "titleContains": "Пользователь",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "omg.lol",
@@ -3390,7 +3766,8 @@
     "errorCode": 0,
     "errorMsg": "\"success\": false",
     "titleContains": "\"success\": true",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "OP.GG",
@@ -3399,7 +3776,8 @@
     "errorCode": 0,
     "errorMsg": "Guide - OP.GG",
     "titleContains": "- Summoner Stats - League of Legends",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Opencollective",
@@ -3408,7 +3786,8 @@
     "errorCode": 0,
     "errorMsg": "Not Found",
     "titleContains": "- Open Collective",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "OpenSource",
@@ -3417,7 +3796,8 @@
     "errorCode": 404,
     "errorMsg": "\"errorCode\": \"404\"",
     "titleContains": "\"contentID\":",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "OpenStreetMap",
@@ -3426,7 +3806,8 @@
     "errorCode": 404,
     "errorMsg": "does not exist",
     "titleContains": "Mapper since:",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "OpenStreetMap Wiki",
@@ -3435,7 +3816,8 @@
     "errorCode": 0,
     "errorMsg": "\"missing\":\"\"",
     "titleContains": "\"userid\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Oper.ru",
@@ -3444,7 +3826,8 @@
     "errorCode": 0,
     "errorMsg": "Нет такого пользователя",
     "titleContains": "Информация о пользователе",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Origins.Habbo.com",
@@ -3453,7 +3836,8 @@
     "errorCode": 404,
     "errorMsg": "not-found",
     "titleContains": "uniqueId",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Origins.Habbo.com.br",
@@ -3462,7 +3846,8 @@
     "errorCode": 404,
     "errorMsg": "not-found",
     "titleContains": "uniqueId",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Origins.Habbo.es",
@@ -3471,7 +3856,8 @@
     "errorCode": 404,
     "errorMsg": "not-found",
     "titleContains": "uniqueId",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "osu!",
@@ -3480,7 +3866,8 @@
     "errorCode": 404,
     "errorMsg": "User not found! ;_;",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "palnet",
@@ -3489,7 +3876,8 @@
     "errorCode": 404,
     "errorMsg": "Unknown user account!",
     "titleContains": "class=\"profile-cover\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Paragraph",
@@ -3498,7 +3886,8 @@
     "errorCode": 404,
     "errorMsg": "\"Missing blog\"",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Parler",
@@ -3507,7 +3896,8 @@
     "errorCode": 302,
     "errorMsg": "join Parler today",
     "titleContains": "People to Follow",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Parler archived posts",
@@ -3516,7 +3906,8 @@
     "errorCode": 0,
     "errorMsg": "\"archived_snapshots\": {}",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Parler archived profile",
@@ -3525,7 +3916,8 @@
     "errorCode": 0,
     "errorMsg": "\"archived_snapshots\": {}",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Pastebin",
@@ -3534,7 +3926,8 @@
     "errorCode": 404,
     "errorMsg": "Not Found (#404)",
     "titleContains": "class=\"user-view\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "patch",
@@ -3543,7 +3936,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003ePage not found\u003c/title\u003e",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "PatientsLikeMe",
@@ -3552,7 +3946,8 @@
     "errorCode": 302,
     "errorMsg": "",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Patreon",
@@ -3561,7 +3956,8 @@
     "errorCode": 404,
     "errorMsg": "errorCode\": 404,",
     "titleContains": "full_name\":",
-    "weight": 6
+    "weight": 6,
+    "category": "finance"
   },
   {
     "name": "Patriots Win",
@@ -3570,7 +3966,8 @@
     "errorCode": 0,
     "errorMsg": "\"error\":\"invalid user\"",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Patronite",
@@ -3579,7 +3976,8 @@
     "errorCode": 404,
     "errorMsg": "Nie znaleźliśmy strony której szukasz.",
     "titleContains": "Zostań Patronem",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "PayPal Business",
@@ -3588,7 +3986,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":\"RESOURCE_NOT_FOUND\"",
     "titleContains": "\"payerId\":",
-    "weight": 6
+    "weight": 6,
+    "category": "finance"
   },
   {
     "name": "PayPal.Me",
@@ -3597,7 +3996,8 @@
     "errorCode": 0,
     "errorMsg": "\",\"griffinMetadata\":{\"",
     "titleContains": "\"recipientSlugDetails\":",
-    "weight": 6
+    "weight": 6,
+    "category": "finance"
   },
   {
     "name": "PCPartPicker",
@@ -3606,7 +4006,8 @@
     "errorCode": 404,
     "errorMsg": "The page you requested could not be found.",
     "titleContains": "class=\"active\"",
-    "weight": 8
+    "weight": 8,
+    "category": "design"
   },
   {
     "name": "Peerlist",
@@ -3615,7 +4016,8 @@
     "errorCode": 500,
     "errorMsg": "\"message\":\"User Not found\"",
     "titleContains": "\"tldr\":",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Peing",
@@ -3624,7 +4026,8 @@
     "errorCode": 302,
     "errorMsg": "user_is_not_found",
     "titleContains": "data-route-user-id-main=''",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Peoople (Creator)",
@@ -3633,7 +4036,8 @@
     "errorCode": 404,
     "errorMsg": "id=\"__next_error__\"",
     "titleContains": "\"@type\":\"BreadcrumbList\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Peoople (Influencer)",
@@ -3642,7 +4046,8 @@
     "errorCode": 404,
     "errorMsg": "id=\"__next_error__\"",
     "titleContains": "\"@type\":\"BreadcrumbList\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Peoople (Star)",
@@ -3651,7 +4056,8 @@
     "errorCode": 404,
     "errorMsg": "id=\"__next_error__\"",
     "titleContains": "\"@type\":\"BreadcrumbList\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Peoople (Unicorn)",
@@ -3660,7 +4066,8 @@
     "errorCode": 404,
     "errorMsg": "id=\"__next_error__\"",
     "titleContains": "\"@type\":\"BreadcrumbList\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Periscope",
@@ -3669,7 +4076,8 @@
     "errorCode": 404,
     "errorMsg": "Sorry, this page doesn’t exist",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Pewex",
@@ -3678,7 +4086,8 @@
     "errorCode": 0,
     "errorMsg": "Nie znaleziono użytkownika o podanym loginie.",
     "titleContains": "Zamieszcza eksponaty od:",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Picsart",
@@ -3687,7 +4096,8 @@
     "errorCode": 0,
     "errorMsg": "\"status\":\"error\"",
     "titleContains": "\"status\":\"success\"",
-    "weight": 6
+    "weight": 6,
+    "category": "design"
   },
   {
     "name": "Piekielni",
@@ -3696,7 +4106,8 @@
     "errorCode": 0,
     "errorMsg": "Nie znaleziono użytkownika o podanym loginie.",
     "titleContains": "Zamieszcza historie od:",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Pillowfort",
@@ -3705,7 +4116,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003e(404)\u003c/title\u003e",
     "titleContains": "\"posts\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "PinkBike",
@@ -3714,7 +4126,8 @@
     "errorCode": 404,
     "errorMsg": "I couldn't find the page you were looking for",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Pinterest",
@@ -3723,7 +4136,8 @@
     "errorCode": 0,
     "errorMsg": "\u003ctitle\u003e\u003c/title\u003e",
     "titleContains": "Profile | Pinterest",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "pixelfed.social",
@@ -3732,7 +4146,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003epixelfed\u003c/title\u003e",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Planoly",
@@ -3741,7 +4156,8 @@
     "errorCode": 404,
     "errorMsg": "\"statusCode\":404",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Playstation Network",
@@ -3750,7 +4166,8 @@
     "errorCode": 0,
     "errorMsg": "We couldn't find anything",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "gaming"
   },
   {
     "name": "Plink",
@@ -3759,7 +4176,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003ePLINK - 404 Page not found\u003c/title\u003e",
     "titleContains": "class=\"user-page\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Plurk",
@@ -3768,7 +4186,8 @@
     "errorCode": 0,
     "errorMsg": "Register your plurk account",
     "titleContains": "Profile views",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Poe.com",
@@ -3777,7 +4196,8 @@
     "errorCode": 0,
     "errorMsg": "\"user\":null",
     "titleContains": "\"__isNode\":\"PoeUser\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Pokec",
@@ -3786,7 +4206,8 @@
     "errorCode": 404,
     "errorMsg": "profile--unknown_title\"\u003eNeexistujúci používateľ",
     "titleContains": "idReportedUser",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "pokemonshowdown",
@@ -3795,7 +4216,8 @@
     "errorCode": 404,
     "errorMsg": "(Unregistered)",
     "titleContains": "Official ladder",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Polarsteps",
@@ -3804,7 +4226,8 @@
     "errorCode": 0,
     "errorMsg": "Ups! User not found.",
     "titleContains": "\"user-profile\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Polchat.pl",
@@ -3813,7 +4236,8 @@
     "errorCode": 0,
     "errorMsg": "Wybrany użytkownik nie istnieje.",
     "titleContains": "Historia wpisów",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Poll Everywhere",
@@ -3822,7 +4246,8 @@
     "errorCode": 404,
     "errorMsg": "ResourceNotFound",
     "titleContains": "name",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "polygon",
@@ -3831,7 +4256,8 @@
     "errorCode": 404,
     "errorMsg": "404 Not found",
     "titleContains": "- Polygon",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "popl",
@@ -3840,7 +4266,8 @@
     "errorCode": 0,
     "errorMsg": "Profile not found",
     "titleContains": "MuiTypography-root MuiTypography-body1 css-kj7pvm",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Pornhub (Model)",
@@ -3849,7 +4276,8 @@
     "errorCode": 301,
     "errorMsg": "",
     "titleContains": "class=\"topProfileHeader\"",
-    "weight": 6
+    "weight": 6,
+    "category": "coding"
   },
   {
     "name": "Pornhub (Pornstar)",
@@ -3858,7 +4286,8 @@
     "errorCode": 301,
     "errorMsg": "",
     "titleContains": "class=\"topProfileHeader\"",
-    "weight": 6
+    "weight": 6,
+    "category": "coding"
   },
   {
     "name": "Pornhub (User)",
@@ -3867,7 +4296,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003ePage Not Found\u003c/title\u003e",
     "titleContains": "id=\"topProfileHeader\"",
-    "weight": 6
+    "weight": 6,
+    "category": "coding"
   },
   {
     "name": "Poshmark",
@@ -3876,7 +4306,8 @@
     "errorCode": 404,
     "errorMsg": "Page not found - Poshmark",
     "titleContains": "is using Poshmark to sell items from their closet.",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "postcrossing",
@@ -3885,7 +4316,8 @@
     "errorCode": 404,
     "errorMsg": "- Postcrossing",
     "titleContains": ", from",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Poweredbygay.social (Mastodon Instance)",
@@ -3894,7 +4326,8 @@
     "errorCode": 404,
     "errorMsg": "Record not found",
     "titleContains": "display_name",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Pr0gramm",
@@ -3903,7 +4336,8 @@
     "errorCode": 404,
     "errorMsg": "\"code\":404",
     "titleContains": "\"user\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Pravda.me",
@@ -3912,7 +4346,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003eThe page you are looking for isn\u0026#39;t here.",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Privacy Guides",
@@ -3921,7 +4356,8 @@
     "errorCode": 404,
     "errorMsg": "The requested URL or resource could not be found.",
     "titleContains": "\"user_badges\":",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Producthunt",
@@ -3930,7 +4366,8 @@
     "errorCode": 404,
     "errorMsg": "Product Hunt - All newest Products",
     "titleContains": "s profile on Product Hunt",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Pronouns.Page",
@@ -3939,7 +4376,8 @@
     "errorCode": 304,
     "errorMsg": "\"profiles\": {}",
     "titleContains": "username",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Pronouny",
@@ -3948,7 +4386,8 @@
     "errorCode": 400,
     "errorMsg": "That user doesn't exist",
     "titleContains": "\"username\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Prose",
@@ -3957,7 +4396,8 @@
     "errorCode": 404,
     "errorMsg": "Are you sure it was ever here?",
     "titleContains": "blog-title",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "prv.pl",
@@ -3966,7 +4406,8 @@
     "errorCode": 0,
     "errorMsg": "Użytkownik nie istnieje.",
     "titleContains": "LOGIN",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "pypi",
@@ -3975,7 +4416,8 @@
     "errorCode": 404,
     "errorMsg": "Page Not Found (404) · PyPI",
     "titleContains": "Profile of",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "QUEER PL",
@@ -3984,7 +4426,8 @@
     "errorCode": 404,
     "errorMsg": "Strona nie została znaleziona",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Quizlet",
@@ -3993,7 +4436,8 @@
     "errorCode": 0,
     "errorMsg": "\"success\":true",
     "titleContains": "\"identifier\":\"username_is_taken\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Quora",
@@ -4002,7 +4446,8 @@
     "errorCode": 301,
     "errorMsg": "Page Not Found",
     "titleContains": "Credentials",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Raddle.me",
@@ -4011,7 +4456,8 @@
     "errorCode": 404,
     "errorMsg": "404 Not Found",
     "titleContains": "sidebar__title",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Rant.li",
@@ -4020,7 +4466,8 @@
     "errorCode": 404,
     "errorMsg": "Are you sure it was ever here?",
     "titleContains": "blog-title",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Rarible",
@@ -4029,7 +4476,8 @@
     "errorCode": 404,
     "errorMsg": "\"success\":false",
     "titleContains": "\"id\":",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "redbubble",
@@ -4038,7 +4486,8 @@
     "errorCode": 404,
     "errorMsg": "This is a lost cause.",
     "titleContains": "Shop | Redbubble",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Reddit",
@@ -4047,7 +4496,8 @@
     "errorCode": 0,
     "errorMsg": "nobody on Reddit goes by that name",
     "titleContains": "u/{} -",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "RedGIFs",
@@ -4056,7 +4506,8 @@
     "errorCode": 404,
     "errorMsg": "\"status\":404",
     "titleContains": "\"name\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Refsheet",
@@ -4065,7 +4516,8 @@
     "errorCode": 404,
     "errorMsg": "That's unfortunate. Where did it go?",
     "titleContains": "og:title",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Replit",
@@ -4074,7 +4526,8 @@
     "errorCode": 404,
     "errorMsg": "\"statusCode\":404",
     "titleContains": "\"__typename\":\"User\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Researchgate",
@@ -4083,7 +4536,8 @@
     "errorCode": 301,
     "errorMsg": "20+ million researchers on ResearchGate",
     "titleContains": "|",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "resumes_actorsaccess",
@@ -4092,7 +4546,8 @@
     "errorCode": 0,
     "errorMsg": "File was not found on this SERVER",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Revolut",
@@ -4101,7 +4556,8 @@
     "errorCode": 404,
     "errorMsg": "\"User not found\"",
     "titleContains": "\"firstName\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "risk.ru",
@@ -4110,7 +4566,8 @@
     "errorCode": 404,
     "errorMsg": "404 — Risk.ru",
     "titleContains": "— Люди — Risk.ru",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Roberts Space Industries",
@@ -4119,7 +4576,8 @@
     "errorCode": 404,
     "errorMsg": "\"/404\",\"query",
     "titleContains": "Query\",\"creator",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Roblox",
@@ -4128,7 +4586,8 @@
     "errorCode": 0,
     "errorMsg": "Username is valid",
     "titleContains": "Username is already in use",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "RoutineHub",
@@ -4137,7 +4596,8 @@
     "errorCode": 0,
     "errorMsg": "A community for Apple Shortcuts\u003c/title\u003e",
     "titleContains": "Downloads:",
-    "weight": 7
+    "weight": 7,
+    "category": "coding"
   },
   {
     "name": "ru_123rf",
@@ -4146,7 +4606,8 @@
     "errorCode": 302,
     "errorMsg": "\u003ctitle\u003eФотобанк 123RF - Стоковые Фото, Векторы, Видеоролики. Подписка на Фото. Royalty Free контент\u003c",
     "titleContains": "userID",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "RubyGems.org",
@@ -4155,7 +4616,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":\"Not Found\"",
     "titleContains": "\"id\":",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "RumbleChannel",
@@ -4164,7 +4626,8 @@
     "errorCode": 404,
     "errorMsg": "404 error, this page does not exist",
     "titleContains": "href=https://rumble.com/c/",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "RumbleUser",
@@ -4173,7 +4636,8 @@
     "errorCode": 404,
     "errorMsg": "404 error, this page does not exist",
     "titleContains": "href=https://rumble.com/user/",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "RuneScape",
@@ -4182,7 +4646,8 @@
     "errorCode": 0,
     "errorMsg": "\"error\":\"NO_PROFILE\"",
     "titleContains": "\"name\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "RuTracker.org",
@@ -4191,7 +4656,8 @@
     "errorCode": 0,
     "errorMsg": "Пользователь не найден",
     "titleContains": "Профиль пользователя",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "ruVoIP.net",
@@ -4200,7 +4666,8 @@
     "errorCode": 0,
     "errorMsg": "Error 404 - Not Found",
     "titleContains": "id=\"user-xprofile\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Salon24",
@@ -4209,7 +4676,8 @@
     "errorCode": 301,
     "errorMsg": "\u003ctitle\u003eSalon24 - Blogi, wiadomości, opinie i komentarze",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Scammer.info",
@@ -4218,7 +4686,8 @@
     "errorCode": 404,
     "errorMsg": "The requested URL or resource could not be found",
     "titleContains": "avatar_template",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Scored",
@@ -4227,7 +4696,8 @@
     "errorCode": 0,
     "errorMsg": "\"status\":false",
     "titleContains": "\"status\":true",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "ScoutWiki",
@@ -4236,7 +4706,8 @@
     "errorCode": 301,
     "errorMsg": "is not registered",
     "titleContains": "NewPP limit report",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Scratch",
@@ -4245,7 +4716,8 @@
     "errorCode": 0,
     "errorMsg": "\"msg\":\"valid username\"",
     "titleContains": "\"msg\":\"username exists\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Scribd (Document)",
@@ -4254,7 +4726,8 @@
     "errorCode": 0,
     "errorMsg": "\"compilationId\":null",
     "titleContains": "\"compilationId\":\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Searchengines",
@@ -4263,7 +4736,8 @@
     "errorCode": 0,
     "errorMsg": "class=\"nothing-found\"",
     "titleContains": "class=\"search-result__item\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Seneporno",
@@ -4272,7 +4746,8 @@
     "errorCode": 301,
     "errorMsg": "Unexpected error! Please contact us and tell us more how you got to this page!",
     "titleContains": "Dernier Login",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "sentimente",
@@ -4281,7 +4756,8 @@
     "errorCode": 404,
     "errorMsg": "HTTP Error code: 404. Resource not found",
     "titleContains": "Chat online with",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "SEOClerks",
@@ -4290,7 +4766,8 @@
     "errorCode": 302,
     "errorMsg": "\u003ctitle\u003eSEO Marketplace",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Sepia Search (PeerTube)",
@@ -4299,7 +4776,8 @@
     "errorCode": 0,
     "errorMsg": "\"data\":[]",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "setlist.fm",
@@ -4308,7 +4786,8 @@
     "errorCode": 404,
     "errorMsg": "Sorry, the page you requested doesn't exist",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "SFD",
@@ -4317,7 +4796,8 @@
     "errorCode": 404,
     "errorMsg": "Brak aktywnego profilu na forum",
     "titleContains": "Tematy użytkownika",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Shesfreaky",
@@ -4326,7 +4806,8 @@
     "errorCode": 302,
     "errorMsg": "",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Shikimori",
@@ -4335,7 +4816,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"error-404\"",
     "titleContains": "class=\"profile-head\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Showup.tv",
@@ -4344,7 +4826,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003eDarmowe",
     "titleContains": "O mnie",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "shutterstock",
@@ -4353,7 +4836,8 @@
     "errorCode": 404,
     "errorMsg": "Well, this is unexpected...",
     "titleContains": "| Shutterstock",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "SimplePlanes",
@@ -4362,7 +4846,8 @@
     "errorCode": 302,
     "errorMsg": "\u003ctitle\u003eSimplePlanes Airplanes\u003c/title\u003e",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "skeb",
@@ -4371,7 +4856,8 @@
     "errorCode": 503,
     "errorMsg": "Skeb - Request Box",
     "titleContains": ") | Skeb",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "SlackHoles",
@@ -4380,7 +4866,8 @@
     "errorCode": 404,
     "errorMsg": "It looks like nothing was found at this location",
     "titleContains": "Pussy and Ass Sizes",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Slant",
@@ -4389,7 +4876,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":404",
     "titleContains": "\"uuid\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "slides",
@@ -4398,7 +4886,8 @@
     "errorCode": 404,
     "errorMsg": "You may have mistyped the address",
     "titleContains": "Presentations by",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Slideshare",
@@ -4407,7 +4896,8 @@
     "errorCode": 0,
     "errorMsg": "id=\"username-available\"",
     "titleContains": "data-testid=\"report-button\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "SmashRun",
@@ -4416,7 +4906,8 @@
     "errorCode": 404,
     "errorMsg": "no Smashrunner with the username",
     "titleContains": "Miles run overall",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "smule",
@@ -4425,7 +4916,8 @@
     "errorCode": 400,
     "errorMsg": "code\": 65",
     "titleContains": "account_id",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Snapchat",
@@ -4434,7 +4926,8 @@
     "errorCode": 404,
     "errorMsg": "",
     "titleContains": "Snapchat",
-    "weight": 9
+    "weight": 9,
+    "category": "social"
   },
   {
     "name": "soc.citizen4.eu",
@@ -4443,7 +4936,8 @@
     "errorCode": 404,
     "errorMsg": "Nie znaleziono",
     "titleContains": "@soc.citizen4.eu",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "social.bund.de",
@@ -4452,7 +4946,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003eThe page you are looking for isn\u0026#39;t here.",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "solo.to",
@@ -4461,7 +4956,8 @@
     "errorCode": 404,
     "errorMsg": "The page you're looking for isn't here.",
     "titleContains": "create your own page",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "SoundCloud",
@@ -4470,7 +4966,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003eSoundCloud - Hear the world’s sounds\u003c/title\u003e",
     "titleContains": "\"hydratable\":\"user\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Soup",
@@ -4479,7 +4976,8 @@
     "errorCode": 301,
     "errorMsg": "Soup.io - News, Sports, Entertainment, TV, Tech, Gaming",
     "titleContains": "Author at Soup.io",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Sourceforge",
@@ -4488,7 +4986,8 @@
     "errorCode": 404,
     "errorMsg": "id=\"message-image-404\"",
     "titleContains": "\"username\":",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Speaker Deck",
@@ -4497,7 +4996,8 @@
     "errorCode": 404,
     "errorMsg": "User Not Found - Speaker Deck",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "speedrun",
@@ -4506,7 +5006,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003espeedrun.com",
     "titleContains": "Runs -",
-    "weight": 6
+    "weight": 6,
+    "category": "gaming"
   },
   {
     "name": "SPOJ",
@@ -4515,7 +5016,8 @@
     "errorCode": 0,
     "errorMsg": "\u003cstrong\u003eInnopolis Open 2018\u003c/strong\u003e",
     "titleContains": "",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "sporcle",
@@ -4524,7 +5026,8 @@
     "errorCode": 301,
     "errorMsg": "This Sporcle user cannot be found.",
     "titleContains": "'s Sporcle Friends",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Sports Tracker",
@@ -4533,7 +5036,8 @@
     "errorCode": 0,
     "errorMsg": "\"code\":\"404\"",
     "titleContains": "\"uuid\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Spotify",
@@ -4542,7 +5046,8 @@
     "errorCode": 404,
     "errorMsg": "Page not found",
     "titleContains": "content=\"profile\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "StackOverflow",
@@ -4551,7 +5056,8 @@
     "errorCode": 0,
     "errorMsg": "\"items\":[]",
     "titleContains": "",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "StackShare",
@@ -4560,7 +5066,8 @@
     "errorCode": 0,
     "errorMsg": "\\\"content\\\":\\\"The requested page could not be found.\\\"",
     "titleContains": "\\\"userProfile\\\":",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "stats.fm",
@@ -4569,7 +5076,8 @@
     "errorCode": 404,
     "errorMsg": "\"status\":404",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Steam",
@@ -4578,7 +5086,8 @@
     "errorCode": 0,
     "errorMsg": "Steam Community :: Error",
     "titleContains": "g_rgProfileData =",
-    "weight": 6
+    "weight": 6,
+    "category": "gaming"
   },
   {
     "name": "SteamGifts",
@@ -4587,7 +5096,8 @@
     "errorCode": 301,
     "errorMsg": "",
     "titleContains": "\"identifier\":",
-    "weight": 6
+    "weight": 6,
+    "category": "gaming"
   },
   {
     "name": "steller",
@@ -4596,7 +5106,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003e\u003c/title\u003e",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "StoryCorps",
@@ -4605,7 +5116,8 @@
     "errorCode": 404,
     "errorMsg": "We're sorry, but the page",
     "titleContains": "archive author",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Strava",
@@ -4614,7 +5126,8 @@
     "errorCode": 404,
     "errorMsg": "\"page\":\"/404\"",
     "titleContains": "/athletes/",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "StreamElements",
@@ -4623,7 +5136,8 @@
     "errorCode": 404,
     "errorMsg": "error",
     "titleContains": "\"providerId\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "StreamLabs",
@@ -4632,7 +5146,8 @@
     "errorCode": 401,
     "errorMsg": "\u003ctitle\u003eUnauthorized\u003c/title\u003e",
     "titleContains": "\"id\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Stripchat",
@@ -4641,7 +5156,8 @@
     "errorCode": 0,
     "errorMsg": "[]",
     "titleContains": "\"error\":\"This username already exists\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Subscribestar",
@@ -4650,7 +5166,8 @@
     "errorCode": 404,
     "errorMsg": "WE ARE SORRY, THE PAGE YOU REQUESTED CANNOT BE FOUND",
     "titleContains": "CREATOR STATS",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Substack",
@@ -4659,7 +5176,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":\"profile not found\"",
     "titleContains": "\"id\":",
-    "weight": 7
+    "weight": 7,
+    "category": "coding"
   },
   {
     "name": "sukebei.nyaa.si",
@@ -4668,7 +5186,8 @@
     "errorCode": 404,
     "errorMsg": "404 Not Found",
     "titleContains": "'s torrents",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Suzuri",
@@ -4677,7 +5196,8 @@
     "errorCode": 404,
     "errorMsg": "Push Space-key",
     "titleContains": "Items",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "szmer.info",
@@ -4686,7 +5206,8 @@
     "errorCode": 0,
     "errorMsg": "Code: Couldn't find that username or email.",
     "titleContains": "Joined",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "tabletoptournament",
@@ -4695,7 +5216,8 @@
     "errorCode": 0,
     "errorMsg": "No player with the nickname",
     "titleContains": "- Player Profile | T³ - TableTop Tournaments",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "TamTam",
@@ -4704,7 +5226,8 @@
     "errorCode": 302,
     "errorMsg": "ТамТам\u003c/title\u003e",
     "titleContains": "deeplink=tamtam://chat/",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Tanuki.pl",
@@ -4713,7 +5236,8 @@
     "errorCode": 404,
     "errorMsg": "Nie ma takiego użytkownika",
     "titleContains": "Dołączył",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "TAPiTAG",
@@ -4722,7 +5246,8 @@
     "errorCode": 0,
     "errorMsg": "The rf number is not valid",
     "titleContains": "User details are Showing",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Tappy",
@@ -4731,7 +5256,8 @@
     "errorCode": 0,
     "errorMsg": "Profile of username Not Found",
     "titleContains": "user_id",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Taringa",
@@ -4740,7 +5266,8 @@
     "errorCode": 301,
     "errorMsg": "Colectiva en Taringa!\u003c/title\u003e",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Taringa Archived Profile",
@@ -4749,7 +5276,8 @@
     "errorCode": 0,
     "errorMsg": "\"archived_snapshots\": {}",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "taskrabbit",
@@ -4758,7 +5286,8 @@
     "errorCode": 302,
     "errorMsg": "",
     "titleContains": "’s Profile",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Teamtreehouse",
@@ -4767,7 +5296,8 @@
     "errorCode": 404,
     "errorMsg": "Oops, Something went missing",
     "titleContains": "Member Since",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Teespring",
@@ -4776,7 +5306,8 @@
     "errorCode": 404,
     "errorMsg": "{\"errors\":{\"store\":[\"not found\"]}}",
     "titleContains": "sellerToken",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Teknik",
@@ -4785,7 +5316,8 @@
     "errorCode": 0,
     "errorMsg": "The user does not exist",
     "titleContains": "Public Key",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Telegram",
@@ -4794,7 +5326,8 @@
     "errorCode": 0,
     "errorMsg": "noindex, nofollow",
     "titleContains": "tgme_page_title",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Teletype",
@@ -4803,7 +5336,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"error\"",
     "titleContains": "class=\"layout__content m_main blog\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Tellonym",
@@ -4812,7 +5346,8 @@
     "errorCode": 404,
     "errorMsg": "\"code\":\"NOT_FOUND\"",
     "titleContains": "\"id\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Tenor",
@@ -4821,7 +5356,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"error-page container page\"",
     "titleContains": "class=\"ProfilePage page\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "TETR.IO",
@@ -4830,7 +5366,8 @@
     "errorCode": 404,
     "errorMsg": "\"success\":false",
     "titleContains": "\"success\":true",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "TF2 Backpack Examiner",
@@ -4839,7 +5376,8 @@
     "errorCode": 302,
     "errorMsg": "",
     "titleContains": "var profileId",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "The Gateway Pundit",
@@ -4848,7 +5386,8 @@
     "errorCode": 0,
     "errorMsg": "\u003ctitle\u003eThe Gateway Pundit * Conservative news and commentary",
     "titleContains": "meta property=\"og:type\" content=\"profile\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "theguardian",
@@ -4857,7 +5396,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003ePage Not Found | The Guardian\u003c/title\u003e",
     "titleContains": "content=\"\u0026#x3C;p\u0026#x3E;",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "themeforest",
@@ -4866,7 +5406,8 @@
     "errorCode": 301,
     "errorMsg": "Page Not Found | ThemeForest",
     "titleContains": "s profile on ThemeForest",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Thetattooforum",
@@ -4875,7 +5416,8 @@
     "errorCode": 500,
     "errorMsg": "We’re sorry",
     "titleContains": "Insert This Gallery",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "thoughts",
@@ -4884,7 +5426,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003ePage not found",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Threads",
@@ -4893,7 +5436,8 @@
     "errorCode": 302,
     "errorMsg": "",
     "titleContains": "\"username\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "TikTok",
@@ -4902,7 +5446,8 @@
     "errorCode": 400,
     "errorMsg": "\"code\":400",
     "titleContains": "\"author_url\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Tilde.zone (Mastodon Instance)",
@@ -4911,7 +5456,8 @@
     "errorCode": 404,
     "errorMsg": "Record not found",
     "titleContains": "display_name",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Tinder",
@@ -4920,7 +5466,8 @@
     "errorCode": 0,
     "errorMsg": "Tinder | Dating, Make Friends \u0026amp; Meet New People",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "TipeeeStream",
@@ -4929,7 +5476,8 @@
     "errorCode": 404,
     "errorMsg": "\"message\":\"Not found\"",
     "titleContains": "\"id\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Tooting.ch (Mastodon Instance)",
@@ -4938,7 +5486,8 @@
     "errorCode": 404,
     "errorMsg": "Record not found",
     "titleContains": "display_name",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Topcoder",
@@ -4947,7 +5496,8 @@
     "errorCode": 404,
     "errorMsg": "\"message\":\"Member with handle:",
     "titleContains": "\"userId\":",
-    "weight": 8
+    "weight": 8,
+    "category": "coding"
   },
   {
     "name": "toyhou.se",
@@ -4956,7 +5506,8 @@
     "errorCode": 404,
     "errorMsg": "We can't find that page!",
     "titleContains": "display-user",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "TradingView",
@@ -4965,7 +5516,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"tv-http-error-page__image tv-http-error-page__image--404\"",
     "titleContains": "class=\"js-user-profile\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "trakt",
@@ -4974,7 +5526,8 @@
     "errorCode": 404,
     "errorMsg": "The page you were looking for doesn't exist (404) - Trakt.tv",
     "titleContains": "s profile - Trakt",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "TRAKTRAIN",
@@ -4983,7 +5536,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"title-404\"",
     "titleContains": "id=\"userId\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Trello",
@@ -4992,7 +5546,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ch1\u003eOh no! 404!\u003c/h1\u003e",
     "titleContains": "\"id\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "tripadvisor",
@@ -5001,7 +5556,8 @@
     "errorCode": 404,
     "errorMsg": "\u003cdiv class=\"error404",
     "titleContains": "Contributions",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "TruckersMP",
@@ -5010,7 +5566,8 @@
     "errorCode": 0,
     "errorMsg": "\u003ch4\u003eCould not find any member using these credentials\u003c/h4\u003e",
     "titleContains": "class=\"team-v2\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "TruckersMP.Ru",
@@ -5019,7 +5576,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"b-handler-error-404\"",
     "titleContains": "class=\"b-user-page\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Truth Social",
@@ -5028,7 +5586,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":\"Record not found\"",
     "titleContains": "\"id\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "TryHackMe",
@@ -5037,7 +5596,8 @@
     "errorCode": 0,
     "errorMsg": "\"success\":false",
     "titleContains": "\"success\":true",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Tryst",
@@ -5046,7 +5606,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003ePage not found",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "tumblr",
@@ -5055,7 +5616,8 @@
     "errorCode": 404,
     "errorMsg": "\"status\":404",
     "titleContains": "\"queryKey\":[\"user-info",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "tunefind",
@@ -5064,7 +5626,8 @@
     "errorCode": 404,
     "errorMsg": "\"code\":\"not_found\"",
     "titleContains": "\"user-stats-engagement\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Tweetapus",
@@ -5073,7 +5636,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\": \"User not found\"",
     "titleContains": "\"username\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Twitcast",
@@ -5082,7 +5646,8 @@
     "errorCode": 404,
     "errorMsg": "\"message\":\"User Not Found\"",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Twitch",
@@ -5091,7 +5656,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003e404 Page Not Found",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Twitter archived profile",
@@ -5100,7 +5666,8 @@
     "errorCode": 0,
     "errorMsg": "\"archived_snapshots\": {}",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Twitter archived tweets",
@@ -5109,7 +5676,8 @@
     "errorCode": 0,
     "errorMsg": "\"archived_snapshots\": {}",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Twitter/X",
@@ -5118,7 +5686,8 @@
     "errorCode": 404,
     "errorMsg": "",
     "titleContains": "X",
-    "weight": 9
+    "weight": 9,
+    "category": "social"
   },
   {
     "name": "twpro",
@@ -5127,7 +5696,8 @@
     "errorCode": 404,
     "errorMsg": ",404,\"/",
     "titleContains": ",200,\"/",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Udemy",
@@ -5136,7 +5706,8 @@
     "errorCode": 301,
     "errorMsg": "\u003ctitle\u003eOnline Courses - Learn Anything, On Your Schedule | Udemy\u003c/title\u003e",
     "titleContains": "",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "UEF CONNECT",
@@ -5145,7 +5716,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003ePage not found - UEFConnect\u003c/title\u003e",
     "titleContains": "profile-page-header__info",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Ultimate Guitar",
@@ -5154,7 +5726,8 @@
     "errorCode": 410,
     "errorMsg": "Oops! We couldn't find that page.",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Ultras Diary",
@@ -5163,7 +5736,8 @@
     "errorCode": 404,
     "errorMsg": "Ile masz wyjazdów?",
     "titleContains": "Mecze wyjazdowe:",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Unlisted Videos",
@@ -5172,7 +5746,8 @@
     "errorCode": 0,
     "errorMsg": "content=\"\"/\u003e",
     "titleContains": "Date submitted",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "unsplash",
@@ -5181,7 +5756,8 @@
     "errorCode": 404,
     "errorMsg": "Hm, the page you were looking for doesn't seem to exist anymore.",
     "titleContains": "| Unsplash Photo Community",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Untappd",
@@ -5190,7 +5766,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"search_404\"",
     "titleContains": "class=\"cont user_profile\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "USA Life",
@@ -5199,7 +5776,8 @@
     "errorCode": 302,
     "errorMsg": "Sorry, page not found",
     "titleContains": "Please log in to like, share and comment",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "utip.io",
@@ -5208,7 +5786,8 @@
     "errorCode": 404,
     "errorMsg": "Not a valid web service key",
     "titleContains": "\"userName\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Uwumarket",
@@ -5217,7 +5796,8 @@
     "errorCode": 404,
     "errorMsg": "Page not found",
     "titleContains": "data-collection-filters",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "vapenews",
@@ -5226,7 +5806,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003e404\u003c/title\u003e",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Venmo",
@@ -5235,7 +5816,8 @@
     "errorCode": 404,
     "errorMsg": "Sorry, the page you requested does not exist!",
     "titleContains": "profileInfo_username__",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Vero",
@@ -5244,7 +5826,8 @@
     "errorCode": 0,
     "errorMsg": "\u003ch3\u003eNot Found\u003c/h3\u003e",
     "titleContains": "name=\"username",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "vibilagare",
@@ -5253,7 +5836,8 @@
     "errorCode": 404,
     "errorMsg": "Sidan hittades inte |",
     "titleContains": "class=\"user-profile\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "VIEWBUG",
@@ -5262,7 +5846,8 @@
     "errorCode": 404,
     "errorMsg": "id=\"missing-this\"",
     "titleContains": "class=\"top-profile-membership\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Vimeo",
@@ -5271,7 +5856,8 @@
     "errorCode": 404,
     "errorMsg": "VimeUhOh",
     "titleContains": "og:type",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Vine",
@@ -5280,7 +5866,8 @@
     "errorCode": 404,
     "errorMsg": "That record does not exist",
     "titleContains": "userId",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "VirusTotal",
@@ -5289,7 +5876,8 @@
     "errorCode": 404,
     "errorMsg": "\"code\": \"NotFoundError\"",
     "titleContains": "\"data\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "visnesscard",
@@ -5298,7 +5886,8 @@
     "errorCode": 0,
     "errorMsg": "card_id\": 0",
     "titleContains": "end_point",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Vivino",
@@ -5307,7 +5896,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":{\"message\":\"Record not found\"}",
     "titleContains": "\"id\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "VK",
@@ -5316,7 +5906,8 @@
     "errorCode": 404,
     "errorMsg": "404 Not Found",
     "titleContains": "content=\"profile\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Vkl.world (Mastodon Instance)",
@@ -5325,7 +5916,8 @@
     "errorCode": 404,
     "errorMsg": "Record not found",
     "titleContains": "display_name",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Vmst.io (Mastodon Instance)",
@@ -5334,7 +5926,8 @@
     "errorCode": 404,
     "errorMsg": "Record not found",
     "titleContains": "display_name",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Voice123",
@@ -5343,7 +5936,8 @@
     "errorCode": 0,
     "errorMsg": "[]",
     "titleContains": "user_id",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Voices.com",
@@ -5352,7 +5946,8 @@
     "errorCode": 301,
     "errorMsg": "Try going back to the previous page or see below for more options",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "vsco",
@@ -5361,7 +5956,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":\"site_not_found\"}",
     "titleContains": "permaSubdomain",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "VseTop",
@@ -5370,7 +5966,8 @@
     "errorCode": 404,
     "errorMsg": "\u003cp\u003eПользователь с таким именем не найден.\u003c/p\u003e",
     "titleContains": "class=\"userinfo\"",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "W3Schools",
@@ -5379,7 +5976,8 @@
     "errorCode": 404,
     "errorMsg": "\"message\":\"Profile does not exists or not visible\"",
     "titleContains": "\"createdAt\":",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Wakatime",
@@ -5388,7 +5986,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\": \"Not found.\"",
     "titleContains": "\"data\":",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Warmerise",
@@ -5397,7 +5996,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ch2\u003ePage Not Found",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "warriorforum",
@@ -5406,7 +6006,8 @@
     "errorCode": 400,
     "errorMsg": "Oops | Warrior Forum -",
     "titleContains": "Last Activity:",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "WatchMeMore",
@@ -5415,7 +6016,8 @@
     "errorCode": 404,
     "errorMsg": "\"Account not exists",
     "titleContains": "\"dateCreated\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Watchmyfeed",
@@ -5424,7 +6026,8 @@
     "errorCode": 302,
     "errorMsg": "",
     "titleContains": "SEND ME A TIP",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Wattpad",
@@ -5433,7 +6036,8 @@
     "errorCode": 400,
     "errorMsg": "\"error_code\":",
     "titleContains": "\"username\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "waytohey",
@@ -5442,7 +6046,8 @@
     "errorCode": 404,
     "errorMsg": "Unfortunately, this page doesn\u0026#039;t exist.",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Weasyl",
@@ -5451,7 +6056,8 @@
     "errorCode": 404,
     "errorMsg": "This user doesn't seem to be in our database.",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Weblancer",
@@ -5460,7 +6066,8 @@
     "errorCode": 404,
     "errorMsg": "\"page\":\"/404\"",
     "titleContains": "\"user\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Weblate",
@@ -5469,7 +6076,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ch2\u003ePage Not Found\u003c/h2\u003e",
     "titleContains": "class=\"user-page text-center\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "wego",
@@ -5478,7 +6086,8 @@
     "errorCode": 302,
     "errorMsg": "Sorry, page not found!",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "weheartit",
@@ -5487,7 +6096,8 @@
     "errorCode": 404,
     "errorMsg": "(404)\u003c/title\u003e",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "design"
   },
   {
     "name": "Weibo",
@@ -5496,7 +6106,8 @@
     "errorCode": 400,
     "errorMsg": "\u003ch2\u003e400 Bad Request\u003c/h2\u003e",
     "titleContains": "\"user\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "WeTransfer",
@@ -5505,7 +6116,8 @@
     "errorCode": 404,
     "errorMsg": "text-display-4\"\u003e404 error",
     "titleContains": "name\":\"WePresent |",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Wikidot",
@@ -5514,7 +6126,8 @@
     "errorCode": 0,
     "errorMsg": "\u003cdiv class=\"error-block\"\u003eUser does not exist.\u003c/div\u003e",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Wikimapia",
@@ -5523,7 +6136,8 @@
     "errorCode": 0,
     "errorMsg": "\"ok\":true",
     "titleContains": "\"ok\":false",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Wimkin-PublicProfile",
@@ -5532,7 +6146,8 @@
     "errorCode": 404,
     "errorMsg": "The page you are looking for cannot be found.",
     "titleContains": "is on WIMKIN",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Wireclub",
@@ -5541,7 +6156,8 @@
     "errorCode": 301,
     "errorMsg": "People - Wireclub",
     "titleContains": "Chat With",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Wishlistr",
@@ -5550,7 +6166,8 @@
     "errorCode": 0,
     "errorMsg": "+:var res = parseInt(0);",
     "titleContains": "+:var res = \"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "wordnik",
@@ -5559,7 +6176,8 @@
     "errorCode": 404,
     "errorMsg": "Wordnik: Page Not Found",
     "titleContains": "Welcome,",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "WordPress.com (Deleted)",
@@ -5568,7 +6186,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":\"unknown_blog\"",
     "titleContains": "\"message\":\"API calls to this endpoint have been disabled.\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "WordPress.com (Private)",
@@ -5577,7 +6196,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":\"unknown_blog\"",
     "titleContains": "\"message\":\"User cannot access this private blog.\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "WordPress.com (Public)",
@@ -5586,7 +6206,8 @@
     "errorCode": 404,
     "errorMsg": "\"error\":\"unknown_blog\"",
     "titleContains": "\"ID\":",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "WordPress.org (Forums)",
@@ -5595,7 +6216,8 @@
     "errorCode": 0,
     "errorMsg": "\"available\":true",
     "titleContains": "\"error\":\"That username is already in use.",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "WordPress.org (Profiles)",
@@ -5604,7 +6226,8 @@
     "errorCode": 0,
     "errorMsg": "\"available\":true",
     "titleContains": "\"error\":\"That username is already in use.",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Wowhead",
@@ -5613,7 +6236,8 @@
     "errorCode": 404,
     "errorMsg": "Error - Wowhead",
     "titleContains": "Profile - Wowhead",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Wykop",
@@ -5622,7 +6246,8 @@
     "errorCode": 404,
     "errorMsg": "Wystąpił błąd 404.",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "X",
@@ -5631,7 +6256,8 @@
     "errorCode": 0,
     "errorMsg": "\"reason\":\"available\"",
     "titleContains": "\"reason\":\"taken\"",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Xakep.ru",
@@ -5640,7 +6266,8 @@
     "errorCode": 404,
     "errorMsg": "Страница не найдена",
     "titleContains": "authorBlock-avatar",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Xbox Gamertag",
@@ -5649,7 +6276,8 @@
     "errorCode": 404,
     "errorMsg": "Gamertag doesn't exist",
     "titleContains": "Games Played",
-    "weight": 6
+    "weight": 6,
+    "category": "gaming"
   },
   {
     "name": "xHamster",
@@ -5658,7 +6286,8 @@
     "errorCode": 404,
     "errorMsg": "User not found\u003c/title\u003e",
     "titleContains": "and bio on xHamster",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Xing",
@@ -5667,7 +6296,8 @@
     "errorCode": 404,
     "errorMsg": "404 Not Found | XING",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "XNXX",
@@ -5676,7 +6306,8 @@
     "errorCode": 400,
     "errorMsg": "\u003ctitle\u003eBad request",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "XVideos",
@@ -5685,7 +6316,8 @@
     "errorCode": 404,
     "errorMsg": "\"message\":\"Unknown user\"",
     "titleContains": "\"result\":true",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Yahoo! JAPAN Auction",
@@ -5694,7 +6326,8 @@
     "errorCode": 500,
     "errorMsg": "Yahoo! JAPAN IDが無効です。",
     "titleContains": "出品者",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "yapishu",
@@ -5703,7 +6336,8 @@
     "errorCode": 404,
     "errorMsg": "Not Found (#404)",
     "titleContains": "for_profile",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Yazawaj",
@@ -5712,7 +6346,8 @@
     "errorCode": 302,
     "errorMsg": "\u003ctitle\u003enodata",
     "titleContains": "profile-description",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "YesWeHack",
@@ -5721,7 +6356,8 @@
     "errorCode": 404,
     "errorMsg": "\"code\":404",
     "titleContains": "\"username\":",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "YouNow",
@@ -5730,7 +6366,8 @@
     "errorCode": 0,
     "errorMsg": "\"errorMsg\":\"No users found\"",
     "titleContains": "\"userId\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "youpic",
@@ -5739,7 +6376,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003eYouPic — Not Found\u003c/title\u003e",
     "titleContains": "",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "YouTube",
@@ -5748,7 +6386,8 @@
     "errorCode": 404,
     "errorMsg": "",
     "titleContains": "",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "YouTube Channel",
@@ -5757,7 +6396,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003e404 Not Found",
     "titleContains": "joinedDateText",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "YouTube User",
@@ -5766,7 +6406,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003e404 Not Found",
     "titleContains": "joinedDateText",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "YouTube User2",
@@ -5775,7 +6416,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003e404 Not Found\u003c/title\u003e",
     "titleContains": "canonicalBaseUrl",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Zbiornik",
@@ -5784,7 +6426,8 @@
     "errorCode": 301,
     "errorMsg": "",
     "titleContains": "INFO",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Zenn",
@@ -5793,7 +6436,8 @@
     "errorCode": 404,
     "errorMsg": "\u003cdiv class=\"ErrorContent_status__2Ykoq\"\u003e404\u003c/div\u003e",
     "titleContains": "",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Zepeto",
@@ -5802,7 +6446,8 @@
     "errorCode": 0,
     "errorMsg": "errorCode\":",
     "titleContains": "zepetoId\":",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "zhihu",
@@ -5811,7 +6456,8 @@
     "errorCode": 404,
     "errorMsg": "\"name\": \"NotFoundException\"",
     "titleContains": "\"is_start\": true",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "Zillow",
@@ -5820,7 +6466,8 @@
     "errorCode": 302,
     "errorMsg": "",
     "titleContains": "- Real Estate Agent",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "zmarsa.com",
@@ -5829,7 +6476,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003eError 404 - zMarsa.com\u003c",
     "titleContains": "Statystyki",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Znanija",
@@ -5838,7 +6486,8 @@
     "errorCode": 0,
     "errorMsg": "\"isAvailable\":true",
     "titleContains": "\"isAvailable\":false",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Zomato",
@@ -5847,7 +6496,8 @@
     "errorCode": 404,
     "errorMsg": "This is a 404 page and we think it's fairly clear",
     "titleContains": "",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   },
   {
     "name": "zoomitir",
@@ -5856,7 +6506,8 @@
     "errorCode": 404,
     "errorMsg": "\u003ctitle\u003eخطای ۴۰۴ - صفحه یافت نشد\u003c/title\u003e",
     "titleContains": "",
-    "weight": 8
+    "weight": 8,
+    "category": "social"
   },
   {
     "name": "Военное обозрение",
@@ -5865,7 +6516,8 @@
     "errorCode": 404,
     "errorMsg": "class=\"error-container\"",
     "titleContains": "class=\"puser-info\"",
-    "weight": 6
+    "weight": 6,
+    "category": "social"
   },
   {
     "name": "Чатовка.net",
@@ -5874,6 +6526,7 @@
     "errorCode": 0,
     "errorMsg": "По Вашему запросу люди не найдены.",
     "titleContains": "href=\"/user/",
-    "weight": 7
+    "weight": 7,
+    "category": "social"
   }
 ]

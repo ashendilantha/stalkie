@@ -77,6 +77,9 @@ func Sync(targetPath string, timeout time.Duration) (int, error) {
 
 	for key, curated := range existingMap {
 		if curated.TitleContains != "" || curated.ErrorType == "status_code" {
+			if curated.Category == "" {
+				curated.Category = NormalizeCategory("", curated.Name, curated.URL)
+			}
 			mergedMap[key] = curated
 		}
 	}
@@ -139,6 +142,40 @@ func fetchWhatsMyName(client *http.Client) ([]wmnSite, error) {
 	return payload.Sites, nil
 }
 
+func NormalizeCategory(rawCat, siteName, siteURL string) string {
+	raw := strings.ToLower(strings.TrimSpace(rawCat))
+	name := strings.ToLower(strings.TrimSpace(siteName))
+	u := strings.ToLower(strings.TrimSpace(siteURL))
+
+	switch raw {
+	case "coding", "tech":
+		return "coding"
+	case "social", "blog", "news", "forum", "political", "dating", "video", "music":
+		return "social"
+	case "art", "images", "design":
+		return "design"
+	case "gaming":
+		return "gaming"
+	case "finance", "business", "shopping":
+		return "finance"
+	}
+
+	if strings.Contains(name, "git") || strings.Contains(name, "code") || strings.Contains(name, "dev") || strings.Contains(name, "stack") || strings.Contains(name, "hub") || strings.Contains(u, "github") || strings.Contains(u, "gitlab") || strings.Contains(u, "codewars") {
+		return "coding"
+	}
+	if strings.Contains(name, "chess") || strings.Contains(name, "game") || strings.Contains(name, "steam") || strings.Contains(name, "play") || strings.Contains(name, "speedrun") {
+		return "gaming"
+	}
+	if strings.Contains(name, "art") || strings.Contains(name, "behance") || strings.Contains(name, "dribbble") || strings.Contains(name, "draw") || strings.Contains(name, "photo") || strings.Contains(name, "design") {
+		return "design"
+	}
+	if strings.Contains(name, "pay") || strings.Contains(name, "cash") || strings.Contains(name, "coin") || strings.Contains(name, "money") || strings.Contains(name, "patreon") || strings.Contains(name, "finance") {
+		return "finance"
+	}
+
+	return "social"
+}
+
 func normalizeWMNSite(s wmnSite) (loader.Site, bool) {
 	name := strings.TrimSpace(s.Name)
 	if name == "" {
@@ -183,6 +220,8 @@ func normalizeWMNSite(s wmnSite) (loader.Site, bool) {
 		weight = 6
 	}
 
+	category := NormalizeCategory(s.Cat, name, targetURL)
+
 	return loader.Site{
 		Name:          name,
 		URL:           targetURL,
@@ -191,6 +230,6 @@ func normalizeWMNSite(s wmnSite) (loader.Site, bool) {
 		ErrorMsg:      errorMsg,
 		TitleContains: titleContains,
 		Weight:        weight,
+		Category:      category,
 	}, true
 }
-

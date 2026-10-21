@@ -15,14 +15,19 @@ import (
 )
 
 type Result struct {
-	Username   string
-	Site       string
-	URL        string
-	Found      bool
-	Confidence int
-	Evidence   string
-	Error      string
-	Duration   time.Duration
+	Username   string          `json:"username"`
+	Site       string          `json:"site"`
+	URL        string          `json:"url"`
+	Found      bool            `json:"found"`
+	Confidence int             `json:"confidence"`
+	Evidence   string          `json:"evidence"`
+	Metadata   ProfileMetadata `json:"metadata,omitempty"`
+	Error      string          `json:"error,omitempty"`
+	Duration   time.Duration   `json:"duration"`
+}
+
+type CircuitRenewer interface {
+	RenewCircuit() error
 }
 
 var userAgents = []string{
@@ -41,6 +46,10 @@ func nextUserAgent() string {
 }
 
 func Check(client *http.Client, site loader.Site, username string, maxRetries int, retryDelay time.Duration) Result {
+	return CheckWithRenewer(client, site, username, maxRetries, retryDelay, nil)
+}
+
+func CheckWithRenewer(client *http.Client, site loader.Site, username string, maxRetries int, retryDelay time.Duration, renewer CircuitRenewer) Result {
 	targetURL := loader.BuildURL(site.URL, username)
 	result := Result{
 		Username: username,
@@ -117,7 +126,18 @@ func Check(client *http.Client, site loader.Site, username string, maxRetries in
 	body := string(bodyBytes)
 
 	if isBlockedOrChallenge(resp.StatusCode, body) {
+		if renewer != nil {
+			_ = renewer.RenewCircuit()
+		}
 		result.Error = fmt.Sprintf("blocked by anti-bot protection (HTTP %d)", resp.StatusCode)
+		return result
+	}
+
+	if resp.StatusCode == http.StatusTooManyRequests {
+		if renewer != nil {
+			_ = renewer.RenewCircuit()
+		}
+		result.Error = fmt.Sprintf("rate-limited by server (HTTP %d)", resp.StatusCode)
 		return result
 	}
 
@@ -132,6 +152,9 @@ func Check(client *http.Client, site loader.Site, username string, maxRetries in
 	}
 
 	result.Found, result.Confidence, result.Evidence = evaluateResponse(site, username, resp.StatusCode, body, finalURL)
+	if result.Found {
+		result.Metadata = ExtractProfileMetadata(body)
+	}
 	return result
 }
 
@@ -392,6 +415,10 @@ func normalizeText(text string) string {
 }
 
 func CheckAll(client *http.Client, sites []loader.Site, username string, workers int, ratelimit time.Duration, maxRetries int, onResult func(Result)) []Result {
+	return CheckAllWithRenewer(client, sites, username, workers, ratelimit, maxRetries, nil, onResult)
+}
+
+func CheckAllWithRenewer(client *http.Client, sites []loader.Site, username string, workers int, ratelimit time.Duration, maxRetries int, renewer CircuitRenewer, onResult func(Result)) []Result {
 	if workers <= 0 {
 		workers = 10
 	}
@@ -421,7 +448,7 @@ func CheckAll(client *http.Client, sites []loader.Site, username string, workers
 				if limiterChan != nil {
 					<-limiterChan
 				}
-				res := Check(client, job.site, username, maxRetries, 200*time.Millisecond)
+				res := CheckWithRenewer(client, job.site, username, maxRetries, 200*time.Millisecond, renewer)
 				results[job.index] = res
 				if onResult != nil {
 					onResult(res)

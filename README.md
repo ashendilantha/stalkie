@@ -15,7 +15,11 @@
 ## Features
 
 - **Automated Upstream Sync** - Synchronize and normalize 650+ platform signatures directly from the WhatsMyName project via `-update-db`.
+- **Target Categorization & Selective Enumeration** - Platforms tagged with categories (`coding`, `social`, `design`, `gaming`, `finance`). Filter scans with `-category coding,design` to reduce scan times and minimize footprint.
+- **Structured JSON-LD & Profile Data Extraction** - Automatically extracts display names, avatar URLs, bios, follower counts, creation dates, and locations from `<script type="application/ld+json">` and OpenGraph meta tags into console, CSV, and JSON outputs.
+- **Smart Username Mutations** - Generate naming variations (`_`, `-dev`, `real<user>`, `<user>01`) with `-permute` to discover alternative handles.
 - **TLS Fingerprint Spoofing (uTLS)** - Emulates genuine Chrome and Firefox ClientHello TLS handshakes (JA3/JA4) with HTTP/2 multiplexing to evade bot protections without headless Chromium.
+- **Tor Circuit Auto-Renewal** - Connects to the Tor control port (`9051`) and triggers `SIGNAL NEWNYM` automatically when rate limits (HTTP 429) or Cloudflare challenges are detected.
 - **False-Positive Elimination** - Requires verified positive indicators (username in `<title>`, `og:title`, or visible user text) before reporting an account as found.
 - **Confidence Scoring** - Multi-signal evaluation engine scoring each match from 0 to 100 with clear evidence attribution.
 - **Anti-Bot & Rate-Limit Isolation** - Detects Cloudflare challenges, Datadome interstitials, HTTP 403, 429, 503, and LinkedIn 999 responses, categorizing them as blocked rather than false positives or silent misses.
@@ -64,8 +68,14 @@ Pull and normalize the latest platform database from WhatsMyName:
 # Adjust concurrency and rate limiting
 ./stalkie -u ashendilantha -w 40 -rate 10
 
-# Route traffic through Tor
-./stalkie -u ashendilantha -proxy tor
+# Route traffic through Tor with automatic circuit rotation
+./stalkie -u ashendilantha -proxy tor -tor-control 127.0.0.1:9051
+
+# Filter by platform category
+./stalkie -u ashendilantha -category coding,design
+
+# Test username permutations and naming variations
+./stalkie -u ashendilantha -permute
 
 # Route traffic through SOCKS5 proxy
 ./stalkie -u ashendilantha -proxy socks5 -proxy-addr 127.0.0.1:1080
@@ -73,7 +83,7 @@ Pull and normalize the latest platform database from WhatsMyName:
 # Run in headless browser mode for JS-rendered applications
 ./stalkie -u ashendilantha -browser
 
-# Export to TXT, CSV, and JSON
+# Export to TXT, CSV, and JSON with extracted metadata
 ./stalkie -u ashendilantha -o results.txt -csv results.csv -json results.json
 ```
 
@@ -87,12 +97,16 @@ Pull and normalize the latest platform database from WhatsMyName:
 | `-f` | - | Text file containing usernames (one per line) |
 | `-update-db` | `false` | Pull and normalize upstream database from WhatsMyName |
 | `-sites` | `sites.json` | Path to platform database JSON |
+| `-category` | - | Filter platforms by comma-separated categories (`coding`, `social`, `design`, `gaming`, `finance`) |
+| `-permute` | `false` | Generate and check common naming variations and permutations |
 | `-w` | `20` | Concurrent worker pool size |
 | `-rate` | `50` | Request interval delay in milliseconds |
 | `-retries` | `2` | Maximum retry attempts per endpoint |
 | `-timeout` | `10` | HTTP and browser timeout in seconds |
 | `-proxy` | `none` | Proxy protocol: `none`, `http`, `socks5`, `tor` |
 | `-proxy-addr` | - | Proxy server host and port |
+| `-tor-control` | `127.0.0.1:9051` | Tor control port address for circuit auto-renewal |
+| `-tor-password` | - | Tor control port authentication password |
 | `-min-score` | `50` | Minimum confidence score threshold for reporting |
 | `-browser` | `false` | Enable headless Chromium rendering |
 | `-no-utls` | `false` | Disable uTLS fingerprint spoofing |

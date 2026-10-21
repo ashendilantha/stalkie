@@ -14,6 +14,7 @@ type Site struct {
 	ErrorMsg      string `json:"errorMsg"`
 	TitleContains string `json:"titleContains"`
 	Weight        int    `json:"weight"`
+	Category      string `json:"category,omitempty"`
 }
 
 func Load(path string) ([]Site, error) {
@@ -45,4 +46,33 @@ func LoadUsernames(path string) ([]string, error) {
 
 func BuildURL(template, username string) string {
 	return strings.ReplaceAll(template, "{}", username)
+}
+
+func FilterByCategory(sites []Site, categoryQuery string) []Site {
+	trimmedQuery := strings.TrimSpace(categoryQuery)
+	if trimmedQuery == "" {
+		return sites
+	}
+
+	rawCats := strings.Split(trimmedQuery, ",")
+	allowed := make(map[string]bool)
+	for _, c := range rawCats {
+		norm := strings.ToLower(strings.TrimSpace(c))
+		if norm != "" {
+			allowed[norm] = true
+		}
+	}
+
+	if len(allowed) == 0 {
+		return sites
+	}
+
+	var filtered []Site
+	for _, s := range sites {
+		cat := strings.ToLower(strings.TrimSpace(s.Category))
+		if allowed[cat] {
+			filtered = append(filtered, s)
+		}
+	}
+	return filtered
 }

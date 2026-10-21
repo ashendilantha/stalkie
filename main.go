@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"strings"
 	"sync"
 	"time"
 
@@ -19,6 +20,8 @@ func main() {
 	username := flag.String("u", "", "Single username to search")
 	bulkFile := flag.String("f", "", "Text file with one username per line")
 	sitesFile := flag.String("sites", "sites.json", "Sites database file")
+	category := flag.String("category", "", "Filter platforms by comma-separated categories (e.g. coding,social,design,gaming,finance)")
+	permute := flag.Bool("permute", false, "Check common username permutations and mutations")
 	updateDB := flag.Bool("update-db", false, "Pull and normalize upstream database from WhatsMyName")
 	workers := flag.Int("w", 20, "Concurrent workers")
 	rateMs := flag.Int("rate", 50, "Delay between requests in ms")
@@ -26,6 +29,8 @@ func main() {
 	timeout := flag.Int("timeout", 10, "HTTP request timeout in seconds")
 	proxyType := flag.String("proxy", "none", "Proxy type: none, http, socks5, tor")
 	proxyAddr := flag.String("proxy-addr", "", "Proxy address")
+	torControl := flag.String("tor-control", "127.0.0.1:9051", "Tor control port address for circuit renewal")
+	torPassword := flag.String("tor-password", "", "Tor control port password")
 	outTXT := flag.String("o", "", "Save results as .txt")
 	outCSV := flag.String("csv", "", "Save results as .csv")
 	outJSON := flag.String("json", "", "Save results as .json")
@@ -71,20 +76,46 @@ func main() {
 		os.Exit(1)
 	}
 
+	if *permute {
+		var expanded []string
+		for _, u := range usernames {
+			expanded = append(expanded, loader.GeneratePermutations(u)...)
+		}
+		usernames = loader.DedupeUsernames(expanded)
+		fmt.Printf("[*] Permutations enabled: scanning %d username variations\n", len(usernames))
+	}
+
 	sites, err := loader.Load(*sitesFile)
 	if err != nil {
 		fmt.Printf("Error loading sites: %v\n", err)
 		os.Exit(1)
 	}
 
+	if *category != "" {
+		initialCount := len(sites)
+		sites = loader.FilterByCategory(sites, *category)
+		if len(sites) == 0 {
+			fmt.Printf("[!] No sites matched category filter: %s (available: coding, social, design, gaming, finance)\n", *category)
+			os.Exit(1)
+		}
+		fmt.Printf("[*] Category filter '%s': %d of %d platforms selected\n", *category, len(sites), initialCount)
+	}
+
 	httpClient, err := proxy.BuildClient(proxy.Config{
 		Type:        *proxyType,
 		Address:     *proxyAddr,
 		DisableUTLS: *noUTLS,
+		TorControl:  *torControl,
+		TorPassword: *torPassword,
 	}, time.Duration(*timeout)*time.Second)
 	if err != nil {
 		fmt.Printf("Proxy error: %v\n", err)
 		os.Exit(1)
+	}
+
+	var torRenewer checker.CircuitRenewer
+	if strings.ToLower(strings.TrimSpace(*proxyType)) == "tor" {
+		torRenewer = proxy.NewTorRenewer(*torControl, *torPassword)
 	}
 
 	var rateLimit time.Duration
@@ -128,7 +159,7 @@ func main() {
 				onResult,
 			)
 		} else {
-			results = checker.CheckAll(httpClient, sites, uname, *workers, rateLimit, *retries, onResult)
+			results = checker.CheckAllWithRenewer(httpClient, sites, uname, *workers, rateLimit, *retries, torRenewer, onResult)
 		}
 
 		bar.Finish()
