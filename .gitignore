@@ -19,4 +19,4 @@ results.json
 *.swp
 *.swo
 *~
-
+*_test.go
