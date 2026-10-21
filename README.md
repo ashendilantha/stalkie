@@ -16,6 +16,7 @@
 
 - **Automated Upstream Sync** - Synchronize and normalize 650+ platform signatures directly from the WhatsMyName project via `-update-db`.
 - **Target Categorization & Selective Enumeration** - Platforms tagged with categories (`coding`, `social`, `design`, `gaming`, `finance`). Filter scans with `-category coding,design` to reduce scan times and minimize footprint.
+- **Interactive Graph Visualization** - Export interactive network graphs via `-html graph.html` mapping target entities to verified accounts, profile avatars, cross-platform handles, and metadata with physics controls and node inspection.
 - **Structured JSON-LD & Profile Data Extraction** - Automatically extracts display names, avatar URLs, bios, follower counts, creation dates, and locations from `<script type="application/ld+json">` and OpenGraph meta tags into console, CSV, and JSON outputs.
 - **Smart Username Mutations** - Generate naming variations (`_`, `-dev`, `real<user>`, `<user>01`) with `-permute` to discover alternative handles.
 - **TLS Fingerprint Spoofing (uTLS)** - Emulates genuine Chrome and Firefox ClientHello TLS handshakes (JA3/JA4) with HTTP/2 multiplexing to evade bot protections without headless Chromium.
@@ -83,8 +84,8 @@ Pull and normalize the latest platform database from WhatsMyName:
 # Run in headless browser mode for JS-rendered applications
 ./stalkie -u ashendilantha -browser
 
-# Export to TXT, CSV, and JSON with extracted metadata
-./stalkie -u ashendilantha -o results.txt -csv results.csv -json results.json
+# Export to TXT, CSV, JSON, and interactive HTML graph with extracted metadata
+./stalkie -u ashendilantha -o results.txt -csv results.csv -json results.json -html graph.html
 ```
 
 ---
@@ -113,6 +114,7 @@ Pull and normalize the latest platform database from WhatsMyName:
 | `-o` | - | Output path for TXT export |
 | `-csv` | - | Output path for CSV export |
 | `-json` | - | Output path for JSON export |
+| `-html` | - | Output path for interactive HTML graph export |
 
 ---
 

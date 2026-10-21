@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stalkie OSINT Investigation Graph</title>
+<link rel="stylesheet" href="https://unpkg.com/vis-network@9.1.9/dist/dist/vis-network.min.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #0b1120; color: #f1f5f9; height: 100vh; overflow: hidden; display: flex; flex-direction: column; }
+header { background: #0f172a; border-bottom: 1px solid #1e293b; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; z-index: 10; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.logo { font-weight: 800; font-size: 1.25rem; letter-spacing: 0.05em; color: #00d2d3; text-transform: uppercase; }
+.subtitle { font-size: 0.85rem; color: #94a3b8; }
+.controls { display: flex; align-items: center; gap: 12px; }
+input[type="text"] { background: #1e293b; border: 1px solid #334155; color: #f8fafc; padding: 6px 12px; border-radius: 6px; font-size: 0.85rem; outline: none; }
+input[type="text"]:focus { border-color: #00d2d3; }
+button { background: #1e293b; color: #e2e8f0; border: 1px solid #334155; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; cursor: pointer; transition: all 0.15s ease; }
+button:hover { background: #334155; border-color: #00d2d3; color: #00d2d3; }
+#main { flex: 1; display: flex; position: relative; height: calc(100vh - 57px); }
+#network { flex: 1; height: 100%; background: #0b1120; }
+#sidebar { width: 340px; background: #0f172a; border-left: 1px solid #1e293b; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 16px; }
+.panel-title { font-size: 0.95rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #38bdf8; border-bottom: 1px solid #1e293b; padding-bottom: 8px; }
+.avatar-preview { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; border: 3px solid #00d2d3; display: block; margin: 0 auto; background: #1e293b; }
+.node-title { font-size: 1.25rem; font-weight: 700; text-align: center; color: #f8fafc; }
+.node-subtitle { font-size: 0.85rem; text-align: center; color: #94a3b8; word-break: break-all; }
+.meta-field { display: flex; flex-direction: column; gap: 4px; background: #1e293b; padding: 10px 12px; border-radius: 6px; border: 1px solid #334155; }
+.meta-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; font-weight: 700; }
+.meta-value { font-size: 0.88rem; color: #e2e8f0; word-break: break-word; }
+.score-bar { height: 8px; background: #334155; border-radius: 4px; overflow: hidden; margin-top: 4px; }
+.score-fill { height: 100%; background: linear-gradient(90deg, #f59e0b, #10b981); border-radius: 4px; }
+.link-btn { display: inline-block; text-align: center; background: #00d2d3; color: #0b1120; font-weight: 700; padding: 10px; border-radius: 6px; text-decoration: none; margin-top: 8px; }
+.link-btn:hover { background: #48dbfb; }
+.stat-pill { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; background: #1e293b; border: 1px solid #334155; color: #38bdf8; }
+#empty-hint { color: #64748b; font-size: 0.85rem; text-align: center; margin-top: 40px; }
+svg.fallback-canvas { width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<header>
+<div class="brand">
+<div class="logo">Stalkie</div>
+<div class="subtitle">OSINT Relationship & Identity Graph</div>
+</div>
+<div class="controls">
+<input type="text" id="search" placeholder="Search node...">
+<button id="reset-btn">Reset View</button>
+<button id="physics-btn">Toggle Physics</button>
+</div>
+</header>
+<div id="main">
+<div id="network"></div>
+<aside id="sidebar">
+<div class="panel-title">Entity Inspector</div>
+<div id="inspector-content">
+<div id="empty-hint">Select a node in the graph to view profile metadata and cross-platform intelligence.</div>
+</div>
+</aside>
+</div>
+
+<script src="https://unpkg.com/vis-network@9.1.9/dist/vis-network.min.js"></script>
+<script>
+const DATA = {"target":"ashendilantha","nodes":[{"id":"user:ashendilantha","label":"ashendilantha","group":"target","shape":"hexagon","size":38,"color":{"background":"#00d2d3","border":"#01a3a4","highlight":"#48dbfb"},"properties":{"type":"Target Entity","username":"ashendilantha"}},{"id":"site:ashendilantha:Behance","label":"Behance\n73%","group":"platform","shape":"circularImage","image":"https://mir-s3-cdn-cf.behance.net/c5429d79605ca95719695bb16c6a3762/f29ce756-1111-4a61-8822-935d97faf98f_acc_1200x630.png?h=bee31c025b7932595183e4006aada6fe","size":26,"color":{"background":"#06b6d4","border":"#0891b2","highlight":"#38ef7d"},"properties":{"avatarUrl":"https://mir-s3-cdn-cf.behance.net/c5429d79605ca95719695bb16c6a3762/f29ce756-1111-4a61-8822-935d97faf98f_acc_1200x630.png?h=bee31c025b7932595183e4006aada6fe","bio":"Ashen Dilantha on Behance","confidence":73,"createdAt":"","displayName":"Ashen Dilantha","evidence":"HTTP 200, title match","followers":"0","location":"Kalutara, Sri Lanka, Sri Lanka","site":"Behance","type":"Platform Account","url":"https://www.behance.net/ashendilantha"}},{"id":"site:ashendilantha:Codewars","label":"Codewars\n63%","group":"platform","shape":"dot","size":26,"color":{"background":"#f59e0b","border":"#d97706","highlight":"#38ef7d"},"properties":{"avatarUrl":"","bio":"","confidence":63,"createdAt":"","displayName":"","evidence":"HTTP 200, username in body text","followers":"","location":"","site":"Codewars","type":"Platform Account","url":"https://www.codewars.com/api/v1/users/ashendilantha"}},{"id":"site:ashendilantha:GitHub","label":"GitHub\n100%","group":"platform","shape":"circularImage","image":"https://avatars.githubusercontent.com/u/154997020?v=4?s=400","size":26,"color":{"background":"#10b981","border":"#059669","highlight":"#38ef7d"},"properties":{"avatarUrl":"https://avatars.githubusercontent.com/u/154997020?v=4?s=400","bio":"Hunting bugs before they hunt you! ashendilantha has 21 repositories available. Follow their code on GitHub.","confidence":100,"createdAt":"","displayName":"ashendilantha - Overview","evidence":"HTTP 200, title match, username in body text","followers":"","location":"","site":"GitHub","type":"Platform Account","url":"https://github.com/ashendilantha"}},{"id":"site:ashendilantha:GitHub (User)","label":"GitHub (User)\n63%","group":"platform","shape":"dot","size":26,"color":{"background":"#f59e0b","border":"#d97706","highlight":"#38ef7d"},"properties":{"avatarUrl":"","bio":"","confidence":63,"createdAt":"","displayName":"","evidence":"HTTP 200, username in body text","followers":"","location":"","site":"GitHub (User)","type":"Platform Account","url":"https://api.github.com/users/ashendilantha"}},{"id":"site:ashendilantha:Picsart","label":"Picsart\n61%","group":"platform","shape":"dot","size":26,"color":{"background":"#f59e0b","border":"#d97706","highlight":"#38ef7d"},"properties":{"avatarUrl":"","bio":"","confidence":61,"createdAt":"","displayName":"","evidence":"HTTP 200, username in body text","followers":"","location":"","site":"Picsart","type":"Platform Account","url":"https://api.picsart.com/users/show/ashendilantha.json"}}],"edges":[{"from":"user:ashendilantha","to":"site:ashendilantha:Behance","label":"73%","color":"#475569","width":2},{"from":"user:ashendilantha","to":"site:ashendilantha:Codewars","label":"63%","color":"#475569","width":2},{"from":"user:ashendilantha","to":"site:ashendilantha:GitHub","label":"100%","color":"#475569","width":2},{"from":"user:ashendilantha","to":"site:ashendilantha:GitHub (User)","label":"63%","color":"#475569","width":2},{"from":"user:ashendilantha","to":"site:ashendilantha:Picsart","label":"61%","color":"#475569","width":2}]};
+
+function renderInspector(props) {
+const c = document.getElementById("inspector-content");
+if (!props) {
+c.innerHTML = '<div id="empty-hint">Select a node in the graph to view profile metadata and cross-platform intelligence.</div>';
+return;
+}
+
+if (props.type === "Target Entity") {
+c.innerHTML = '<div class="node-title">' + escapeHTML(props.username) + '</div>' +
+'<div class="node-subtitle">Root Investigation Entity</div>' +
+'<div class="meta-field"><span class="meta-label">Type</span><span class="meta-value">Primary Search Subject</span></div>';
+return;
+}
+
+let html = "";
+if (props.avatarUrl) {
+html += '<img class="avatar-preview" src="' + escapeHTML(props.avatarUrl) + '" onerror="this.style.display=\'none\'">';
+}
+html += '<div class="node-title">' + escapeHTML(props.site) + '</div>';
+if (props.displayName) {
+html += '<div class="node-subtitle">' + escapeHTML(props.displayName) + '</div>';
+}
+
+html += '<div class="meta-field"><span class="meta-label">Confidence Score</span>' +
+'<span class="meta-value">' + props.confidence + '%</span>' +
+'<div class="score-bar"><div class="score-fill" style="width:' + props.confidence + '%;"></div></div></div>';
+
+if (props.url) {
+html += '<a class="link-btn" href="' + escapeHTML(props.url) + '" target="_blank" rel="noopener noreferrer">Open Target Profile</a>';
+}
+
+if (props.evidence) {
+html += '<div class="meta-field"><span class="meta-label">Corroborating Evidence</span><span class="meta-value">' + escapeHTML(props.evidence) + '</span></div>';
+}
+if (props.bio) {
+html += '<div class="meta-field"><span class="meta-label">Bio / Description</span><span class="meta-value">' + escapeHTML(props.bio) + '</span></div>';
+}
+if (props.followers) {
+html += '<div class="meta-field"><span class="meta-label">Followers / Subscribers</span><span class="meta-value">' + escapeHTML(props.followers) + '</span></div>';
+}
+if (props.location) {
+html += '<div class="meta-field"><span class="meta-label">Location</span><span class="meta-value">' + escapeHTML(props.location) + '</span></div>';
+}
+if (props.createdAt) {
+html += '<div class="meta-field"><span class="meta-label">Profile Created</span><span class="meta-value">' + escapeHTML(props.createdAt) + '</span></div>';
+}
+
+c.innerHTML = html;
+}
+
+function escapeHTML(str) {
+if (!str) return "";
+return String(str).replace(/[&<>"']/g, function(m) {
+return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m];
+});
+}
+
+function initVis() {
+const container = document.getElementById("network");
+const visNodes = new vis.DataSet(DATA.nodes.map(n => ({
+id: n.id,
+label: n.label,
+shape: n.shape,
+image: n.image,
+size: n.size,
+color: n.color,
+font: { color: "#f8fafc", size: 12, face: "inherit" },
+borderWidth: 2,
+shadow: true
+})));
+
+const visEdges = new vis.DataSet(DATA.edges.map(e => ({
+from: e.from,
+to: e.to,
+label: e.label,
+font: { color: "#94a3b8", size: 10, align: "top" },
+color: { color: e.color, highlight: "#00d2d3" },
+width: e.width,
+smooth: { type: "continuous" }
+})));
+
+const options = {
+physics: {
+stabilization: true,
+barnesHut: { gravitationalConstant: -3500, centralGravity: 0.2, springLength: 120, springConstant: 0.04 }
+},
+interaction: { hover: true, tooltipDelay: 150 }
+};
+
+const network = new vis.Network(container, { nodes: visNodes, edges: visEdges }, options);
+
+network.on("click", function(params) {
+if (params.nodes.length > 0) {
+const nodeId = params.nodes[0];
+const found = DATA.nodes.find(n => n.id === nodeId);
+if (found) renderInspector(found.properties);
+} else {
+renderInspector(null);
+}
+});
+
+let physicsEnabled = true;
+document.getElementById("physics-btn").addEventListener("click", function() {
+physicsEnabled = !physicsEnabled;
+network.setOptions({ physics: { enabled: physicsEnabled } });
+this.textContent = physicsEnabled ? "Freeze Layout" : "Enable Physics";
+});
+
+document.getElementById("reset-btn").addEventListener("click", function() {
+network.fit({ animation: { duration: 500 } });
+});
+
+document.getElementById("search").addEventListener("input", function(e) {
+const q = e.target.value.toLowerCase().trim();
+if (!q) {
+network.fit();
+return;
+}
+const matched = DATA.nodes.find(n => n.label.toLowerCase().includes(q));
+if (matched) {
+network.focus(matched.id, { scale: 1.2, animation: true });
+renderInspector(matched.properties);
+}
+});
+}
+
+function initFallback() {
+const container = document.getElementById("network");
+const width = container.clientWidth || 800;
+const height = container.clientHeight || 600;
+const cx = width / 2;
+const cy = height / 2;
+const total = DATA.nodes.length;
+const radius = Math.min(width, height) * 0.38;
+
+let svg = '<svg class="fallback-canvas" viewBox="0 0 ' + width + ' ' + height + '">';
+const pos = {};
+
+DATA.nodes.forEach((n, idx) => {
+if (n.group === "target") {
+pos[n.id] = { x: cx, y: cy };
+} else {
+const angle = (2 * Math.PI * idx) / Math.max(1, total - 1);
+pos[n.id] = { x: cx + radius * Math.cos(angle), y: cy + radius * Math.sin(angle) };
+}
+});
+
+DATA.edges.forEach(e => {
+const p1 = pos[e.from] || { x: cx, y: cy };
+const p2 = pos[e.to] || { x: cx, y: cy };
+svg += '<line x1="' + p1.x + '" y1="' + p1.y + '" x2="' + p2.x + '" y2="' + p2.y + '" stroke="#334155" stroke-width="2"/>';
+});
+
+DATA.nodes.forEach(n => {
+const p = pos[n.id] || { x: cx, y: cy };
+const r = n.size || 20;
+const bg = (n.color && n.color.background) || "#00d2d3";
+svg += '<g style="cursor:pointer" onclick="handleFallbackClick(\'' + n.id + '\')">';
+svg += '<circle cx="' + p.x + '" cy="' + p.y + '" r="' + r + '" fill="' + bg + '" stroke="#1e293b" stroke-width="2"/>';
+svg += '<text x="' + p.x + '" y="' + (p.y + r + 14) + '" fill="#f8fafc" font-size="11" text-anchor="middle">' + escapeHTML(n.label.split("\n")[0]) + '</text>';
+svg += '</g>';
+});
+svg += '</svg>';
+container.innerHTML = svg;
+
+window.handleFallbackClick = function(id) {
+const found = DATA.nodes.find(n => n.id === id);
+if (found) renderInspector(found.properties);
+};
+}
+
+if (typeof vis !== "undefined") {
+initVis();
+} else {
+initFallback();
+}
+</script>
+</body>
+</html>

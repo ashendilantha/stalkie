@@ -34,6 +34,7 @@ func main() {
 	outTXT := flag.String("o", "", "Save results as .txt")
 	outCSV := flag.String("csv", "", "Save results as .csv")
 	outJSON := flag.String("json", "", "Save results as .json")
+	outHTML := flag.String("html", "", "Save interactive relationship graph as .html")
 	minScore := flag.Int("min-score", 50, "Minimum confidence score to report as found")
 	useBrowser := flag.Bool("browser", false, "Use headless browser mode for JS-heavy sites")
 	noUTLS := flag.Bool("no-utls", false, "Disable uTLS fingerprint spoofing")
@@ -203,6 +204,18 @@ func main() {
 			fmt.Printf("Error saving JSON: %v\n", err)
 		} else {
 			fmt.Printf("[*] Saved JSON -> %s\n", *outJSON)
+		}
+	}
+
+	if *outHTML != "" {
+		primaryTarget := *username
+		if primaryTarget == "" && len(usernames) > 0 {
+			primaryTarget = usernames[0]
+		}
+		if err := output.SaveHTML(allResults, primaryTarget, *outHTML); err != nil {
+			fmt.Printf("Error saving HTML: %v\n", err)
+		} else {
+			fmt.Printf("[*] Saved HTML graph -> %s\n", *outHTML)
 		}
 	}
 }
