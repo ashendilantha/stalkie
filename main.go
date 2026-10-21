@@ -31,6 +31,7 @@ func main() {
 	outJSON := flag.String("json", "", "Save results as .json")
 	minScore := flag.Int("min-score", 50, "Minimum confidence score to report as found")
 	useBrowser := flag.Bool("browser", false, "Use headless browser mode for JS-heavy sites")
+	noUTLS := flag.Bool("no-utls", false, "Disable uTLS fingerprint spoofing")
 	flag.Parse()
 
 	if *updateDB {
@@ -77,8 +78,9 @@ func main() {
 	}
 
 	httpClient, err := proxy.BuildClient(proxy.Config{
-		Type:    *proxyType,
-		Address: *proxyAddr,
+		Type:        *proxyType,
+		Address:     *proxyAddr,
+		DisableUTLS: *noUTLS,
 	}, time.Duration(*timeout)*time.Second)
 	if err != nil {
 		fmt.Printf("Proxy error: %v\n", err)

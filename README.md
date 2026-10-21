@@ -15,6 +15,7 @@
 ## Features
 
 - **Automated Upstream Sync** - Synchronize and normalize 650+ platform signatures directly from the WhatsMyName project via `-update-db`.
+- **TLS Fingerprint Spoofing (uTLS)** - Emulates genuine Chrome and Firefox ClientHello TLS handshakes (JA3/JA4) with HTTP/2 multiplexing to evade bot protections without headless Chromium.
 - **False-Positive Elimination** - Requires verified positive indicators (username in `<title>`, `og:title`, or visible user text) before reporting an account as found.
 - **Confidence Scoring** - Multi-signal evaluation engine scoring each match from 0 to 100 with clear evidence attribution.
 - **Anti-Bot & Rate-Limit Isolation** - Detects Cloudflare challenges, Datadome interstitials, HTTP 403, 429, 503, and LinkedIn 999 responses, categorizing them as blocked rather than false positives or silent misses.
@@ -94,6 +95,7 @@ Pull and normalize the latest platform database from WhatsMyName:
 | `-proxy-addr` | - | Proxy server host and port |
 | `-min-score` | `50` | Minimum confidence score threshold for reporting |
 | `-browser` | `false` | Enable headless Chromium rendering |
+| `-no-utls` | `false` | Disable uTLS fingerprint spoofing |
 | `-o` | - | Output path for TXT export |
 | `-csv` | - | Output path for CSV export |
 | `-json` | - | Output path for JSON export |
