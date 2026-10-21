@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/ashendilantha/stalkie/checker"
@@ -28,23 +29,26 @@ func PrintBanner() {
       ██    ██    ██   ██ ██      ██  ██  ██ ██      
  ██████     ██    ██   ██ ███████ ██   ██ ██ ███████ 
 ` + reset)
-
-	fmt.Println(bold + cyan + "\nStalkie - A Social Media OSINT Tool" + reset)
+	fmt.Println(bold + cyan + "\nStalkie - OSINT Username Enumeration Engine" + reset)
 	fmt.Println()
 }
 
 func confidenceBar(score int) string {
 	filled := score / 10
-	bar := "["
+	if filled > 10 {
+		filled = 10
+	}
+	var b strings.Builder
+	b.WriteString("[")
 	for i := 0; i < 10; i++ {
 		if i < filled {
-			bar += "█"
+			b.WriteString("█")
 		} else {
-			bar += "░"
+			b.WriteString("░")
 		}
 	}
-	bar += fmt.Sprintf("] %d%%", score)
-	return bar
+	b.WriteString(fmt.Sprintf("] %d%%", score))
+	return b.String()
 }
 
 func PrintResult(r checker.Result) {
@@ -59,17 +63,23 @@ func PrintResult(r checker.Result) {
 
 func PrintSummary(results []checker.Result, username string, elapsed time.Duration) {
 	found := 0
+	blocked := 0
 	for _, r := range results {
 		if r.Found {
 			found++
 		}
+		if r.Error != "" {
+			blocked++
+		}
 	}
 	fmt.Printf("\n%s[*]%s Username  : %s%s%s\n", cyan, reset, bold, username, reset)
 	fmt.Printf("%s[*]%s Found     : %s%d%s / %d sites\n", cyan, reset, green, found, reset, len(results))
+	if blocked > 0 {
+		fmt.Printf("%s[*]%s Blocked   : %s%d%s (anti-bot / rate-limit / network)\n", cyan, reset, yellow, blocked, reset)
+	}
 	fmt.Printf("%s[*]%s Duration  : %s\n\n", cyan, reset, elapsed.Round(time.Millisecond))
 }
 
-// save txt only found accounts
 func SaveTXT(results []checker.Result, username, path string) error {
 	f, err := os.Create(path)
 	if err != nil {
@@ -85,7 +95,6 @@ func SaveTXT(results []checker.Result, username, path string) error {
 	return nil
 }
 
-// save all results in csv
 func SaveCSV(results []checker.Result, path string) error {
 	f, err := os.Create(path)
 	if err != nil {
@@ -96,20 +105,23 @@ func SaveCSV(results []checker.Result, path string) error {
 	w := csv.NewWriter(f)
 	defer w.Flush()
 
-	w.Write([]string{"username", "site", "url", "found", "confidence", "evidence", "error", "duration_ms"})
+	if err := w.Write([]string{"username", "site", "url", "found", "confidence", "evidence", "error", "duration_ms"}); err != nil {
+		return err
+	}
 	for _, r := range results {
-		w.Write([]string{
+		if err := w.Write([]string{
 			r.Username, r.Site, r.URL,
 			strconv.FormatBool(r.Found),
 			strconv.Itoa(r.Confidence),
 			r.Evidence, r.Error,
 			strconv.FormatInt(r.Duration.Milliseconds(), 10),
-		})
+		}); err != nil {
+			return err
+		}
 	}
 	return nil
 }
 
-// save all results in json
 func SaveJSON(results []checker.Result, path string) error {
 	f, err := os.Create(path)
 	if err != nil {

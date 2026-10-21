@@ -1,106 +1,5879 @@
 [
   {
+    "name": "247sports",
+    "url": "https://247sports.com/User/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003e247Sports\u003c/title\u003e",
+    "titleContains": "staff-header-container",
+    "weight": 6
+  },
+  {
+    "name": "35photo",
+    "url": "https://35photo.pro/@{}/",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "",
+    "titleContains": "userNameBlock",
+    "weight": 6
+  },
+  {
+    "name": "3dtoday",
+    "url": "https://3dtoday.ru/blogs/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "",
+    "titleContains": "class=\"header_user_name",
+    "weight": 6
+  },
+  {
+    "name": "7cup",
+    "url": "https://www.7cups.com/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Oops! The content you're attempting to access could not be found.",
+    "titleContains": "Profile - 7 Cups",
+    "weight": 7
+  },
+  {
+    "name": "7dach",
+    "url": "https://7dach.ru/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003eОшибка / 7dach.ru",
+    "titleContains": "Информация / Профиль",
+    "weight": 7
+  },
+  {
+    "name": "about.me",
+    "url": "https://about.me/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003eabout.me\u003c/title\u003e",
+    "titleContains": "| about.me",
+    "weight": 7
+  },
+  {
+    "name": "ACF",
+    "url": "https://support.advancedcustomfields.com/forums/users/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003ePage Not Found - ACF Support\u003c/title\u003e",
+    "titleContains": "bbp-user-body",
+    "weight": 8
+  },
+  {
+    "name": "AdmireMe.VIP",
+    "url": "https://admireme.vip/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003ePage Not Found |",
+    "titleContains": "creator-stat subscriber",
+    "weight": 6
+  },
+  {
+    "name": "adultism",
+    "url": "https://www.adultism.com/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003e Not Found",
+    "titleContains": "Last login:",
+    "weight": 6
+  },
+  {
+    "name": "ADVFN",
+    "url": "https://uk.advfn.com/forum/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "ADVFN ERROR - Page Not Found",
+    "titleContains": "Profile | ADVFN",
+    "weight": 6
+  },
+  {
+    "name": "alik",
+    "url": "https://www.alik.cz/u/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003eVizitka nenalezena",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Alura",
+    "url": "https://cursos.alura.com.br/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":\"Not Found\"",
+    "titleContains": "Perfil de",
+    "weight": 8
+  },
+  {
+    "name": "Ameblo",
+    "url": "https://ameblo.jp/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "削除された可能性がございます。",
+    "titleContains": "画像一覧",
+    "weight": 6
+  },
+  {
+    "name": "AmericanThinker",
+    "url": "https://www.americanthinker.com/author/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "title\u003e404 Not Found\u003c/title\u003e",
+    "titleContains": "class=\"author_image\"",
+    "weight": 6
+  },
+  {
+    "name": "Aparat",
+    "url": "https://www.aparat.com/api/fa/v1/user/user/information/username/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"status\":404",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Apex Legends",
+    "url": "https://api.tracker.gg/api/v2/apex/standard/profile/origin/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "CollectorResultStatus::NotFound",
+    "titleContains": "platformInfo",
+    "weight": 6
+  },
+  {
+    "name": "appian Community",
+    "url": "https://community.appian.com/members/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "",
+    "titleContains": "class=\"avatar-container",
+    "weight": 8
+  },
+  {
+    "name": "Arch Linux GitLab",
+    "url": "https://gitlab.archlinux.org/api/v4/users?username={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "[]",
+    "titleContains": "\"username\":",
+    "weight": 7
+  },
+  {
+    "name": "Arduino (Forum)",
+    "url": "https://forum.arduino.cc/u/{}.json",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error_type\":\"not_found\"",
+    "titleContains": "\"id\":",
+    "weight": 8
+  },
+  {
+    "name": "Arduino (Project Hub)",
+    "url": "https://projecthub.arduino.cc/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"userInfo\":null",
+    "titleContains": "",
+    "weight": 8
+  },
+  {
+    "name": "ArmorGames",
+    "url": "https://armorgames.com/user/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "404: Oh Noes!",
+    "titleContains": "about",
+    "weight": 6
+  },
+  {
+    "name": "Arsmate",
+    "url": "https://arsmate.com/api/creators/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "404,\"Server Error",
+    "titleContains": "\"success\":true",
+    "weight": 6
+  },
+  {
+    "name": "Artbreeder",
+    "url": "https://www.artbreeder.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "error: {message:\"User not found\"",
+    "titleContains": "data-tutorial=\"profile-filter\"",
+    "weight": 6
+  },
+  {
+    "name": "ArtStation",
+    "url": "https://www.artstation.com/api/v2/user_profiles/{}.json",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"message\":\"User with username:",
+    "titleContains": "\"id\":",
+    "weight": 6
+  },
+  {
+    "name": "asciinema",
+    "url": "https://asciinema.org/~{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ch1\u003e404 Not Found\u003c/h1\u003e",
+    "titleContains": "class=\"profile-page\"",
+    "weight": 8
+  },
+  {
+    "name": "AtCoder",
+    "url": "https://atcoder.jp/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003e404 Page Not Found\u003c/h1\u003e",
+    "titleContains": "",
+    "weight": 8
+  },
+  {
+    "name": "au.ru",
+    "url": "https://au.ru/user/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Пользователь не найден",
+    "titleContains": "Лоты пользователя",
+    "weight": 6
+  },
+  {
+    "name": "Audiojungle",
+    "url": "https://audiojungle.net/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "404 - Nothing to see here",
+    "titleContains": "s profile on AudioJungle",
+    "weight": 6
+  },
+  {
+    "name": "Avid Community",
+    "url": "https://community.avid.com/members/{}/default.aspx",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "The user you requested cannot be found.",
+    "titleContains": "My Activity",
+    "weight": 6
+  },
+  {
+    "name": "babepedia",
+    "url": "https://www.babepedia.com/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Profile not found",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "BabyPips",
+    "url": "https://forums.babypips.com/u/{}.json",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The requested URL or resource could not be found",
+    "titleContains": "user_badges",
+    "weight": 7
+  },
+  {
+    "name": "Bandcamp",
+    "url": "https://bandcamp.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ch2\u003eSorry, that something isn’t here.\u003c/h2\u003e",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Bandlab",
+    "url": "https://www.bandlab.com/api/v1.3/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Couldn’t find any matching element, it might be deleted",
+    "titleContains": "\"username\":",
+    "weight": 6
+  },
+  {
+    "name": "bblog_ru",
+    "url": "https://www.babyblog.ru/user/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "БэбиБлог - беременность, календарь беременности, дневники",
+    "titleContains": ") — дневник на Babyblog.ru",
+    "weight": 6
+  },
+  {
+    "name": "bdsmsingles",
+    "url": "https://www.bdsmsingles.com/members/{}/",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Beacons",
+    "url": "https://beacons.ai/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "The page you are looking for does not seem to exist anymore",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Behance",
+    "url": "https://www.behance.net/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "",
+    "titleContains": "Behance",
+    "weight": 8
+  },
+  {
+    "name": "Bentbox",
+    "url": "https://bentbox.co/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "This user is currently not available",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "BiggerPockets",
+    "url": "https://www.biggerpockets.com/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Page not found",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "BIGO Live",
+    "url": "https://www.bigo.tv/user/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "userInfo:{}",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Bimpos",
+    "url": "https://ask.bimpos.com/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Page not found",
+    "titleContains": "",
+    "weight": 8
+  },
+  {
+    "name": "Bio Site",
+    "url": "https://bio.site/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "This Bio Site doesn’t exist — Bio Site\u003c/title\u003e",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "biolink",
+    "url": "https://bio.link/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The page you’re looking for doesn’t exist",
+    "titleContains": "profile:username",
+    "weight": 6
+  },
+  {
+    "name": "Bitbucket",
+    "url": "https://bitbucket.org/!api/2.0/repositories/{}?page=1\u0026pagelen=25\u0026sort=-updated_on\u0026q=\u0026fields=-values.owner%2C-values.workspace",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"message\":\"No workspace with identifier",
+    "titleContains": "\"full_name\":",
+    "weight": 8
+  },
+  {
+    "name": "blogi.pl",
+    "url": "https://www.blogi.pl/osoba,{}.html",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Niepoprawny adres.",
+    "titleContains": "Informacje ogólne",
+    "weight": 6
+  },
+  {
+    "name": "Blogmarks",
+    "url": "http://blogmarks.net/user/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "",
+    "titleContains": "Public marks from",
+    "weight": 6
+  },
+  {
+    "name": "Bluesky Domain as User",
+    "url": "https://bsky.app/profile/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\u003ctitle\u003eBluesky\u003c/title\u003e",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Bluesky Username",
+    "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor={}.bsky.social",
+    "errorType": "status_code",
+    "errorCode": 400,
+    "errorMsg": "\"message\":\"Profile not found\"",
+    "titleContains": "\"handle\":\"",
+    "weight": 7
+  },
+  {
+    "name": "BoardGameGeek",
+    "url": "https://api.geekdo.com/api/accounts/validate/username?username={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"isValid\":true",
+    "titleContains": "\"message\":\"Sorry, this username is already taken.\"",
+    "weight": 6
+  },
+  {
+    "name": "Bookcrossing",
+    "url": "https://www.bookcrossing.com/mybookshelf/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "BookCrossing - Not Found",
+    "titleContains": "membersbycity/",
+    "weight": 6
+  },
+  {
+    "name": "Booknode",
+    "url": "https://booknode.com/profil/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003ePage non trouvée",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Boosty",
+    "url": "https://api.boosty.to/v1/blog/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":\"blog_not_found\"",
+    "titleContains": "\"id\":",
+    "weight": 7
+  },
+  {
+    "name": "Brickset",
+    "url": "https://brickset.com/profile/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "{name}\u003c/h1\u003e",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Bugcrowd",
+    "url": "https://bugcrowd.com/profile-service/v1/profiles/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":\"Not Found\"",
+    "titleContains": "\"username\":",
+    "weight": 8
+  },
+  {
+    "name": "Bunpro",
+    "url": "https://community.bunpro.jp/u/{}.json",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The requested URL or resource could not be found.",
+    "titleContains": "username",
+    "weight": 7
+  },
+  {
+    "name": "BuzzFeed",
+    "url": "https://www.buzzfeed.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "We can't find the page you're looking for",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "cafecito",
+    "url": "https://cafecito.app/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Es posible que el enlace que seleccionaste esté roto o que se haya eliminado la página",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Calendy",
+    "url": "https://calendly.com/api/booking/profiles/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"message\":\"not found\"",
+    "titleContains": "\"id\":",
+    "weight": 6
+  },
+  {
+    "name": "Cameo",
+    "url": "https://www.cameo.com/api/v2/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"message\":\"We could not find the user:",
+    "titleContains": "\"_id\":",
+    "weight": 6
+  },
+  {
+    "name": "Career.habr",
+    "url": "https://career.habr.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Ошибка 404",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "CastingCallClub",
+    "url": "https://www.castingcall.club/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "cda.pl",
+    "url": "https://www.cda.pl/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Strona na którą chcesz wejść nie istnieje",
+    "titleContains": "Foldery",
+    "weight": 6
+  },
+  {
+    "name": "Cent",
+    "url": "https://beta.cent.co/data/user/profile?userHandles={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"results\":[]",
+    "titleContains": "\"id\":",
+    "weight": 7
+  },
+  {
+    "name": "cfx.re",
+    "url": "https://forum.cfx.re/u/{}.json",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The requested URL or resource could not be found.",
+    "titleContains": "created_at",
+    "weight": 6
+  },
+  {
+    "name": "championat",
+    "url": "https://www.championat.com/user/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Извините, запрашиваемая страница не найдена",
+    "titleContains": "Личный профил",
+    "weight": 6
+  },
+  {
+    "name": "Chamsko",
+    "url": "https://www.chamsko.pl/profil/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Strona nie istnieje.",
+    "titleContains": "W serwisie od",
+    "weight": 6
+  },
+  {
+    "name": "CHEEZburger",
+    "url": "https://cheezburger.com/Editor/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003e404 Not Found\u003c/title\u003e",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Chess.com",
+    "url": "https://api.chess.com/pub/player/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"code\":0",
+    "titleContains": "\"player_id\":",
+    "weight": 6
+  },
+  {
+    "name": "Chocolatey",
+    "url": "https://community.chocolatey.org/profiles/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "id=\"error404Message\"",
+    "titleContains": "id =\"bioSection\"",
+    "weight": 8
+  },
+  {
+    "name": "Choko.Link",
+    "url": "https://choko.link/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The link might be incorrect or the profile has been deleted.",
+    "titleContains": "--title-font-family: Roboto;",
+    "weight": 7
+  },
+  {
+    "name": "Chomikuj.pl",
+    "url": "https://chomikuj.pl/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Chomik o takiej nazwie nie istnieje",
+    "titleContains": "Foldery",
+    "weight": 6
+  },
+  {
+    "name": "Chyoa",
+    "url": "https://chyoa.com/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Sorry, I got distracted...",
+    "titleContains": "When I'm not reading erotica I like to read",
+    "weight": 6
+  },
+  {
+    "name": "Cloudflare",
+    "url": "https://community.cloudflare.com/u/{}/card.json",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The requested URL or resource could not be found",
+    "titleContains": "user_avatar",
+    "weight": 8
+  },
+  {
+    "name": "Clubhouse",
+    "url": "https://www.clubhouse.com/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "404",
+    "titleContains": "\"user\":",
+    "weight": 7
+  },
+  {
+    "name": "cnet",
+    "url": "https://www.cnet.com/profiles/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003ePage Not Found - CNET",
+    "titleContains": "class=\"author-header__stat-label\"",
+    "weight": 6
+  },
+  {
+    "name": "Coda",
+    "url": "https://coda.io/@{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003eCoda | Page not found - Coda\u003c/title\u003e",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Codeberg",
+    "url": "https://codeberg.org/api/v1/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "user redirect does not exist",
+    "titleContains": "\"id\":",
+    "weight": 8
+  },
+  {
+    "name": "Codecademy",
+    "url": "https://www.codecademy.com/profiles/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"type\":\"UserNotFound\"",
+    "titleContains": "\"type\":\"User\"",
+    "weight": 8
+  },
+  {
+    "name": "CodeChef",
+    "url": "https://www.codechef.com/users/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "",
+    "titleContains": "class=\"user-profile-container\"",
+    "weight": 8
+  },
+  {
+    "name": "Codeforces",
+    "url": "https://codeforces.com/api/user.info?handles={}",
+    "errorType": "status_code",
+    "errorCode": 400,
+    "errorMsg": "\"status\":\"FAILED\"",
+    "titleContains": "\"status\":\"OK\"",
+    "weight": 8
+  },
+  {
+    "name": "codementor",
+    "url": "https://www.codementor.io/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "404/favicon.png",
+    "titleContains": "ABOUT ME",
+    "weight": 8
+  },
+  {
+    "name": "CodePen",
+    "url": "https://codepen.io/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "data-test-id=\"text-404\"",
+    "titleContains": "property=\"og:url\"",
+    "weight": 8
+  },
+  {
+    "name": "Coderwall",
+    "url": "https://coderwall.com/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "404! Our feels when that url is used",
+    "titleContains": "s profile |",
+    "weight": 8
+  },
+  {
+    "name": "CodeSandbox",
+    "url": "https://codesandbox.io/api/v1/users/{}",
+    "errorType": "status_code",
+    "errorCode": 422,
+    "errorMsg": "Could not find user with username",
+    "titleContains": "\"data\":",
+    "weight": 8
+  },
+  {
+    "name": "Codewars",
+    "url": "https://www.codewars.com/api/v1/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"reason\":\"not found\"",
+    "titleContains": "\"id\":",
+    "weight": 8
+  },
+  {
+    "name": "Commudle",
+    "url": "https://json.commudle.com/api/v2/users?username={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"status\":404",
+    "titleContains": "\"status\":200",
+    "weight": 8
+  },
+  {
+    "name": "Community Adobe",
+    "url": "https://community.adobe.com/t5/forums/searchpage/tab/user?q={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "No search results found.",
+    "titleContains": "UserSearchItemContainer",
+    "weight": 8
+  },
+  {
+    "name": "coroflot",
+    "url": "https://www.coroflot.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Looking for something?",
+    "titleContains": "portfolio",
+    "weight": 6
+  },
+  {
+    "name": "Coub",
+    "url": "https://coub.com/api/v2/channels/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":\"Unhandled exception\"",
+    "titleContains": "\"user_id\":",
+    "weight": 7
+  },
+  {
+    "name": "cowboys4angels",
+    "url": "https://cowboys4angels.com/cowboy/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Error Page not found",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Cracked",
+    "url": "https://www.cracked.com/members/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "",
+    "titleContains": "Member Since",
+    "weight": 7
+  },
+  {
+    "name": "Cropty",
+    "url": "https://api.cropty.io/v1/auth/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"errors\":",
+    "titleContains": "\"name\":",
+    "weight": 6
+  },
+  {
+    "name": "Crowdin",
+    "url": "https://crowdin.com/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"error-page\"",
+    "titleContains": "id=\"profile-page\"",
+    "weight": 6
+  },
+  {
+    "name": "Cults3D",
+    "url": "https://cults3d.com/en/users/{}/creations",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Oh dear, this page is not working!",
+    "titleContains": "All the 3D models of",
+    "weight": 6
+  },
+  {
+    "name": "Cytoid",
+    "url": "https://cytoid.io/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Profile not found",
+    "titleContains": "Joined",
+    "weight": 6
+  },
+  {
+    "name": "Daily Kos",
+    "url": "https://www.dailykos.com/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Page not found! (404)",
+    "titleContains": "\"@type\":\"ProfilePage\"",
+    "weight": 6
+  },
+  {
+    "name": "Dailymotion",
+    "url": "https://api.dailymotion.com/user/{}?fields=id,username,screenname,description,avatar_720_url,cover_250_url,followers_total,following_total,videos_total,country,created_time,verified,url",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"code\":404",
+    "titleContains": "\"id\":",
+    "weight": 6
+  },
+  {
+    "name": "darudar",
+    "url": "https://darudar.org/users/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "404. Дару~дар: миру~мир!",
+    "titleContains": ". Дарудар",
+    "weight": 6
+  },
+  {
+    "name": "dateinasia",
+    "url": "https://www.dateinasia.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The page you are looking for does not exist",
+    "titleContains": "About me",
+    "weight": 6
+  },
+  {
+    "name": "datezone",
+    "url": "https://en.datezone.com/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003ePage not found\u003c/title\u003e",
+    "titleContains": "property=\"og:url\"",
+    "weight": 6
+  },
+  {
+    "name": "Dating.ru",
+    "url": "https://dating.ru/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Такой страницы не существует.",
+    "titleContains": "| dating.ru",
+    "weight": 6
+  },
+  {
+    "name": "Demotywatory",
+    "url": "https://demotywatory.pl/user/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Użytkownik o podanym pseudonimie nie istnieje.",
+    "titleContains": "Z nami od:",
+    "weight": 6
+  },
+  {
+    "name": "depop",
+    "url": "https://www.depop.com/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Sorry, that page doesn't exist",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Designspriation",
+    "url": "https://www.designspiration.com/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Content Not Found",
+    "titleContains": "has discovered on Designspiration",
+    "weight": 6
+  },
+  {
+    "name": "destream",
+    "url": "https://api.destream.net/siteapi/v2/live/details/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "",
+    "titleContains": "\"userName\":",
+    "weight": 6
+  },
+  {
+    "name": "Dev.to",
+    "url": "https://dev.to/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "DeviantArt",
+    "url": "https://www.deviantart.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "DeviantArt: 404",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "devRant",
+    "url": "https://devrant.com/api/get-user-id?app=3\u0026username={}",
+    "errorType": "status_code",
+    "errorCode": 400,
+    "errorMsg": "\"success\":false",
+    "titleContains": "\"success\":true",
+    "weight": 8
+  },
+  {
+    "name": "DFG",
+    "url": "https://www.dfg.com.br/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "content=\"https://www.dfg.com.br/Layout/HandleStatusCode/404\"",
+    "titleContains": "class=\"container user-information\"",
+    "weight": 6
+  },
+  {
+    "name": "Diablo",
+    "url": "https://diablo2.io/member/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The requested user does not exist",
+    "titleContains": "Viewing profile -",
+    "weight": 6
+  },
+  {
+    "name": "DIBIZ",
+    "url": "https://www.dibiz.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "An Error Has Occurred",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Digitalspy",
+    "url": "https://forums.digitalspy.com/profile/discussions/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "User not found",
+    "titleContains": "About",
+    "weight": 7
+  },
+  {
+    "name": "diigo",
+    "url": "https://www.diigo.com/interact_api/load_profile_info?name={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "{}",
+    "titleContains": "regist_at",
+    "weight": 6
+  },
+  {
+    "name": "Discogs",
+    "url": "https://api.discogs.com/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"message\": \"User does not exist or may have been deleted.\"",
+    "titleContains": "\"id\":",
+    "weight": 6
+  },
+  {
+    "name": "Discord (Invite)",
+    "url": "https://discord.com/api/v9/invites/{}?with_counts=true\u0026with_expiration=true",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"message\": \"Unknown Invite\"",
+    "titleContains": "\"channel\":",
+    "weight": 7
+  },
+  {
+    "name": "Discourse",
+    "url": "https://meta.discourse.org/u/{}/summary.json",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The requested URL or resource could not be found.",
+    "titleContains": "topics",
+    "weight": 6
+  },
+  {
+    "name": "discuss.elastic.co",
+    "url": "https://discuss.elastic.co/u/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Oops!",
+    "titleContains": "",
+    "weight": 8
+  },
+  {
+    "name": "Disqus",
+    "url": "https://disqus.com/api/3.0/users/details?user=username:{}\u0026api_key=E8Uh5l5fHZ6gD8U3KycjAIAk46f68Zw7C6eW8WSjZvCLXebZ7p0r1yrYDrLilk2F",
+    "errorType": "status_code",
+    "errorCode": 400,
+    "errorMsg": "\"code\":2",
+    "titleContains": "\"code\":0",
+    "weight": 7
+  },
+  {
+    "name": "Docker Hub (Organization)",
+    "url": "https://hub.docker.com/v2/orgs/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"orgname\":[\"",
+    "titleContains": "\"uuid\":",
+    "weight": 8
+  },
+  {
+    "name": "Docker Hub (User)",
+    "url": "https://hub.docker.com/v2/users/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"message\":\"User not found\"",
+    "titleContains": "\"uuid\":",
+    "weight": 8
+  },
+  {
+    "name": "DockerHub",
+    "url": "https://hub.docker.com/v2/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "",
+    "titleContains": "",
+    "weight": 8
+  },
+  {
+    "name": "Dojoverse",
+    "url": "https://dojoverse.com/members/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Looks like you got lost!.",
+    "titleContains": "Joined",
+    "weight": 6
+  },
+  {
+    "name": "donate.stream",
+    "url": "https://donate.stream/api/v1/streamer.get?path={}\u0026app=9f4e793cec820015d511dbc77b20c5c1",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"message\":\"Not found\"",
+    "titleContains": "\"response\":",
+    "weight": 6
+  },
+  {
+    "name": "Donatello",
+    "url": "https://donatello.to/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003eСторінку не знайдено (404) - Donatello\u003c/title\u003e",
+    "titleContains": "UserPage.init",
+    "weight": 6
+  },
+  {
+    "name": "Donation Alerts",
+    "url": "https://www.donationalerts.com/api/v1/user/{}/donationpagesettings",
+    "errorType": "status_code",
+    "errorCode": 202,
+    "errorMsg": "\"success\":false",
+    "titleContains": "\"data\":",
+    "weight": 6
+  },
+  {
+    "name": "DonationPay",
+    "url": "https://give.donationpay.org/hopewell-fund/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003e404 Not Found\u003c/title\u003e",
+    "titleContains": "id=\"dp-payment-form\"",
+    "weight": 6
+  },
+  {
+    "name": "Donatty",
+    "url": "https://api.donatty.com/users/find/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":\"internal error\"",
+    "titleContains": "\"response\":",
+    "weight": 6
+  },
+  {
+    "name": "dot.cards",
+    "url": "https://dot.cards/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"status\":\"username_not_found",
+    "titleContains": "\"user_id\":\"",
+    "weight": 6
+  },
+  {
+    "name": "Dota2.ru",
+    "url": "https://dota2.ru/forum/search/?type=user\u0026keywords={}\u0026sort_by=username",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "id=\"no-activity-posts\"",
+    "titleContains": "class=\"forum-section__item forum-section__item--first\"",
+    "weight": 6
+  },
+  {
+    "name": "DOTAFire",
+    "url": "https://www.dotafire.com/ajax/searchSite?text={}\u0026search=members",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\u003eNo results found\u003c/span\u003e",
+    "titleContains": "href=\"/profile/",
+    "weight": 6
+  },
+  {
+    "name": "DOU",
+    "url": "https://dou.ua/users/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"page-error\"",
+    "titleContains": "class=\"page-profile\"",
+    "weight": 7
+  },
+  {
+    "name": "Dribbble",
+    "url": "https://dribbble.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "(404)\u003c/title\u003e",
+    "titleContains": "| Dribbble",
+    "weight": 6
+  },
+  {
+    "name": "DRIVE2.RU",
+    "url": "https://www.drive2.ru/users/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003e404 — Страница не найдена\u003c/title\u003e",
+    "titleContains": "itemprop=\"name\"",
+    "weight": 7
+  },
+  {
+    "name": "Droners",
+    "url": "https://droners.io/accounts/{}/",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "(404)\u003c/title\u003e",
+    "titleContains": "- Professional Drone Pilot",
+    "weight": 6
+  },
+  {
+    "name": "Duolingo",
+    "url": "https://www.duolingo.com/2017-06-30/users?username={}\u0026_=1628308619574",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"users\" : []",
+    "titleContains": "joinedClassroomIds",
+    "weight": 6
+  },
+  {
+    "name": "easyen",
+    "url": "https://easyen.ru/index/8-0-{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Пользователь не найден",
+    "titleContains": "День рождения",
+    "weight": 7
+  },
+  {
+    "name": "eBay",
+    "url": "https://www.ebay.com/usr/{}?_tab=about",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Sorry, this store was not found.",
+    "titleContains": "\"text\":\" followers\"",
+    "weight": 6
+  },
+  {
+    "name": "ebay_stores",
+    "url": "https://www.ebay.com/str/{}",
+    "errorType": "status_code",
+    "errorCode": 410,
+    "errorMsg": "Sorry, this store was not found.",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Etoro",
+    "url": "https://www.etoro.com/api/logininfo/v1.1/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"ErrorCode\":\"NotFound\"",
+    "titleContains": "\"gcid\":",
+    "weight": 6
+  },
+  {
+    "name": "Etsy",
+    "url": "https://www.etsy.com/people/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Sorry, the member you are looking for does not exist",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Evolution CMS",
+    "url": "https://community.evocms.ru/users/?search={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "",
+    "titleContains": "id=\"user-search\"",
+    "weight": 8
+  },
+  {
+    "name": "Expressional.social (Mastodon Instance)",
+    "url": "https://expressional.social/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Record not found",
+    "titleContains": "display_name",
+    "weight": 7
+  },
+  {
+    "name": "Fabswingers",
+    "url": "https://www.fabswingers.com/profile/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "The user you tried to view doesn't seem to be on the site any more",
+    "titleContains": "View Profile",
+    "weight": 6
+  },
+  {
+    "name": "Facebook",
+    "url": "https://www.facebook.com/{}/",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\u003ctitle\u003eFacebook\u003c/title\u003e",
+    "titleContains": "__isProfile",
+    "weight": 7
+  },
+  {
+    "name": "FACEIT",
+    "url": "https://www.faceit.com/api/users/v1/nicknames/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"message\":\"user not found\"",
+    "titleContains": "\"result\":\"OK\"",
+    "weight": 6
+  },
+  {
+    "name": "Faktopedia",
+    "url": "https://faktopedia.pl/user/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Nie znaleziono użytkownika o podanym loginie.",
+    "titleContains": "Zamieszcza fakty od:",
+    "weight": 6
+  },
+  {
+    "name": "FanCentro",
+    "url": "https://fancentro.com/api/profile.get?profileAlias={}\u0026limit=1",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"status\":false",
+    "titleContains": "\"status\":true",
+    "weight": 6
+  },
+  {
+    "name": "Fandom",
+    "url": "https://www.fandom.com/u/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Not Found",
+    "titleContains": "| Profile | Fandom",
+    "weight": 6
+  },
+  {
+    "name": "Fanslist (OnlyFans)",
+    "url": "https://fanslist.com/search?q={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "No results found for query",
+    "titleContains": "data-username=",
+    "weight": 6
+  },
+  {
+    "name": "Fansly",
+    "url": "https://apiv3.fansly.com/api/v1/account?usernames={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"response\":[]",
+    "titleContains": "\"id\":",
+    "weight": 6
+  },
+  {
+    "name": "Federated.press (Mastodon Instance)",
+    "url": "https://federated.press/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Record not found",
+    "titleContains": "display_name",
+    "weight": 7
+  },
+  {
+    "name": "Figma",
+    "url": "https://www.figma.com/api/profile/handle/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"status\":404",
+    "titleContains": "\"status\":200",
+    "weight": 8
+  },
+  {
+    "name": "Filmot Channel Search",
+    "url": "https://filmot.com/channelsearch/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "No channels found",
+    "titleContains": "Subscribers",
+    "weight": 6
+  },
+  {
+    "name": "Filmot Unlisted Videos",
+    "url": "https://filmot.com/unlistedSearch?channelQuery={}\u0026sortField=uploaddate\u0026sortOrder=desc\u0026",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "No results",
+    "titleContains": "clips found",
+    "weight": 6
+  },
+  {
+    "name": "Filmweb",
+    "url": "https://www.filmweb.pl/api/v1/users/{}/id",
+    "errorType": "status_code",
+    "errorCode": 204,
+    "errorMsg": "",
+    "titleContains": "\"userId\":",
+    "weight": 6
+  },
+  {
+    "name": "fine_art_america",
+    "url": "https://fineartamerica.com/profiles/{}",
+    "errorType": "status_code",
+    "errorCode": 301,
+    "errorMsg": "Browse through millions of independent artists in our extensive",
+    "titleContains": "Shop for artwork by",
+    "weight": 6
+  },
+  {
+    "name": "FL.ru",
+    "url": "https://www.fl.ru/users/{}/portfolio/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "content=\"404 Not Found\"",
+    "titleContains": "class=\"page-profile\"",
+    "weight": 7
+  },
+  {
+    "name": "Flickr",
+    "url": "https://www.flickr.com/photos/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "",
+    "titleContains": "| Flickr",
+    "weight": 6
+  },
+  {
+    "name": "Flightradar24",
+    "url": "https://my.flightradar24.com/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"main page-not-found-main",
+    "titleContains": "class=\"profile-card\" data-profile-user=",
+    "weight": 6
+  },
+  {
+    "name": "Flipboard",
+    "url": "https://flipboard.com/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003e\u003c/title\u003e",
+    "titleContains": ") on Flipboard",
+    "weight": 8
+  },
+  {
+    "name": "flowcode",
+    "url": "https://www.flow.page/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"page\":null",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Fodors Forum",
+    "url": "https://www.fodors.com/community/profile/{}/forum-activity",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "Plan Your Trip Online\u003c/title\u003e",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Folkd",
+    "url": "https://www.folkd.com/?app=core\u0026module=system\u0026controller=ajax\u0026do=usernameExists\u0026input={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"result\":\"ok\"",
+    "titleContains": "\"message\":\"That display name is in use by another member.\"",
+    "weight": 7
+  },
+  {
+    "name": "Fortnite Tracker",
+    "url": "https://fortnitetracker.com/profile/all/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Fortnite Player Stats -",
+    "titleContains": "s Fortnite Stats - Fortnite Tracker",
+    "weight": 6
+  },
+  {
+    "name": "Fosstodon.org (Mastodon Instance)",
+    "url": "https://fosstodon.org/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Record not found",
+    "titleContains": "display_name",
+    "weight": 7
+  },
+  {
+    "name": "fotka",
+    "url": "https://api.fotka.com/v2/user/dataStatic?login={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"status\":\"ERROR\"",
+    "titleContains": "\"profil\":",
+    "weight": 7
+  },
+  {
+    "name": "Fotolog Archived Profile",
+    "url": "https://archive.org/wayback/available?url=https://www.fotolog.com/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"archived_snapshots\": {}",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Foursquare",
+    "url": "https://foursquare.com/{}",
+    "errorType": "status_code",
+    "errorCode": 308,
+    "errorMsg": "",
+    "titleContains": "class=\"userProfile2Page\"",
+    "weight": 7
+  },
+  {
+    "name": "freeCodeCamp",
+    "url": "https://api.freecodecamp.org/users/get-public-profile?username={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "{}",
+    "titleContains": "\"user\":",
+    "weight": 8
+  },
+  {
+    "name": "Freelance.RU",
+    "url": "https://freelance.ru/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"msg_error alert alert-danger\"",
+    "titleContains": "class=\" user-top-container user-portfolio\"",
+    "weight": 6
+  },
+  {
+    "name": "Freelance.ua",
+    "url": "https://freelance.ua/user/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Схоже, дана сторінка не знайдена",
+    "titleContains": "p-profile-avatar",
+    "weight": 7
+  },
+  {
+    "name": "Freelancehunt (Employer)",
+    "url": "https://freelancehunt.com/en/employer/{}.html",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "User not found.",
+    "titleContains": "\"@id\":\"https://freelancehunt.com/en/employers\"",
+    "weight": 7
+  },
+  {
+    "name": "Freelancehunt (Freelancer)",
+    "url": "https://freelancehunt.com/en/freelancer/{}.html",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "User not found.",
+    "titleContains": "\"@id\":\"https://freelancehunt.com/en/freelancers\"",
+    "weight": 7
+  },
+  {
+    "name": "Freelancer",
+    "url": "https://www.freelancer.com/api/users/0.1/users?usernames%5B%5D={}\u0026compact=true",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"users\":{}",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "freesound",
+    "url": "https://freesound.org/people/{}/section/stats/?ajax=1",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ch1\u003ePage not found\u003c/h1\u003e",
+    "titleContains": "forum posts",
+    "weight": 6
+  },
+  {
+    "name": "FriendFinder",
+    "url": "https://friendfinder.com/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "302 Found",
+    "titleContains": "Last Visit:",
+    "weight": 6
+  },
+  {
+    "name": "FriendFinder-X",
+    "url": "https://www.friendfinder-x.com/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "The document has moved",
+    "titleContains": "'s Dating Profile on FriendFinder-x",
+    "weight": 6
+  },
+  {
+    "name": "Fur Affinity",
+    "url": "https://www.furaffinity.net/user/{}/",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\u003ch2\u003eSystem Error\u003c/h2\u003e",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Gab",
+    "url": "https://gab.com/api/v1/account_by_username/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":\"Record not found\"",
+    "titleContains": "\"id\":",
+    "weight": 6
+  },
+  {
+    "name": "Game Jolt",
+    "url": "https://gamejolt.com/site-api/web/profile/@{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "null,",
+    "titleContains": "created_on",
+    "weight": 6
+  },
+  {
+    "name": "Gamer DVR",
+    "url": "https://gamerdvr.com/gamer/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "\u003cbody\u003eYou are being \u003c",
+    "titleContains": "class=\"gamerpic\"",
+    "weight": 6
+  },
+  {
+    "name": "Gamespot",
+    "url": "https://www.gamespot.com/profile/{}/summary/activity/?ajax",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"success\":false",
+    "titleContains": "\"success\":true",
+    "weight": 6
+  },
+  {
+    "name": "Garmin Connect",
+    "url": "https://connect.garmin.com/app/profile/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "window.VIEWER_USERPREFERENCES = null",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "GDBrowser",
+    "url": "https://gdbrowser.com/api/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 500,
+    "errorMsg": "-1",
+    "titleContains": "\"accountID\":",
+    "weight": 6
+  },
+  {
+    "name": "GeeksForGeeks",
+    "url": "https://authapi.geeksforgeeks.org/api-get/user-profile-info/?handle={}",
+    "errorType": "status_code",
+    "errorCode": 400,
+    "errorMsg": "\"message\":\"User not found!\"",
+    "titleContains": "\"message\":\"data retrieved successfully\"",
+    "weight": 8
+  },
+  {
+    "name": "Genius (Artist)",
+    "url": "https://genius.com/artists/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"render_404\"",
+    "titleContains": "class=\"profile_header\"",
+    "weight": 6
+  },
+  {
+    "name": "Genius (User)",
+    "url": "https://genius.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"render_404\"",
+    "titleContains": "class=\"profile_header\"",
+    "weight": 6
+  },
+  {
+    "name": "Geocaching",
+    "url": "https://www.geocaching.com/p/?u={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"callout http-error\"",
+    "titleContains": "class=\"hax-profile\"",
+    "weight": 7
+  },
+  {
+    "name": "Gettr",
+    "url": "https://gettr.com/api/s/uinf/{}",
+    "errorType": "status_code",
+    "errorCode": 400,
+    "errorMsg": "\"rc\":\"ERR\"",
+    "titleContains": "\"rc\":\"OK\"",
+    "weight": 7
+  },
+  {
+    "name": "Giphy (Channel)",
+    "url": "https://giphy.com/channel/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "404 Not Found",
+    "titleContains": "\\\"user_id\\\"",
+    "weight": 6
+  },
+  {
+    "name": "Gitea",
+    "url": "https://gitea.com/api/v1/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"message\":\"user redirect does not exist",
+    "titleContains": "\"id\":",
+    "weight": 8
+  },
+  {
+    "name": "Gitee",
+    "url": "https://gitee.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"container error midCenter\"",
+    "titleContains": "class=\"ui container user_page\"",
+    "weight": 8
+  },
+  {
     "name": "GitHub",
     "url": "https://github.com/{}",
     "errorType": "status_code",
     "errorCode": 404,
-    "titleContains": "· GitHub",
+    "errorMsg": "",
+    "titleContains": "GitHub",
     "weight": 10
+  },
+  {
+    "name": "GitHub (Gists)",
+    "url": "https://api.github.com/users/{}/gists",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"status\": \"404\"",
+    "titleContains": "\"id\":",
+    "weight": 8
+  },
+  {
+    "name": "GitHub (User)",
+    "url": "https://api.github.com/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"status\": \"404\"",
+    "titleContains": "\"id\":",
+    "weight": 8
+  },
+  {
+    "name": "GitLab",
+    "url": "https://gitlab.com/api/v4/users?username={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "[]",
+    "titleContains": "\"id\":",
+    "weight": 8
+  },
+  {
+    "name": "gloria.tv",
+    "url": "https://gloria.tv/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Page unavailable",
+    "titleContains": "Last online",
+    "weight": 7
+  },
+  {
+    "name": "GNOME (GitLab)",
+    "url": "https://gitlab.gnome.org/api/v4/users?username={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "[]",
+    "titleContains": "\"username\":",
+    "weight": 8
+  },
+  {
+    "name": "GNOME (Shell Extensions)",
+    "url": "https://extensions.gnome.org/accounts/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ch3\u003e404 - Page not Found\u003c/h3\u003e",
+    "titleContains": "class=\"user-details\"",
+    "weight": 8
+  },
+  {
+    "name": "GOG",
+    "url": "https://www.gog.com/u/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "href=\"http://www.gog.com/404\"",
+    "titleContains": "window.profilesData.profileUser",
+    "weight": 6
+  },
+  {
+    "name": "Goodgame_Russia",
+    "url": "https://goodgame.ru/channel/{}/",
+    "errorType": "status_code",
+    "errorCode": 400,
+    "errorMsg": "Такой страницы не существует",
+    "titleContains": "channel_id",
+    "weight": 6
+  },
+  {
+    "name": "gpodder.net",
+    "url": "https://gpodder.net/user/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "404 - Not found",
+    "titleContains": "mdash; gpodder.net",
+    "weight": 6
+  },
+  {
+    "name": "grandprof",
+    "url": "https://grandprof.org/communaute/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Mauvaise pioche",
+    "titleContains": "s Profile",
+    "weight": 6
+  },
+  {
+    "name": "Graphics.social (Mastodon Instance)",
+    "url": "https://graphics.social/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Record not found",
+    "titleContains": "display_name",
+    "weight": 7
+  },
+  {
+    "name": "Gravatar",
+    "url": "https://en.gravatar.com/{}.json",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"User not found\"",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Greasy Fork",
+    "url": "https://greasyfork.org/en/users?q={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\u003cp\u003eNo users!\u003c/p\u003e",
+    "titleContains": "class=\"user-list\"",
+    "weight": 8
+  },
+  {
+    "name": "GTAinside.com",
+    "url": "https://www.gtainside.com/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003ePage not found - 404\u003c/title\u003e",
+    "titleContains": "class=\"user-profile-name\"",
+    "weight": 6
+  },
+  {
+    "name": "Habbo.com",
+    "url": "https://www.habbo.com/api/public/users?name={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "error\": \"not-found",
+    "titleContains": "uniqueId\":",
+    "weight": 6
+  },
+  {
+    "name": "Habbo.com.br",
+    "url": "https://www.habbo.com.br/api/public/users?name={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "error\": \"not-found",
+    "titleContains": "uniqueId\":",
+    "weight": 6
+  },
+  {
+    "name": "Habbo.com.tr",
+    "url": "https://www.habbo.com.tr/api/public/users?name={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "error\": \"not-found",
+    "titleContains": "uniqueId\":",
+    "weight": 6
+  },
+  {
+    "name": "Habbo.de",
+    "url": "https://www.habbo.de/api/public/users?name={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "error\": \"not-found",
+    "titleContains": "uniqueId\":",
+    "weight": 6
+  },
+  {
+    "name": "Habbo.es",
+    "url": "https://www.habbo.es/api/public/users?name={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "not-found",
+    "titleContains": "uniqueId\":",
+    "weight": 6
+  },
+  {
+    "name": "Habbo.fi",
+    "url": "https://www.habbo.fi/api/public/users?name={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "error\": \"not-found",
+    "titleContains": "uniqueId\":",
+    "weight": 6
+  },
+  {
+    "name": "Habbo.fr",
+    "url": "https://www.habbo.fr/api/public/users?name={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "error\": \"not-found",
+    "titleContains": "uniqueId\":",
+    "weight": 6
+  },
+  {
+    "name": "Habbo.it",
+    "url": "https://www.habbo.it/api/public/users?name={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "error\": \"not-found",
+    "titleContains": "uniqueId\":",
+    "weight": 6
+  },
+  {
+    "name": "Habbo.nl",
+    "url": "https://www.habbo.nl/api/public/users?name={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "error\": \"not-found",
+    "titleContains": "uniqueId\":",
+    "weight": 6
+  },
+  {
+    "name": "Habr (Q\u0026A)",
+    "url": "https://qna.habr.com/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "icon_error_404",
+    "titleContains": "class=\"page-header__info\"",
+    "weight": 8
+  },
+  {
+    "name": "Habr (User)",
+    "url": "https://habr.com/ru/users/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "tm-error-message",
+    "titleContains": "tm-page tm-user",
+    "weight": 7
+  },
+  {
+    "name": "Habtium",
+    "url": "https://habtium.es/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ch1 class=\"section red\"\u003eOops!",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Hackaday.io",
+    "url": "https://hackaday.io/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"error-nav\"",
+    "titleContains": "class=\"following-container \"",
+    "weight": 6
+  },
+  {
+    "name": "HackAdvisor",
+    "url": "https://hackadvisor.io/api/v2/profile/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "{\"detail\":\"Username not found\"}",
+    "titleContains": "\"username\":",
+    "weight": 8
+  },
+  {
+    "name": "Hacker News",
+    "url": "https://hacker-news.firebaseio.com/v0/user/{}.json?print=pretty",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "null",
+    "titleContains": "\"id\" :",
+    "weight": 8
+  },
+  {
+    "name": "hackerearth",
+    "url": "https://www.hackerearth.com/@{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "404 | HackerEarth",
+    "titleContains": "| Developer Profile on HackerEarth",
+    "weight": 8
+  },
+  {
+    "name": "Hackernoon",
+    "url": "https://hackernoon.com/_next/data/foL6JC7ro2FEEMD-gMKgQ/u/{}.json",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "__N_REDIRECT",
+    "titleContains": "\"profile\"",
+    "weight": 8
+  },
+  {
+    "name": "HackerRank",
+    "url": "https://www.hackerrank.com/rest/contests/master/hackers/{}/profile",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":\"Not Found\"",
+    "titleContains": "\"model\":",
+    "weight": 8
+  },
+  {
+    "name": "Hackster",
+    "url": "https://www.hackster.io/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "id=\"error\"",
+    "titleContains": "data-hypernova-key=\"UserProfile\"",
+    "weight": 8
+  },
+  {
+    "name": "hamaha",
+    "url": "https://hamaha.net/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "content=\"HAMAHA  Биткоин форум. Торговля на бирже - ➨ Обучение Криптовалютам, Биткоин и NYSE \"",
+    "titleContains": "id=\"profile\"",
+    "weight": 6
+  },
+  {
+    "name": "Hanime",
+    "url": "https://hanime.tv/channels/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "DYNAMIC",
+    "titleContains": "Channel Views",
+    "weight": 6
+  },
+  {
+    "name": "Hcommons.social (Mastodon Instance)",
+    "url": "https://hcommons.social/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Record not found",
+    "titleContains": "display_name",
+    "weight": 7
+  },
+  {
+    "name": "Heylink",
+    "url": "https://heylink.me/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "We can't find the page that you're looking for :(",
+    "titleContains": "HeyLink.me |",
+    "weight": 6
+  },
+  {
+    "name": "HiHello",
+    "url": "https://www.hihello.com/author/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"utility-page-wrap-404\"",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Home Design 3D",
+    "url": "https://www.homedesign3d.net/user/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "\u003ctitle\u003eCommunity\u003c/title\u003e",
+    "titleContains": "id=\"user_content\"",
+    "weight": 6
+  },
+  {
+    "name": "Hometech.social (Mastodon Instance)",
+    "url": "https://hometech.social/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Record not found",
+    "titleContains": "display_name",
+    "weight": 7
+  },
+  {
+    "name": "hoo.be",
+    "url": "https://hoo.be/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003ehoo.be\u003c/title\u003e",
+    "titleContains": "ProfilePage\",\"mainEntity",
+    "weight": 7
+  },
+  {
+    "name": "Hostux.social (Mastodon Instance)",
+    "url": "https://hostux.social/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Record not found",
+    "titleContains": "display_name",
+    "weight": 7
+  },
+  {
+    "name": "Houzz",
+    "url": "https://www.houzz.com/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Page Not Found",
+    "titleContains": "Followers",
+    "weight": 6
+  },
+  {
+    "name": "HubPages",
+    "url": "https://hubpages.com/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Sorry, that user does not exist",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "HudsonRock",
+    "url": "https://cavalier.hudsonrock.com/api/json/v2/osint-tools/search-by-username?username={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "This username is not associated with a computer infected by an info-stealer",
+    "titleContains": "",
+    "weight": 8
+  },
+  {
+    "name": "HuggingFace",
+    "url": "https://huggingface.co/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "content=\"404 – Hugging Face\"",
+    "titleContains": "data-target=\"UserProfile\"",
+    "weight": 8
+  },
+  {
+    "name": "HulkShare",
+    "url": "https://www.hulkshare.com/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Invalid user.",
+    "titleContains": "id=\"profile_image\"",
+    "weight": 7
+  },
+  {
+    "name": "icq-chat",
+    "url": "https://icq.icqchat.co/members/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003eOops! We ran into some problems.",
+    "titleContains": "class=\"memberHeader-mainContent",
+    "weight": 7
+  },
+  {
+    "name": "IFTTT",
+    "url": "https://ifttt.com/p/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The requested page or file does not exist",
+    "titleContains": "Joined",
+    "weight": 6
+  },
+  {
+    "name": "ifunny",
+    "url": "https://ifunny.co/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "404 - page not found",
+    "titleContains": "subscribers",
+    "weight": 6
+  },
+  {
+    "name": "igromania",
+    "url": "https://forum.igromania.ru/member.php?username={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Пользователь не зарегистрирован и не имеет профиля для просмотра.",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "ILGM Growers Forum",
+    "url": "https://ilgmforum.com/u/{}/summary.json",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "errors\":[\"The requested URL",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "imagefap",
+    "url": "https://www.imagefap.com/profile/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Invalid uid",
+    "titleContains": "s Profile",
+    "weight": 6
+  },
+  {
+    "name": "ImageShack",
+    "url": "https://imageshack.com/user/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "iMGSRC.RU",
+    "url": "https://imgsrc.ru/main/user.php?lang=ru\u0026user={}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "",
+    "titleContains": "Присоединился",
+    "weight": 6
+  },
+  {
+    "name": "Imgur",
+    "url": "https://api.imgur.com/account/v1/accounts/{}?client_id=546c25a59c58ad7",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"code\":\"404\"",
+    "titleContains": "\"username\":",
+    "weight": 6
+  },
+  {
+    "name": "Immunefi",
+    "url": "https://immunefi.com/profile/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "id=\"__next_error__\"",
+    "titleContains": "content=\"profile\"",
+    "weight": 8
+  },
+  {
+    "name": "inaturalist",
+    "url": "https://api.inaturalist.org/v1/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"status\":404",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Independent academia",
+    "url": "https://independent.academia.edu/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Academia.edu",
+    "titleContains": "- Academia.edu",
+    "weight": 6
+  },
+  {
+    "name": "InkBunny",
+    "url": "https://inkbunny.net/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "\u003ctitle\u003eMembers | Inkbunny, the Furry Art Community\u003c/title\u003e",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Instagram",
+    "url": "https://www.instagram.com/{}/",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"routePath\":null",
+    "titleContains": "Posts - See Instagram photos and videos from",
+    "weight": 7
+  },
+  {
+    "name": "Instagram (Imginn)",
+    "url": "https://imginn.com/{}/",
+    "errorType": "status_code",
+    "errorCode": 410,
+    "errorMsg": "class=\"page-error notfound\"",
+    "titleContains": "class=\"userinfo\"",
+    "weight": 7
+  },
+  {
+    "name": "Instagram_archives",
+    "url": "https://archive.org/wayback/available?url=https://instagram.com/{}/",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"archived_snapshots\": {}}",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Instructables",
+    "url": "https://www.instructables.com/json-api/showAuthorExists?screenName={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\": \"Sorry, we couldn't find that one!\"",
+    "titleContains": "\"exists\": true",
+    "weight": 6
+  },
+  {
+    "name": "Internet Archive User Contribution Search",
+    "url": "https://archive.org/advancedsearch.php?q=creator:{}\u0026output=json",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "numFound\":0",
+    "titleContains": "backup_location",
+    "weight": 6
+  },
+  {
+    "name": "Internet Archive Username Mentions",
+    "url": "https://archive.org/advancedsearch.php?q={}\u0026output=json",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "numFound\":0",
+    "titleContains": "backup_location",
+    "weight": 6
+  },
+  {
+    "name": "interpals",
+    "url": "https://www.interpals.net/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "User not found",
+    "titleContains": "Looking for",
+    "weight": 6
+  },
+  {
+    "name": "Intigriti",
+    "url": "https://app.intigriti.com/api/user/public/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"error-page-container\"",
+    "titleContains": "\"userName\":",
+    "weight": 8
+  },
+  {
+    "name": "itch.io",
+    "url": "https://itch.io/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"not_found_page page_widget base_widget\"",
+    "titleContains": "class=\"user_data\"",
+    "weight": 6
+  },
+  {
+    "name": "JapanDict",
+    "url": "https://forum.japandict.com/u/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The page you requested could not be found.",
+    "titleContains": "class=\"UserPage\"",
+    "weight": 7
+  },
+  {
+    "name": "JBZD",
+    "url": "https://jbzd.com.pl/uzytkownik/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Błąd 404",
+    "titleContains": "Dzidy użytkownika",
+    "weight": 6
+  },
+  {
+    "name": "jeja.pl",
+    "url": "https://www.jeja.pl/user,{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Niepoprawny login",
+    "titleContains": "Profil użytkownika",
+    "weight": 6
+  },
+  {
+    "name": "Jeuxvideo",
+    "url": "https://www.jeuxvideo.com/profil/{}?mode=infos",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "rence des gamers",
+    "titleContains": "- jeuxvideo.com",
+    "weight": 6
+  },
+  {
+    "name": "Joe Monster",
+    "url": "https://joemonster.org/bojownik/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Nie wiem jak ci to powiedzieć",
+    "titleContains": "jest prywatny",
+    "weight": 6
+  },
+  {
+    "name": "Justforfans",
+    "url": "https://justfor.fans/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "",
+    "titleContains": "@ JustFor.Fans",
+    "weight": 6
+  },
+  {
+    "name": "Kaggle",
+    "url": "https://www.kaggle.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003eKaggle: Your Home for Data Science\u003c/title\u003e",
+    "titleContains": "property=\"og:username\"",
+    "weight": 8
+  },
+  {
+    "name": "Keybase",
+    "url": "https://keybase.io/_/api/1.0/user/lookup.json?usernames={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"them\":[null]",
+    "titleContains": "\"id\":",
+    "weight": 7
+  },
+  {
+    "name": "Kick",
+    "url": "https://kick.com/api/v2/channels/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003eNot Found\u003c/title\u003e",
+    "titleContains": "\"id\"",
+    "weight": 7
+  },
+  {
+    "name": "Kickstarter",
+    "url": "https://www.kickstarter.com/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Oops, Something went missing",
+    "titleContains": "projects",
+    "weight": 6
+  },
+  {
+    "name": "kik",
+    "url": "https://kik.me/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\u003ch1 class=\"display-name\"\u003e \u003c/h1\u003e",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "KnowYourMeme",
+    "url": "https://knowyourmeme.com/users/{}",
+    "errorType": "status_code",
+    "errorCode": 400,
+    "errorMsg": "404, File Not Found!",
+    "titleContains": "Contributions",
+    "weight": 7
+  },
+  {
+    "name": "Ko-Fi",
+    "url": "https://ko-fi.com/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "\u003ctitle\u003eObject moved\u003c/title\u003e",
+    "titleContains": "id=\"profile-header\"",
+    "weight": 7
+  },
+  {
+    "name": "komi",
+    "url": "https://api.komi.io/api/talent/usernames/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The talent profile was not found",
+    "titleContains": "accountStatus\":\"active",
+    "weight": 7
+  },
+  {
+    "name": "Kongregate",
+    "url": "https://www.kongregate.com/accounts/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Sorry, no account with that name was found",
+    "titleContains": "Member Since",
+    "weight": 6
+  },
+  {
+    "name": "Kwai",
+    "url": "https://www.kwai.com/@{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\u003ctitle\u003eKwai\u003c/title\u003e",
+    "titleContains": "name=\"title\"",
+    "weight": 7
+  },
+  {
+    "name": "kwejk.pl",
+    "url": "https://kwejk.pl/uzytkownik/{}#/tablica/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "404 - strona nie została znaleziona - KWEJK.pl",
+    "titleContains": "Kwejki użytkownika",
+    "weight": 6
+  },
+  {
+    "name": "Kwork",
+    "url": "https://kwork.ru/user_kworks/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"success\":false",
+    "titleContains": "\"success\":true",
+    "weight": 7
+  },
+  {
+    "name": "Last.fm",
+    "url": "https://www.last.fm/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ch1\u003e404 - Page Not Found\u003c/h1\u003e",
+    "titleContains": "class=\"header-info\"",
+    "weight": 6
+  },
+  {
+    "name": "LeakIX",
+    "url": "https://leakix.net/u/{}",
+    "errorType": "status_code",
+    "errorCode": 500,
+    "errorMsg": "\u003ctitle\u003eLeakIX - Server error\u003c/title\u003e",
+    "titleContains": "",
+    "weight": 8
+  },
+  {
+    "name": "Lemon8",
+    "url": "https://www.lemon8-app.com/{}?region=us",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"not_found_text\"",
+    "titleContains": "id=\"user-description\"",
+    "weight": 7
+  },
+  {
+    "name": "Letterboxd",
+    "url": "https://letterboxd.com/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Sorry, we can’t find the page you’ve requested.",
+    "titleContains": "’s profile on Letterboxd",
+    "weight": 7
+  },
+  {
+    "name": "LevelBlue",
+    "url": "https://otx.alienvault.com/otxapi/auth/validate?username={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "{}",
+    "titleContains": "\"username\": [\"This username is already taken\"]",
+    "weight": 7
+  },
+  {
+    "name": "Liberapay",
+    "url": "https://liberapay.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Response code: 404",
+    "titleContains": "class=\"profile-header\"",
+    "weight": 6
+  },
+  {
+    "name": "LibraryThing",
+    "url": "https://www.librarything.com/profile/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Error: This user doesn't exist",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Libretooth.gr (Mastodon Instance)",
+    "url": "https://libretooth.gr/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Record not found",
+    "titleContains": "display_name",
+    "weight": 7
+  },
+  {
+    "name": "lichess.org",
+    "url": "https://lichess.org/api/player/autocomplete?term={}\u0026exists=1",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "false",
+    "titleContains": "true",
+    "weight": 6
+  },
+  {
+    "name": "LINE",
+    "url": "https://line.me/R/ti/p/@{}?from=page",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "404 Not Found",
+    "titleContains": "Add LINE friend",
+    "weight": 7
+  },
+  {
+    "name": "Linktree",
+    "url": "https://linktr.ee/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"statusCode\":404",
+    "titleContains": "\"uuid\":",
+    "weight": 7
+  },
+  {
+    "name": "linux.org.ru",
+    "url": "https://www.linux.org.ru/people/{}/profile",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Пользователя не существует",
+    "titleContains": "Дата регистрации",
+    "weight": 8
+  },
+  {
+    "name": "LiveJasmin",
+    "url": "https://www.livejasmin.com/en/flash/get-performer-details/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"success\":false",
+    "titleContains": "\"success\":true",
+    "weight": 6
+  },
+  {
+    "name": "livemaster.ru",
+    "url": "https://www.livemaster.ru/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003eВы попали на несуществующую страницу",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "lobste.rs",
+    "url": "https://lobste.rs/u/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The resource you requested was not found, or the story has been deleted.",
+    "titleContains": "Joined",
+    "weight": 8
+  },
+  {
+    "name": "LoLProfile",
+    "url": "https://lolprofile.net/search/world/{}-world",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "We could not find any results, please try again later or check your input.",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Lor.sh (Mastodon Instance)",
+    "url": "https://lor.sh/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Record not found",
+    "titleContains": "display_name",
+    "weight": 7
+  },
+  {
+    "name": "lowcygier.pl",
+    "url": "https://bazar.lowcygier.pl/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Błąd 404 - Podana strona nie istnieje",
+    "titleContains": "Zarejestrowany",
+    "weight": 6
+  },
+  {
+    "name": "MAGABOOK",
+    "url": "https://magabook.com/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "",
+    "titleContains": "Timeline",
+    "weight": 7
+  },
+  {
+    "name": "Magix",
+    "url": "https://www.magix.info/us/users/profile/{}/",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Page not found",
+    "titleContains": "About me",
+    "weight": 6
+  },
+  {
+    "name": "Magnific",
+    "url": "https://www.magnific.com/app/api/community/creator-info-by-name?creator_name={}\u0026lang=en_US",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"message\":\"Creator not found\"",
+    "titleContains": "\"creator\":",
+    "weight": 6
+  },
+  {
+    "name": "Malpedia Actors",
+    "url": "https://malpedia.caad.fkie.fraunhofer.de/actor/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Page not Found.",
+    "titleContains": "href=\"/actors\"",
+    "weight": 8
+  },
+  {
+    "name": "MapMyTracks",
+    "url": "https://www.mapmytracks.com/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Sorry, there is nothing to see here!",
+    "titleContains": "class=\"profile-header\"",
+    "weight": 6
+  },
+  {
+    "name": "Mapstodon.space (Mastodon Instance)",
+    "url": "https://mapstodon.space/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Record not found",
+    "titleContains": "display_name",
+    "weight": 7
+  },
+  {
+    "name": "Maroc_nl",
+    "url": "https://www.maroc.nl/forums/members/{}.html",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Deze gebruiker is niet geregistreerd",
+    "titleContains": "Bekijk Profiel:",
+    "weight": 7
+  },
+  {
+    "name": "Marshmallow",
+    "url": "https://marshmallow-qa.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "For compensation, here are cats for you.",
+    "titleContains": "さんにメッセージをおくる",
+    "weight": 7
+  },
+  {
+    "name": "Martech",
+    "url": "https://martech.org/author/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Page not found",
+    "titleContains": "twitter:site",
+    "weight": 6
+  },
+  {
+    "name": "Massage Anywhere",
+    "url": "https://www.massageanywhere.com/profile/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\u003ctitle\u003eMassageAnywhere.com: Search Results\u003c/title\u003e",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "masto.ai",
+    "url": "https://masto.ai/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":\"Record not found\"",
+    "titleContains": "\"id\":",
+    "weight": 7
+  },
+  {
+    "name": "Masto.nyc (Mastodon Instance)",
+    "url": "https://masto.nyc/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Record not found",
+    "titleContains": "display_name",
+    "weight": 7
+  },
+  {
+    "name": "Mastodon API",
+    "url": "https://mastodon.social/api/v2/search?q={}\u0026limit=1\u0026type=accounts",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"accounts\":[]",
+    "titleContains": "display_name",
+    "weight": 7
+  },
+  {
+    "name": "Mastodon-101010.pl",
+    "url": "https://101010.pl/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The page you are looking for isn\u0026#39;t here.",
+    "titleContains": "@101010.pl",
+    "weight": 7
+  },
+  {
+    "name": "Mastodon-C.IM",
+    "url": "https://c.im/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003eThe page you are looking for isn\u0026#39;t here",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Mastodon-Chaos.social",
+    "url": "https://chaos.social/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The page you are looking for isn\u0026#39;t here.",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Mastodon-Defcon",
+    "url": "https://defcon.social/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The page you are looking for isn\u0026#39;t here.",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Mastodon-mastodon",
+    "url": "https://mastodon.social/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The page you are looking for isn't here.",
+    "titleContains": "profile:username",
+    "weight": 7
+  },
+  {
+    "name": "Mastodon-meow.social",
+    "url": "https://meow.social/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The page you are looking for isn\u0026#39;t here.",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Mastodon-mstdn.io",
+    "url": "https://mstdn.io/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The page you are looking for isn\u0026#39;t here.",
+    "titleContains": "@mstdn.io) - Mastodon",
+    "weight": 7
+  },
+  {
+    "name": "Mastodon-rigcz.club",
+    "url": "https://rigcz.club/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The page you are looking for isn't here.",
+    "titleContains": "@rigcz.club",
+    "weight": 7
+  },
+  {
+    "name": "Mastodon-social_tchncs",
+    "url": "https://social.tchncs.de/@{}",
+    "errorType": "status_code",
+    "errorCode": 301,
+    "errorMsg": "The page you are looking for isn\u0026#39;t here",
+    "titleContains": "profile:username",
+    "weight": 7
+  },
+  {
+    "name": "Mastodon-Toot.Community",
+    "url": "https://toot.community/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The page you are looking for isn\u0026#39;t here.",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Mastodon.online",
+    "url": "https://mastodon.online/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003eThe page you are looking for isn\u0026#39;t here.",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Mastodonbooks.net (Mastodon Instance)",
+    "url": "https://mastodonbooks.net/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Record not found",
+    "titleContains": "display_name",
+    "weight": 7
+  },
+  {
+    "name": "MAX",
+    "url": "https://max.ru/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "linkInfo:{}",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "MCUUID (Minecraft)",
+    "url": "https://playerdb.co/api/player/minecraft/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "minecraft.api_failure",
+    "titleContains": "Successfully found player by given ID.",
+    "weight": 6
+  },
+  {
+    "name": "Medium",
+    "url": "https://medium.com/feed/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "",
+    "titleContains": "",
+    "weight": 8
+  },
+  {
+    "name": "meet me",
+    "url": "https://www.meetme.com/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "\u003ctitle\u003eMeetMe - Chat and Meet New People\u003c/title",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Meta-Wiki (Wikimedia)",
+    "url": "https://meta.wikimedia.org/wiki/Special:CentralAuth?target={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "There is no global account for",
+    "titleContains": "id='mw-centralauth-info'",
+    "weight": 6
+  },
+  {
+    "name": "metacritic",
+    "url": "https://www.metacritic.com/user/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "re looking for. Sorry about that.\u003c/p\u003e",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/api/profiles/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "",
+    "titleContains": "\"userId\":",
+    "weight": 8
+  },
+  {
+    "name": "Minds",
+    "url": "https://www.minds.com/api/v3/register/validate?username={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"valid\":true",
+    "titleContains": "\"valid\":false",
+    "weight": 7
+  },
+  {
+    "name": "Minecraft List",
+    "url": "https://minecraftlist.com/api/legacy/players/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"found\":false",
+    "titleContains": "\"found\":true",
+    "weight": 6
+  },
+  {
+    "name": "mintme",
+    "url": "https://www.mintme.com/token/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Page not found",
+    "titleContains": "token | mintMe",
+    "weight": 6
+  },
+  {
+    "name": "Mistrzowie",
+    "url": "https://mistrzowie.org/user/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Nie znaleziono użytkownika o podanym loginie.",
+    "titleContains": "Profil użytkownika",
+    "weight": 6
+  },
+  {
+    "name": "Mix",
+    "url": "https://mix.com/{}/",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "The best content from the open web, personalized.",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Mixcloud",
+    "url": "https://api.mixcloud.com/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":",
+    "titleContains": "\"username\":",
+    "weight": 6
+  },
+  {
+    "name": "Mixi",
+    "url": "https://mixi.jp/view_community.pl?id={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "データがありません",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Mixlr",
+    "url": "https://api.mixlr.com/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":\"Resource not found\"",
+    "titleContains": "\"id\":",
+    "weight": 6
+  },
+  {
+    "name": "Mmorpg",
+    "url": "https://forums.mmorpg.com/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "404 Not Not_Found",
+    "titleContains": "MMORPG.com Forums",
+    "weight": 6
+  },
+  {
+    "name": "MobileGTA.net",
+    "url": "https://www.mobilegta.net/en/user/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\u003ch1\u003e404 Not Found",
+    "titleContains": "userpage_user",
+    "weight": 6
+  },
+  {
+    "name": "Mod DB",
+    "url": "https://www.moddb.com/html/scripts/autocomplete.php?a=username\u0026q={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"available\":true",
+    "titleContains": "\"available\":false",
+    "weight": 6
+  },
+  {
+    "name": "MODX.im",
+    "url": "https://modx.evo.im/profile/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"content-error\"",
+    "titleContains": "class=\"profile\"",
+    "weight": 8
+  },
+  {
+    "name": "Monkeytype",
+    "url": "https://api.monkeytype.com/users/{}/profile",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"message\":\"User not found\"",
+    "titleContains": "\"message\":\"Profile retrieved\"",
+    "weight": 8
+  },
+  {
+    "name": "Moto Trip",
+    "url": "https://moto-trip.com/profil/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ch1\u003ePage introuvable\u003c/h1\u003e",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Motokiller",
+    "url": "https://mklr.pl/user/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Nie znaleziono użytkownika o podanym loginie.",
+    "titleContains": "Zamieszcza materiały od:",
+    "weight": 6
+  },
+  {
+    "name": "Moxfield",
+    "url": "https://api2.moxfield.com/v1/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"status\":404",
+    "titleContains": "\"userName\":",
+    "weight": 6
+  },
+  {
+    "name": "Muck Rack",
+    "url": "https://muckrack.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Oh no! Page not found.",
+    "titleContains": "on Muck Rack",
+    "weight": 6
+  },
+  {
+    "name": "Musician.social (Mastodon Instance)",
+    "url": "https://musician.social/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Record not found",
+    "titleContains": "display_name",
+    "weight": 7
+  },
+  {
+    "name": "musictraveler",
+    "url": "https://www.musictraveler.com/en/users/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003ePage Not found\u003c/title\u003e",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "MUYZORRAS",
+    "url": "https://www.muyzorras.com/usuarios/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003eError 404",
+    "titleContains": "og:title",
+    "weight": 6
+  },
+  {
+    "name": "my_instants",
+    "url": "https://www.myinstants.com/en/profile/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Page not found",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "MyAnimeList",
+    "url": "https://myanimelist.net/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003e404 Not Found",
+    "titleContains": "Profile - MyAnimeList.net",
+    "weight": 7
+  },
+  {
+    "name": "MyBuilder",
+    "url": "https://www.mybuilder.com/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Sorry, we can't find that page.",
+    "titleContains": "\"legalName\":",
+    "weight": 6
+  },
+  {
+    "name": "myfitnesspal Author",
+    "url": "https://blog.myfitnesspal.com/author/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003ePage not found | MyFitnessPal Blog\u003c/title\u003e",
+    "titleContains": "\"isPartOf\":",
+    "weight": 6
+  },
+  {
+    "name": "myfitnesspal Community",
+    "url": "https://community.myfitnesspal.com/en/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "User Not Found",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "MyLot",
+    "url": "https://www.mylot.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "/ Whoops!",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "MYM",
+    "url": "https://mym.fans/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"page page-404\"",
+    "titleContains": "class=\"page profile\"",
+    "weight": 7
+  },
+  {
+    "name": "MyNickname",
+    "url": "https://mynickname.com/en/search?q={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\u003ch2\u003eNickname not found. Try searching for similar nicknames.\u003c/h2\u003e",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "MySpace",
+    "url": "https://myspace.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003c!-- 404 --\u003e",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "myWishBoard",
+    "url": "https://mywishboard.com/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "User not found\u003c/span\u003e",
+    "titleContains": "user.profile\\\",\\\"login\\\":",
+    "weight": 6
+  },
+  {
+    "name": "naija_planet",
+    "url": "https://naijaplanet.com/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "- NaijaPlanet!",
+    "titleContains": "dating Profile,",
+    "weight": 6
+  },
+  {
+    "name": "nairaland",
+    "url": "https://www.nairaland.com/{}",
+    "errorType": "status_code",
+    "errorCode": 301,
+    "errorMsg": "404: Page Not Found",
+    "titleContains": "s Profile",
+    "weight": 6
+  },
+  {
+    "name": "NaturalNews",
+    "url": "https://naturalnews.com/author/{}/",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "The page you are looking for cannot be found or is no longer available.",
+    "titleContains": "class=\"Headline\"",
+    "weight": 6
+  },
+  {
+    "name": "Naver",
+    "url": "https://blog.naver.com/{}",
+    "errorType": "status_code",
+    "errorCode": 500,
+    "errorMsg": "페이지를 찾을 수 없습니다",
+    "titleContains": ": 네이버 블로그",
+    "weight": 7
+  },
+  {
+    "name": "Neocities",
+    "url": "https://neocities.org/site/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "- Not Found\u003c/title\u003e",
+    "titleContains": "noindex, follow",
+    "weight": 7
+  },
+  {
+    "name": "newmeet",
+    "url": "https://www.newmeet.com/en/profile/{}/",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Chat with , , ,  -",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Nifty Gateway",
+    "url": "https://api.niftygateway.com/user/profile-and-offchain-nifties-by-url/?profile_url={}",
+    "errorType": "status_code",
+    "errorCode": 400,
+    "errorMsg": "\u0026quot;didSucceed\u0026quot;: false",
+    "titleContains": "\u0026quot;didSucceed\u0026quot;: true",
+    "weight": 7
+  },
+  {
+    "name": "Nightbot",
+    "url": "https://api.nightbot.tv/1/channels/t/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"status\":404",
+    "titleContains": "\"status\":200",
+    "weight": 7
+  },
+  {
+    "name": "Nih Buat Jajan",
+    "url": "https://www.nihbuatjajan.com/manifest/{}.json",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":\"Creator not found\"",
+    "titleContains": "\"name\":",
+    "weight": 7
+  },
+  {
+    "name": "Nitecrew (Mastodon Instance)",
+    "url": "https://nitecrew.rip/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Record not found",
+    "titleContains": "display_name",
+    "weight": 7
+  },
+  {
+    "name": "NotABug",
+    "url": "https://notabug.org/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "alt=\"404\"",
+    "titleContains": "class=\"user profile\"",
+    "weight": 8
+  },
+  {
+    "name": "Note",
+    "url": "https://note.com/api/v2/creators/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"data\":\"リソースが見つかりません\"",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "npm",
+    "url": "https://www.npmjs.com/~{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ch1\u003enot found\u003c/h1\u003e",
+    "titleContains": "\"id\":",
+    "weight": 8
+  },
+  {
+    "name": "oglaszamy24h.pl",
+    "url": "https://oglaszamy24h.pl/profil,{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Nieprawidłowy link, w bazie danych nie istnieje użytkownik o podanym loginie",
+    "titleContains": "Profil użytkownika:",
+    "weight": 6
+  },
+  {
+    "name": "ok.ru",
+    "url": "https://ok.ru/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"p404_t",
+    "titleContains": "| OK",
+    "weight": 7
+  },
+  {
+    "name": "okidoki",
+    "url": "https://m.okidoki.ee/ru/users/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Страница не найдена",
+    "titleContains": "Пользователь",
+    "weight": 6
+  },
+  {
+    "name": "omg.lol",
+    "url": "https://api.omg.lol/address/{}/info",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"success\": false",
+    "titleContains": "\"success\": true",
+    "weight": 7
+  },
+  {
+    "name": "OP.GG",
+    "url": "https://eune.op.gg/summoners/eune/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Guide - OP.GG",
+    "titleContains": "- Summoner Stats - League of Legends",
+    "weight": 6
+  },
+  {
+    "name": "Opencollective",
+    "url": "https://opencollective.com/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Not Found",
+    "titleContains": "- Open Collective",
+    "weight": 6
+  },
+  {
+    "name": "OpenSource",
+    "url": "https://opensource.com/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"errorCode\": \"404\"",
+    "titleContains": "\"contentID\":",
+    "weight": 8
+  },
+  {
+    "name": "OpenStreetMap",
+    "url": "https://www.openstreetmap.org/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "does not exist",
+    "titleContains": "Mapper since:",
+    "weight": 7
+  },
+  {
+    "name": "OpenStreetMap Wiki",
+    "url": "https://wiki.openstreetmap.org/w/api.php?action=query\u0026format=json\u0026list=users\u0026ususers={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"missing\":\"\"",
+    "titleContains": "\"userid\":",
+    "weight": 7
+  },
+  {
+    "name": "Oper.ru",
+    "url": "https://oper.ru/visitors/info.php?t={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Нет такого пользователя",
+    "titleContains": "Информация о пользователе",
+    "weight": 8
+  },
+  {
+    "name": "Origins.Habbo.com",
+    "url": "https://origins.habbo.com/api/public/users?name={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "not-found",
+    "titleContains": "uniqueId",
+    "weight": 6
+  },
+  {
+    "name": "Origins.Habbo.com.br",
+    "url": "https://origins.habbo.com.br/api/public/users?name={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "not-found",
+    "titleContains": "uniqueId",
+    "weight": 6
+  },
+  {
+    "name": "Origins.Habbo.es",
+    "url": "https://origins.habbo.es/api/public/users?name={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "not-found",
+    "titleContains": "uniqueId",
+    "weight": 6
+  },
+  {
+    "name": "osu!",
+    "url": "https://osu.ppy.sh/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "User not found! ;_;",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "palnet",
+    "url": "https://www.palnet.io/@{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Unknown user account!",
+    "titleContains": "class=\"profile-cover\"",
+    "weight": 7
+  },
+  {
+    "name": "Paragraph",
+    "url": "https://paragraph.com/api/blogs/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"Missing blog\"",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Parler",
+    "url": "https://parler.com/user/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "join Parler today",
+    "titleContains": "People to Follow",
+    "weight": 7
+  },
+  {
+    "name": "Parler archived posts",
+    "url": "http://archive.org/wayback/available?url=https://parler.com/profile/{}/posts",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"archived_snapshots\": {}",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Parler archived profile",
+    "url": "http://archive.org/wayback/available?url=https://parler.com/profile/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"archived_snapshots\": {}",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Pastebin",
+    "url": "https://pastebin.com/u/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Not Found (#404)",
+    "titleContains": "class=\"user-view\"",
+    "weight": 8
+  },
+  {
+    "name": "patch",
+    "url": "https://patch.com/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003ePage not found\u003c/title\u003e",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "PatientsLikeMe",
+    "url": "https://www.patientslikeme.com/members/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Patreon",
+    "url": "https://www.patreon.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "errorCode\": 404,",
+    "titleContains": "full_name\":",
+    "weight": 6
+  },
+  {
+    "name": "Patriots Win",
+    "url": "https://patriots.win/api/v2/user/about.json?user={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"error\":\"invalid user\"",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Patronite",
+    "url": "https://patronite.pl/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Nie znaleźliśmy strony której szukasz.",
+    "titleContains": "Zostań Patronem",
+    "weight": 6
+  },
+  {
+    "name": "PayPal Business",
+    "url": "https://www.paypal.com/biz/profile-data/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":\"RESOURCE_NOT_FOUND\"",
+    "titleContains": "\"payerId\":",
+    "weight": 6
+  },
+  {
+    "name": "PayPal.Me",
+    "url": "https://www.paypal.com/paypalme/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\",\"griffinMetadata\":{\"",
+    "titleContains": "\"recipientSlugDetails\":",
+    "weight": 6
+  },
+  {
+    "name": "PCPartPicker",
+    "url": "https://pcpartpicker.com/user/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The page you requested could not be found.",
+    "titleContains": "class=\"active\"",
+    "weight": 8
+  },
+  {
+    "name": "Peerlist",
+    "url": "https://peerlist.io/api/v1/users/profile/tldr?handle={}",
+    "errorType": "status_code",
+    "errorCode": 500,
+    "errorMsg": "\"message\":\"User Not found\"",
+    "titleContains": "\"tldr\":",
+    "weight": 8
+  },
+  {
+    "name": "Peing",
+    "url": "https://peing.net/en/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "user_is_not_found",
+    "titleContains": "data-route-user-id-main=''",
+    "weight": 7
+  },
+  {
+    "name": "Peoople (Creator)",
+    "url": "https://peoople.app/en/creator/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "id=\"__next_error__\"",
+    "titleContains": "\"@type\":\"BreadcrumbList\"",
+    "weight": 7
+  },
+  {
+    "name": "Peoople (Influencer)",
+    "url": "https://peoople.app/en/influencer/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "id=\"__next_error__\"",
+    "titleContains": "\"@type\":\"BreadcrumbList\"",
+    "weight": 7
+  },
+  {
+    "name": "Peoople (Star)",
+    "url": "https://peoople.app/en/star/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "id=\"__next_error__\"",
+    "titleContains": "\"@type\":\"BreadcrumbList\"",
+    "weight": 7
+  },
+  {
+    "name": "Peoople (Unicorn)",
+    "url": "https://peoople.app/en/unicorn/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "id=\"__next_error__\"",
+    "titleContains": "\"@type\":\"BreadcrumbList\"",
+    "weight": 7
+  },
+  {
+    "name": "Periscope",
+    "url": "https://www.periscope.tv/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Sorry, this page doesn’t exist",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Pewex",
+    "url": "https://retro.pewex.pl/user/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Nie znaleziono użytkownika o podanym loginie.",
+    "titleContains": "Zamieszcza eksponaty od:",
+    "weight": 6
+  },
+  {
+    "name": "Picsart",
+    "url": "https://api.picsart.com/users/show/{}.json",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"status\":\"error\"",
+    "titleContains": "\"status\":\"success\"",
+    "weight": 6
+  },
+  {
+    "name": "Piekielni",
+    "url": "https://piekielni.pl/user/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Nie znaleziono użytkownika o podanym loginie.",
+    "titleContains": "Zamieszcza historie od:",
+    "weight": 6
+  },
+  {
+    "name": "Pillowfort",
+    "url": "https://www.pillowfort.social/{}/json/?p=1",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003e(404)\u003c/title\u003e",
+    "titleContains": "\"posts\":",
+    "weight": 7
+  },
+  {
+    "name": "PinkBike",
+    "url": "https://www.pinkbike.com/u/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "I couldn't find the page you were looking for",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Pinterest",
+    "url": "https://www.pinterest.com/{}/",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\u003ctitle\u003e\u003c/title\u003e",
+    "titleContains": "Profile | Pinterest",
+    "weight": 8
+  },
+  {
+    "name": "pixelfed.social",
+    "url": "https://pixelfed.social/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003epixelfed\u003c/title\u003e",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Planoly",
+    "url": "https://planoly.store/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"statusCode\":404",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Playstation Network",
+    "url": "https://psnprofiles.com/xhr/search/users?q={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "We couldn't find anything",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Plink",
+    "url": "https://plink.gg/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003ePLINK - 404 Page not found\u003c/title\u003e",
+    "titleContains": "class=\"user-page\"",
+    "weight": 6
+  },
+  {
+    "name": "Plurk",
+    "url": "https://www.plurk.com/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Register your plurk account",
+    "titleContains": "Profile views",
+    "weight": 7
+  },
+  {
+    "name": "Poe.com",
+    "url": "https://poe.com/profile/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"user\":null",
+    "titleContains": "\"__isNode\":\"PoeUser\"",
+    "weight": 8
+  },
+  {
+    "name": "Pokec",
+    "url": "https://pokec.azet.sk/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "profile--unknown_title\"\u003eNeexistujúci používateľ",
+    "titleContains": "idReportedUser",
+    "weight": 7
+  },
+  {
+    "name": "pokemonshowdown",
+    "url": "https://pokemonshowdown.com/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "(Unregistered)",
+    "titleContains": "Official ladder",
+    "weight": 6
+  },
+  {
+    "name": "Polarsteps",
+    "url": "https://www.polarsteps.com/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Ups! User not found.",
+    "titleContains": "\"user-profile\"",
+    "weight": 7
+  },
+  {
+    "name": "Polchat.pl",
+    "url": "https://polczat.pl/forum/profile/{}/",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Wybrany użytkownik nie istnieje.",
+    "titleContains": "Historia wpisów",
+    "weight": 7
+  },
+  {
+    "name": "Poll Everywhere",
+    "url": "https://pollev.com/proxy/api/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "ResourceNotFound",
+    "titleContains": "name",
+    "weight": 8
+  },
+  {
+    "name": "polygon",
+    "url": "https://www.polygon.com/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "404 Not found",
+    "titleContains": "- Polygon",
+    "weight": 6
+  },
+  {
+    "name": "popl",
+    "url": "https://poplme.co/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Profile not found",
+    "titleContains": "MuiTypography-root MuiTypography-body1 css-kj7pvm",
+    "weight": 6
+  },
+  {
+    "name": "Pornhub (Model)",
+    "url": "https://www.pornhub.com/model/{}",
+    "errorType": "status_code",
+    "errorCode": 301,
+    "errorMsg": "",
+    "titleContains": "class=\"topProfileHeader\"",
+    "weight": 6
+  },
+  {
+    "name": "Pornhub (Pornstar)",
+    "url": "https://www.pornhub.com/pornstar/{}",
+    "errorType": "status_code",
+    "errorCode": 301,
+    "errorMsg": "",
+    "titleContains": "class=\"topProfileHeader\"",
+    "weight": 6
+  },
+  {
+    "name": "Pornhub (User)",
+    "url": "https://www.pornhub.com/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003ePage Not Found\u003c/title\u003e",
+    "titleContains": "id=\"topProfileHeader\"",
+    "weight": 6
+  },
+  {
+    "name": "Poshmark",
+    "url": "https://poshmark.com/closet/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Page not found - Poshmark",
+    "titleContains": "is using Poshmark to sell items from their closet.",
+    "weight": 6
+  },
+  {
+    "name": "postcrossing",
+    "url": "https://www.postcrossing.com/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "- Postcrossing",
+    "titleContains": ", from",
+    "weight": 7
+  },
+  {
+    "name": "Poweredbygay.social (Mastodon Instance)",
+    "url": "https://poweredbygay.social/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Record not found",
+    "titleContains": "display_name",
+    "weight": 7
+  },
+  {
+    "name": "Pr0gramm",
+    "url": "https://pr0gramm.com/api/profile/info?name={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"code\":404",
+    "titleContains": "\"user\":",
+    "weight": 7
+  },
+  {
+    "name": "Pravda.me",
+    "url": "https://pravda.me/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003eThe page you are looking for isn\u0026#39;t here.",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Privacy Guides",
+    "url": "https://discuss.privacyguides.net/u/{}.json",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The requested URL or resource could not be found.",
+    "titleContains": "\"user_badges\":",
+    "weight": 8
+  },
+  {
+    "name": "Producthunt",
+    "url": "https://www.producthunt.com/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Product Hunt - All newest Products",
+    "titleContains": "s profile on Product Hunt",
+    "weight": 6
+  },
+  {
+    "name": "Pronouns.Page",
+    "url": "https://pronouns.page/api/profile/get/{}?version=2",
+    "errorType": "status_code",
+    "errorCode": 304,
+    "errorMsg": "\"profiles\": {}",
+    "titleContains": "username",
+    "weight": 7
+  },
+  {
+    "name": "Pronouny",
+    "url": "https://pronouny.xyz/api/users/profile/username/{}",
+    "errorType": "status_code",
+    "errorCode": 400,
+    "errorMsg": "That user doesn't exist",
+    "titleContains": "\"username\":",
+    "weight": 7
+  },
+  {
+    "name": "Prose",
+    "url": "https://prose.astral.camp/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Are you sure it was ever here?",
+    "titleContains": "blog-title",
+    "weight": 6
+  },
+  {
+    "name": "prv.pl",
+    "url": "https://www.prv.pl/osoba/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Użytkownik nie istnieje.",
+    "titleContains": "LOGIN",
+    "weight": 8
+  },
+  {
+    "name": "pypi",
+    "url": "https://pypi.org/user/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Page Not Found (404) · PyPI",
+    "titleContains": "Profile of",
+    "weight": 8
+  },
+  {
+    "name": "QUEER PL",
+    "url": "https://queer.pl/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Strona nie została znaleziona",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Quizlet",
+    "url": "https://quizlet.com/webapi/3.2/users/check-username?username={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"success\":true",
+    "titleContains": "\"identifier\":\"username_is_taken\"",
+    "weight": 6
+  },
+  {
+    "name": "Quora",
+    "url": "https://www.quora.com/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 301,
+    "errorMsg": "Page Not Found",
+    "titleContains": "Credentials",
+    "weight": 7
+  },
+  {
+    "name": "Raddle.me",
+    "url": "https://raddle.me/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "404 Not Found",
+    "titleContains": "sidebar__title",
+    "weight": 7
+  },
+  {
+    "name": "Rant.li",
+    "url": "https://rant.li/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Are you sure it was ever here?",
+    "titleContains": "blog-title",
+    "weight": 6
+  },
+  {
+    "name": "Rarible",
+    "url": "https://rarible.com/marketplace/api/v4/urls/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"success\":false",
+    "titleContains": "\"id\":",
+    "weight": 8
+  },
+  {
+    "name": "redbubble",
+    "url": "https://www.redbubble.com/people/{}/shop",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "This is a lost cause.",
+    "titleContains": "Shop | Redbubble",
+    "weight": 6
   },
   {
     "name": "Reddit",
     "url": "https://www.reddit.com/user/{}",
     "errorType": "message",
-    "errorMsg": "Sorry, nobody on Reddit goes by that name.",
+    "errorCode": 0,
+    "errorMsg": "nobody on Reddit goes by that name",
     "titleContains": "u/{} -",
-    "weight": 9
+    "weight": 6
   },
   {
-    "name": "Twitter/X",
-    "url": "https://x.com/{}",
+    "name": "RedGIFs",
+    "url": "https://api.redgifs.com/v1/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"status\":404",
+    "titleContains": "\"name\":",
+    "weight": 6
+  },
+  {
+    "name": "Refsheet",
+    "url": "https://refsheet.net/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "That's unfortunate. Where did it go?",
+    "titleContains": "og:title",
+    "weight": 6
+  },
+  {
+    "name": "Replit",
+    "url": "https://replit.com/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"statusCode\":404",
+    "titleContains": "\"__typename\":\"User\"",
+    "weight": 8
+  },
+  {
+    "name": "Researchgate",
+    "url": "https://www.researchgate.net/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 301,
+    "errorMsg": "20+ million researchers on ResearchGate",
+    "titleContains": "|",
+    "weight": 6
+  },
+  {
+    "name": "resumes_actorsaccess",
+    "url": "https://resumes.actorsaccess.com/{}",
     "errorType": "message",
-    "errorMsg": "This account doesn't exist",
+    "errorCode": 0,
+    "errorMsg": "File was not found on this SERVER",
     "titleContains": "",
     "weight": 7
   },
   {
-    "name": "Instagram",
-    "url": "https://www.instagram.com/{}",
+    "name": "Revolut",
+    "url": "https://revolut.me/api/web-profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"User not found\"",
+    "titleContains": "\"firstName\"",
+    "weight": 6
+  },
+  {
+    "name": "risk.ru",
+    "url": "https://risk.ru/people/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "404 — Risk.ru",
+    "titleContains": "— Люди — Risk.ru",
+    "weight": 6
+  },
+  {
+    "name": "Roberts Space Industries",
+    "url": "https://robertsspaceindustries.com/community-hub/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"/404\",\"query",
+    "titleContains": "Query\",\"creator",
+    "weight": 6
+  },
+  {
+    "name": "Roblox",
+    "url": "https://auth.roblox.com/v1/usernames/validate?username={}\u0026birthday=2019-12-31T23:00:00.000Z",
     "errorType": "message",
-    "errorMsg": "Sorry, this page isn't available.",
+    "errorCode": 0,
+    "errorMsg": "Username is valid",
+    "titleContains": "Username is already in use",
+    "weight": 6
+  },
+  {
+    "name": "RoutineHub",
+    "url": "https://routinehub.co/user/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "A community for Apple Shortcuts\u003c/title\u003e",
+    "titleContains": "Downloads:",
+    "weight": 7
+  },
+  {
+    "name": "ru_123rf",
+    "url": "https://ru.123rf.com/profile_{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "\u003ctitle\u003eФотобанк 123RF - Стоковые Фото, Векторы, Видеоролики. Подписка на Фото. Royalty Free контент\u003c",
+    "titleContains": "userID",
+    "weight": 6
+  },
+  {
+    "name": "RubyGems.org",
+    "url": "https://rubygems.org/api/v1/profiles/{}.json",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":\"Not Found\"",
+    "titleContains": "\"id\":",
+    "weight": 8
+  },
+  {
+    "name": "RumbleChannel",
+    "url": "https://rumble.com/c/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "404 error, this page does not exist",
+    "titleContains": "href=https://rumble.com/c/",
+    "weight": 6
+  },
+  {
+    "name": "RumbleUser",
+    "url": "https://rumble.com/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "404 error, this page does not exist",
+    "titleContains": "href=https://rumble.com/user/",
+    "weight": 6
+  },
+  {
+    "name": "RuneScape",
+    "url": "https://apps.runescape.com/runemetrics/profile/profile?user={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"error\":\"NO_PROFILE\"",
+    "titleContains": "\"name\":",
+    "weight": 6
+  },
+  {
+    "name": "RuTracker.org",
+    "url": "https://rutracker.org/forum/profile.php?mode=viewprofile\u0026u={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Пользователь не найден",
+    "titleContains": "Профиль пользователя",
+    "weight": 6
+  },
+  {
+    "name": "ruVoIP.net",
+    "url": "https://ruvoip.net/members/{}/",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Error 404 - Not Found",
+    "titleContains": "id=\"user-xprofile\"",
+    "weight": 8
+  },
+  {
+    "name": "Salon24",
+    "url": "https://www.salon24.pl/u/{}/",
+    "errorType": "status_code",
+    "errorCode": 301,
+    "errorMsg": "\u003ctitle\u003eSalon24 - Blogi, wiadomości, opinie i komentarze",
     "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Scammer.info",
+    "url": "https://scammer.info/u/{}.json",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The requested URL or resource could not be found",
+    "titleContains": "avatar_template",
+    "weight": 6
+  },
+  {
+    "name": "Scored",
+    "url": "https://scored.co/api/v2/user/about.json?user={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"status\":false",
+    "titleContains": "\"status\":true",
+    "weight": 7
+  },
+  {
+    "name": "ScoutWiki",
+    "url": "https://en.scoutwiki.org/User:{}",
+    "errorType": "status_code",
+    "errorCode": 301,
+    "errorMsg": "is not registered",
+    "titleContains": "NewPP limit report",
+    "weight": 7
+  },
+  {
+    "name": "Scratch",
+    "url": "https://api.scratch.mit.edu/accounts/checkusername/{}/",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"msg\":\"valid username\"",
+    "titleContains": "\"msg\":\"username exists\"",
+    "weight": 8
+  },
+  {
+    "name": "Scribd (Document)",
+    "url": "https://www.scribd.com/search/query?query={}\u0026verbatim=true",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"compilationId\":null",
+    "titleContains": "\"compilationId\":\"",
+    "weight": 6
+  },
+  {
+    "name": "Searchengines",
+    "url": "https://searchengines.guru/ru/search?keyword=\u0026author={}\u0026sortByDate=true",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "class=\"nothing-found\"",
+    "titleContains": "class=\"search-result__item\"",
+    "weight": 6
+  },
+  {
+    "name": "Seneporno",
+    "url": "https://seneporno.com/user/{}",
+    "errorType": "status_code",
+    "errorCode": 301,
+    "errorMsg": "Unexpected error! Please contact us and tell us more how you got to this page!",
+    "titleContains": "Dernier Login",
+    "weight": 6
+  },
+  {
+    "name": "sentimente",
+    "url": "https://www.sentimente.com/amp/{}.html",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "HTTP Error code: 404. Resource not found",
+    "titleContains": "Chat online with",
+    "weight": 6
+  },
+  {
+    "name": "SEOClerks",
+    "url": "https://www.seoclerks.com/user/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "\u003ctitle\u003eSEO Marketplace",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Sepia Search (PeerTube)",
+    "url": "https://sepiasearch.org/api/v1/search/video-channels?search=%22{}%22\u0026start=0\u0026count=10",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"data\":[]",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "setlist.fm",
+    "url": "https://www.setlist.fm/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Sorry, the page you requested doesn't exist",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "SFD",
+    "url": "https://www.sfd.pl/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Brak aktywnego profilu na forum",
+    "titleContains": "Tematy użytkownika",
+    "weight": 6
+  },
+  {
+    "name": "Shesfreaky",
+    "url": "https://www.shesfreaky.com/profile/{}/",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Shikimori",
+    "url": "https://shikimori.io/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"error-404\"",
+    "titleContains": "class=\"profile-head\"",
+    "weight": 7
+  },
+  {
+    "name": "Showup.tv",
+    "url": "https://showup.tv/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003eDarmowe",
+    "titleContains": "O mnie",
+    "weight": 6
+  },
+  {
+    "name": "shutterstock",
+    "url": "https://www.shutterstock.com/g/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Well, this is unexpected...",
+    "titleContains": "| Shutterstock",
+    "weight": 6
+  },
+  {
+    "name": "SimplePlanes",
+    "url": "https://www.simpleplanes.com/u/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "\u003ctitle\u003eSimplePlanes Airplanes\u003c/title\u003e",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "skeb",
+    "url": "https://skeb.jp/@{}",
+    "errorType": "status_code",
+    "errorCode": 503,
+    "errorMsg": "Skeb - Request Box",
+    "titleContains": ") | Skeb",
+    "weight": 6
+  },
+  {
+    "name": "SlackHoles",
+    "url": "https://slackholes.com/actor/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "It looks like nothing was found at this location",
+    "titleContains": "Pussy and Ass Sizes",
+    "weight": 6
+  },
+  {
+    "name": "Slant",
+    "url": "https://www.slant.co/users/{}?format=jsonp\u0026callback=jsonLoaded",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":404",
+    "titleContains": "\"uuid\":",
+    "weight": 6
+  },
+  {
+    "name": "slides",
+    "url": "https://slides.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "You may have mistyped the address",
+    "titleContains": "Presentations by",
+    "weight": 7
+  },
+  {
+    "name": "Slideshare",
+    "url": "https://www.slideshare.net/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "id=\"username-available\"",
+    "titleContains": "data-testid=\"report-button\"",
+    "weight": 7
+  },
+  {
+    "name": "SmashRun",
+    "url": "https://smashrun.com/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "no Smashrunner with the username",
+    "titleContains": "Miles run overall",
+    "weight": 6
+  },
+  {
+    "name": "smule",
+    "url": "https://www.smule.com/api/profile/?handle={}",
+    "errorType": "status_code",
+    "errorCode": 400,
+    "errorMsg": "code\": 65",
+    "titleContains": "account_id",
+    "weight": 6
+  },
+  {
+    "name": "Snapchat",
+    "url": "https://www.snapchat.com/add/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "",
+    "titleContains": "Snapchat",
     "weight": 9
   },
   {
-    "name": "Facebook",
-    "url": "https://www.facebook.com/{}",
-    "errorType": "message",
-    "errorMsg": "The link you followed may be broken",
-    "titleContains": "",
-    "weight": 5
+    "name": "soc.citizen4.eu",
+    "url": "https://soc.citizen4.eu/profile/{}/profile",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Nie znaleziono",
+    "titleContains": "@soc.citizen4.eu",
+    "weight": 7
   },
   {
-    "name": "LinkedIn",
-    "url": "https://www.linkedin.com/in/{}",
-    "errorType": "message",
-    "errorMsg": "This page doesn't exist",
+    "name": "social.bund.de",
+    "url": "https://social.bund.de/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003eThe page you are looking for isn\u0026#39;t here.",
     "titleContains": "",
-    "weight": 3
+    "weight": 7
+  },
+  {
+    "name": "solo.to",
+    "url": "https://solo.to/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The page you're looking for isn't here.",
+    "titleContains": "create your own page",
+    "weight": 7
+  },
+  {
+    "name": "SoundCloud",
+    "url": "https://soundcloud.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003eSoundCloud - Hear the world’s sounds\u003c/title\u003e",
+    "titleContains": "\"hydratable\":\"user\"",
+    "weight": 6
+  },
+  {
+    "name": "Soup",
+    "url": "https://www.soup.io/author/{}",
+    "errorType": "status_code",
+    "errorCode": 301,
+    "errorMsg": "Soup.io - News, Sports, Entertainment, TV, Tech, Gaming",
+    "titleContains": "Author at Soup.io",
+    "weight": 6
+  },
+  {
+    "name": "Sourceforge",
+    "url": "https://sourceforge.net/rest/u/{}/profile",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "id=\"message-image-404\"",
+    "titleContains": "\"username\":",
+    "weight": 8
+  },
+  {
+    "name": "Speaker Deck",
+    "url": "https://speakerdeck.com/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "User Not Found - Speaker Deck",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "speedrun",
+    "url": "https://www.speedrun.com/user/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003espeedrun.com",
+    "titleContains": "Runs -",
+    "weight": 6
+  },
+  {
+    "name": "SPOJ",
+    "url": "https://www.spoj.com/users/{}/",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\u003cstrong\u003eInnopolis Open 2018\u003c/strong\u003e",
+    "titleContains": "",
+    "weight": 8
+  },
+  {
+    "name": "sporcle",
+    "url": "https://www.sporcle.com/user/{}/people/",
+    "errorType": "status_code",
+    "errorCode": 301,
+    "errorMsg": "This Sporcle user cannot be found.",
+    "titleContains": "'s Sporcle Friends",
+    "weight": 6
+  },
+  {
+    "name": "Sports Tracker",
+    "url": "https://api.sports-tracker.com/apiserver/v1/user/name/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"code\":\"404\"",
+    "titleContains": "\"uuid\":",
+    "weight": 6
+  },
+  {
+    "name": "Spotify",
+    "url": "https://open.spotify.com/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Page not found",
+    "titleContains": "content=\"profile\"",
+    "weight": 6
+  },
+  {
+    "name": "StackOverflow",
+    "url": "https://api.stackexchange.com/2.3/users?order=desc\u0026sort=name\u0026inname={}\u0026site=stackoverflow",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"items\":[]",
+    "titleContains": "",
+    "weight": 8
+  },
+  {
+    "name": "StackShare",
+    "url": "https://stackshare.io/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\\\"content\\\":\\\"The requested page could not be found.\\\"",
+    "titleContains": "\\\"userProfile\\\":",
+    "weight": 8
+  },
+  {
+    "name": "stats.fm",
+    "url": "https://api.stats.fm/api/v1/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"status\":404",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Steam",
+    "url": "https://steamcommunity.com/id/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Steam Community :: Error",
+    "titleContains": "g_rgProfileData =",
+    "weight": 6
+  },
+  {
+    "name": "SteamGifts",
+    "url": "https://www.steamgifts.com/user/{}",
+    "errorType": "status_code",
+    "errorCode": 301,
+    "errorMsg": "",
+    "titleContains": "\"identifier\":",
+    "weight": 6
+  },
+  {
+    "name": "steller",
+    "url": "https://steller.co/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003e\u003c/title\u003e",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "StoryCorps",
+    "url": "https://archive.storycorps.org/user/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "We're sorry, but the page",
+    "titleContains": "archive author",
+    "weight": 6
+  },
+  {
+    "name": "Strava",
+    "url": "https://www.strava.com/athletes/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"page\":\"/404\"",
+    "titleContains": "/athletes/",
+    "weight": 7
+  },
+  {
+    "name": "StreamElements",
+    "url": "https://api.streamelements.com/kappa/v2/channels/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "error",
+    "titleContains": "\"providerId\"",
+    "weight": 6
+  },
+  {
+    "name": "StreamLabs",
+    "url": "https://streamlabs.com/api/v6/user/{}",
+    "errorType": "status_code",
+    "errorCode": 401,
+    "errorMsg": "\u003ctitle\u003eUnauthorized\u003c/title\u003e",
+    "titleContains": "\"id\":",
+    "weight": 6
+  },
+  {
+    "name": "Stripchat",
+    "url": "https://stripchat.com/api/front/users/checkUsername?username={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "[]",
+    "titleContains": "\"error\":\"This username already exists\"",
+    "weight": 6
+  },
+  {
+    "name": "Subscribestar",
+    "url": "https://subscribestar.adult/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "WE ARE SORRY, THE PAGE YOU REQUESTED CANNOT BE FOUND",
+    "titleContains": "CREATOR STATS",
+    "weight": 6
+  },
+  {
+    "name": "Substack",
+    "url": "https://substack.com/api/v1/user/{}/public_profile",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":\"profile not found\"",
+    "titleContains": "\"id\":",
+    "weight": 7
+  },
+  {
+    "name": "sukebei.nyaa.si",
+    "url": "https://sukebei.nyaa.si/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "404 Not Found",
+    "titleContains": "'s torrents",
+    "weight": 6
+  },
+  {
+    "name": "Suzuri",
+    "url": "https://suzuri.jp/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Push Space-key",
+    "titleContains": "Items",
+    "weight": 6
+  },
+  {
+    "name": "szmer.info",
+    "url": "https://szmer.info/u/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Code: Couldn't find that username or email.",
+    "titleContains": "Joined",
+    "weight": 7
+  },
+  {
+    "name": "tabletoptournament",
+    "url": "https://www.tabletoptournaments.net/eu/player/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "No player with the nickname",
+    "titleContains": "- Player Profile | T³ - TableTop Tournaments",
+    "weight": 6
+  },
+  {
+    "name": "TamTam",
+    "url": "https://tamtam.chat/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "ТамТам\u003c/title\u003e",
+    "titleContains": "deeplink=tamtam://chat/",
+    "weight": 7
+  },
+  {
+    "name": "Tanuki.pl",
+    "url": "https://tanuki.pl/profil/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Nie ma takiego użytkownika",
+    "titleContains": "Dołączył",
+    "weight": 6
+  },
+  {
+    "name": "TAPiTAG",
+    "url": "https://account.tapitag.co/tapitag/api/v1/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "The rf number is not valid",
+    "titleContains": "User details are Showing",
+    "weight": 6
+  },
+  {
+    "name": "Tappy",
+    "url": "https://api.tappy.tech/api/profile/username/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "Profile of username Not Found",
+    "titleContains": "user_id",
+    "weight": 6
+  },
+  {
+    "name": "Taringa",
+    "url": "https://www.taringa.net/{}",
+    "errorType": "status_code",
+    "errorCode": 301,
+    "errorMsg": "Colectiva en Taringa!\u003c/title\u003e",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Taringa Archived Profile",
+    "url": "https://archive.org/wayback/available?url=https://www.taringa.net/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"archived_snapshots\": {}",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "taskrabbit",
+    "url": "https://www.taskrabbit.com/profile/{}/about",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "",
+    "titleContains": "’s Profile",
+    "weight": 6
+  },
+  {
+    "name": "Teamtreehouse",
+    "url": "https://teamtreehouse.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Oops, Something went missing",
+    "titleContains": "Member Since",
+    "weight": 8
+  },
+  {
+    "name": "Teespring",
+    "url": "https://commerce.teespring.com/v1/stores?slug={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "{\"errors\":{\"store\":[\"not found\"]}}",
+    "titleContains": "sellerToken",
+    "weight": 6
+  },
+  {
+    "name": "Teknik",
+    "url": "https://user.teknik.io/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "The user does not exist",
+    "titleContains": "Public Key",
+    "weight": 8
+  },
+  {
+    "name": "Telegram",
+    "url": "https://t.me/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "noindex, nofollow",
+    "titleContains": "tgme_page_title",
+    "weight": 7
+  },
+  {
+    "name": "Teletype",
+    "url": "https://teletype.in/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"error\"",
+    "titleContains": "class=\"layout__content m_main blog\"",
+    "weight": 6
+  },
+  {
+    "name": "Tellonym",
+    "url": "https://api.tellonym.me/profiles/name/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"code\":\"NOT_FOUND\"",
+    "titleContains": "\"id\":",
+    "weight": 7
+  },
+  {
+    "name": "Tenor",
+    "url": "https://tenor.com/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"error-page container page\"",
+    "titleContains": "class=\"ProfilePage page\"",
+    "weight": 6
+  },
+  {
+    "name": "TETR.IO",
+    "url": "https://ch.tetr.io/api/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"success\":false",
+    "titleContains": "\"success\":true",
+    "weight": 6
+  },
+  {
+    "name": "TF2 Backpack Examiner",
+    "url": "https://www.tf2items.com/id/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "",
+    "titleContains": "var profileId",
+    "weight": 6
+  },
+  {
+    "name": "The Gateway Pundit",
+    "url": "https://www.thegatewaypundit.com/author/{}/",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\u003ctitle\u003eThe Gateway Pundit * Conservative news and commentary",
+    "titleContains": "meta property=\"og:type\" content=\"profile\"",
+    "weight": 6
+  },
+  {
+    "name": "theguardian",
+    "url": "https://www.theguardian.com/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003ePage Not Found | The Guardian\u003c/title\u003e",
+    "titleContains": "content=\"\u0026#x3C;p\u0026#x3E;",
+    "weight": 6
+  },
+  {
+    "name": "themeforest",
+    "url": "https://themeforest.net/user/{}",
+    "errorType": "status_code",
+    "errorCode": 301,
+    "errorMsg": "Page Not Found | ThemeForest",
+    "titleContains": "s profile on ThemeForest",
+    "weight": 6
+  },
+  {
+    "name": "Thetattooforum",
+    "url": "https://www.thetattooforum.com/members/{}/",
+    "errorType": "status_code",
+    "errorCode": 500,
+    "errorMsg": "We’re sorry",
+    "titleContains": "Insert This Gallery",
+    "weight": 6
+  },
+  {
+    "name": "thoughts",
+    "url": "https://thoughts.com/members/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003ePage not found",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Threads",
+    "url": "https://www.threads.com/@{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "",
+    "titleContains": "\"username\":",
+    "weight": 7
   },
   {
     "name": "TikTok",
-    "url": "https://www.tiktok.com/@{}",
+    "url": "https://www.tiktok.com/oembed?url=https://www.tiktok.com/@{}",
+    "errorType": "status_code",
+    "errorCode": 400,
+    "errorMsg": "\"code\":400",
+    "titleContains": "\"author_url\":",
+    "weight": 7
+  },
+  {
+    "name": "Tilde.zone (Mastodon Instance)",
+    "url": "https://tilde.zone/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Record not found",
+    "titleContains": "display_name",
+    "weight": 7
+  },
+  {
+    "name": "Tinder",
+    "url": "https://tinder.com/@{}",
     "errorType": "message",
-    "errorMsg": "Couldn't find this account",
+    "errorCode": 0,
+    "errorMsg": "Tinder | Dating, Make Friends \u0026amp; Meet New People",
     "titleContains": "",
-    "weight": 4
+    "weight": 6
+  },
+  {
+    "name": "TipeeeStream",
+    "url": "https://www.tipeeestream.com/v3.0/pages/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"message\":\"Not found\"",
+    "titleContains": "\"id\":",
+    "weight": 6
+  },
+  {
+    "name": "Tooting.ch (Mastodon Instance)",
+    "url": "https://tooting.ch/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Record not found",
+    "titleContains": "display_name",
+    "weight": 7
+  },
+  {
+    "name": "Topcoder",
+    "url": "https://api.topcoder.com/v5/members/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"message\":\"Member with handle:",
+    "titleContains": "\"userId\":",
+    "weight": 8
+  },
+  {
+    "name": "toyhou.se",
+    "url": "https://toyhou.se/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "We can't find that page!",
+    "titleContains": "display-user",
+    "weight": 6
+  },
+  {
+    "name": "TradingView",
+    "url": "https://www.tradingview.com/u/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"tv-http-error-page__image tv-http-error-page__image--404\"",
+    "titleContains": "class=\"js-user-profile\"",
+    "weight": 6
+  },
+  {
+    "name": "trakt",
+    "url": "https://trakt.tv/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The page you were looking for doesn't exist (404) - Trakt.tv",
+    "titleContains": "s profile - Trakt",
+    "weight": 6
+  },
+  {
+    "name": "TRAKTRAIN",
+    "url": "https://traktrain.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"title-404\"",
+    "titleContains": "id=\"userId\"",
+    "weight": 6
+  },
+  {
+    "name": "Trello",
+    "url": "https://trello.com/1/Members/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ch1\u003eOh no! 404!\u003c/h1\u003e",
+    "titleContains": "\"id\":",
+    "weight": 7
+  },
+  {
+    "name": "tripadvisor",
+    "url": "https://www.tripadvisor.com/Profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003cdiv class=\"error404",
+    "titleContains": "Contributions",
+    "weight": 7
+  },
+  {
+    "name": "TruckersMP",
+    "url": "https://truckersmp.com/user/search?search={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\u003ch4\u003eCould not find any member using these credentials\u003c/h4\u003e",
+    "titleContains": "class=\"team-v2\"",
+    "weight": 6
+  },
+  {
+    "name": "TruckersMP.Ru",
+    "url": "https://truckersmp.ru/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"b-handler-error-404\"",
+    "titleContains": "class=\"b-user-page\"",
+    "weight": 6
+  },
+  {
+    "name": "Truth Social",
+    "url": "https://truthsocial.com/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":\"Record not found\"",
+    "titleContains": "\"id\":",
+    "weight": 7
+  },
+  {
+    "name": "TryHackMe",
+    "url": "https://tryhackme.com/api/user/exist/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"success\":false",
+    "titleContains": "\"success\":true",
+    "weight": 8
+  },
+  {
+    "name": "Tryst",
+    "url": "https://tryst.link/escort/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003ePage not found",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "tumblr",
+    "url": "https://www.tumblr.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"status\":404",
+    "titleContains": "\"queryKey\":[\"user-info",
+    "weight": 6
+  },
+  {
+    "name": "tunefind",
+    "url": "https://www.tunefind.com/api-request/account/profile?userName={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"code\":\"not_found\"",
+    "titleContains": "\"user-stats-engagement\":",
+    "weight": 6
+  },
+  {
+    "name": "Tweetapus",
+    "url": "https://tweetapus.tiag.workers.dev/@{}.json",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\": \"User not found\"",
+    "titleContains": "\"username\":",
+    "weight": 7
+  },
+  {
+    "name": "Twitcast",
+    "url": "https://frontendapi.twitcasting.tv/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"message\":\"User Not Found\"",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Twitch",
+    "url": "https://twitchtracker.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003e404 Page Not Found",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Twitter archived profile",
+    "url": "http://archive.org/wayback/available?url=https://twitter.com/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"archived_snapshots\": {}",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Twitter archived tweets",
+    "url": "http://archive.org/wayback/available?url=https://twitter.com/{}/status/*",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"archived_snapshots\": {}",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Twitter/X",
+    "url": "https://x.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "",
+    "titleContains": "X",
+    "weight": 9
+  },
+  {
+    "name": "twpro",
+    "url": "https://twpro.jp/{}/q-data.json",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": ",404,\"/",
+    "titleContains": ",200,\"/",
+    "weight": 7
+  },
+  {
+    "name": "Udemy",
+    "url": "https://www.udemy.com/user/{}/",
+    "errorType": "status_code",
+    "errorCode": 301,
+    "errorMsg": "\u003ctitle\u003eOnline Courses - Learn Anything, On Your Schedule | Udemy\u003c/title\u003e",
+    "titleContains": "",
+    "weight": 8
+  },
+  {
+    "name": "UEF CONNECT",
+    "url": "https://uefconnect.uef.fi/en/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003ePage not found - UEFConnect\u003c/title\u003e",
+    "titleContains": "profile-page-header__info",
+    "weight": 6
+  },
+  {
+    "name": "Ultimate Guitar",
+    "url": "https://www.ultimate-guitar.com/u/{}",
+    "errorType": "status_code",
+    "errorCode": 410,
+    "errorMsg": "Oops! We couldn't find that page.",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Ultras Diary",
+    "url": "http://ultrasdiary.pl/u/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Ile masz wyjazdów?",
+    "titleContains": "Mecze wyjazdowe:",
+    "weight": 6
+  },
+  {
+    "name": "Unlisted Videos",
+    "url": "https://unlistedvideos.com/search.php?user={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "content=\"\"/\u003e",
+    "titleContains": "Date submitted",
+    "weight": 6
+  },
+  {
+    "name": "unsplash",
+    "url": "https://unsplash.com/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Hm, the page you were looking for doesn't seem to exist anymore.",
+    "titleContains": "| Unsplash Photo Community",
+    "weight": 6
+  },
+  {
+    "name": "Untappd",
+    "url": "https://untappd.com/user/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"search_404\"",
+    "titleContains": "class=\"cont user_profile\"",
+    "weight": 7
+  },
+  {
+    "name": "USA Life",
+    "url": "https://usa.life/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "Sorry, page not found",
+    "titleContains": "Please log in to like, share and comment",
+    "weight": 7
+  },
+  {
+    "name": "utip.io",
+    "url": "https://utip.io/creator/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Not a valid web service key",
+    "titleContains": "\"userName\"",
+    "weight": 6
+  },
+  {
+    "name": "Uwumarket",
+    "url": "https://uwumarket.us/collections/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Page not found",
+    "titleContains": "data-collection-filters",
+    "weight": 6
+  },
+  {
+    "name": "vapenews",
+    "url": "https://vapenews.ru/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003e404\u003c/title\u003e",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Venmo",
+    "url": "https://account.venmo.com/u/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Sorry, the page you requested does not exist!",
+    "titleContains": "profileInfo_username__",
+    "weight": 6
+  },
+  {
+    "name": "Vero",
+    "url": "https://vero.co/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\u003ch3\u003eNot Found\u003c/h3\u003e",
+    "titleContains": "name=\"username",
+    "weight": 6
+  },
+  {
+    "name": "vibilagare",
+    "url": "https://www.vibilagare.se/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Sidan hittades inte |",
+    "titleContains": "class=\"user-profile\"",
+    "weight": 6
+  },
+  {
+    "name": "VIEWBUG",
+    "url": "https://www.viewbug.com/member/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "id=\"missing-this\"",
+    "titleContains": "class=\"top-profile-membership\"",
+    "weight": 6
+  },
+  {
+    "name": "Vimeo",
+    "url": "https://vimeo.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "VimeUhOh",
+    "titleContains": "og:type",
+    "weight": 6
+  },
+  {
+    "name": "Vine",
+    "url": "https://vine.co/api/users/profiles/vanity/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "That record does not exist",
+    "titleContains": "userId",
+    "weight": 6
+  },
+  {
+    "name": "VirusTotal",
+    "url": "https://www.virustotal.com/ui/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"code\": \"NotFoundError\"",
+    "titleContains": "\"data\"",
+    "weight": 6
+  },
+  {
+    "name": "visnesscard",
+    "url": "https://my.visnesscard.com/Home/GetCard/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "card_id\": 0",
+    "titleContains": "end_point",
+    "weight": 6
+  },
+  {
+    "name": "Vivino",
+    "url": "https://api.vivino.com/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":{\"message\":\"Record not found\"}",
+    "titleContains": "\"id\":",
+    "weight": 6
+  },
+  {
+    "name": "VK",
+    "url": "https://vk.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "404 Not Found",
+    "titleContains": "content=\"profile\"",
+    "weight": 7
+  },
+  {
+    "name": "Vkl.world (Mastodon Instance)",
+    "url": "https://vkl.world/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Record not found",
+    "titleContains": "display_name",
+    "weight": 7
+  },
+  {
+    "name": "Vmst.io (Mastodon Instance)",
+    "url": "https://vmst.io/api/v1/accounts/lookup?acct={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Record not found",
+    "titleContains": "display_name",
+    "weight": 7
+  },
+  {
+    "name": "Voice123",
+    "url": "https://voice123.com/api/providers/search/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "[]",
+    "titleContains": "user_id",
+    "weight": 6
+  },
+  {
+    "name": "Voices.com",
+    "url": "https://www.voices.com/profile/{}/",
+    "errorType": "status_code",
+    "errorCode": 301,
+    "errorMsg": "Try going back to the previous page or see below for more options",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "vsco",
+    "url": "https://vsco.co/{}/gallery",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":\"site_not_found\"}",
+    "titleContains": "permaSubdomain",
+    "weight": 7
+  },
+  {
+    "name": "VseTop",
+    "url": "https://vsetop.org/user/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003cp\u003eПользователь с таким именем не найден.\u003c/p\u003e",
+    "titleContains": "class=\"userinfo\"",
+    "weight": 8
+  },
+  {
+    "name": "W3Schools",
+    "url": "https://pathfinder-api.kai.w3spaces.com/public-profile-api/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"message\":\"Profile does not exists or not visible\"",
+    "titleContains": "\"createdAt\":",
+    "weight": 8
+  },
+  {
+    "name": "Wakatime",
+    "url": "https://wakatime.com/api/v1/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\": \"Not found.\"",
+    "titleContains": "\"data\":",
+    "weight": 8
+  },
+  {
+    "name": "Warmerise",
+    "url": "https://warmerise.com/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ch2\u003ePage Not Found",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "warriorforum",
+    "url": "https://www.warriorforum.com/members/{}.html",
+    "errorType": "status_code",
+    "errorCode": 400,
+    "errorMsg": "Oops | Warrior Forum -",
+    "titleContains": "Last Activity:",
+    "weight": 6
+  },
+  {
+    "name": "WatchMeMore",
+    "url": "https://watchmemore.com/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"Account not exists",
+    "titleContains": "\"dateCreated\":",
+    "weight": 6
+  },
+  {
+    "name": "Watchmyfeed",
+    "url": "https://watchmyfeed.com/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "",
+    "titleContains": "SEND ME A TIP",
+    "weight": 6
+  },
+  {
+    "name": "Wattpad",
+    "url": "https://www.wattpad.com/api/v3/users/{}",
+    "errorType": "status_code",
+    "errorCode": 400,
+    "errorMsg": "\"error_code\":",
+    "titleContains": "\"username\":",
+    "weight": 7
+  },
+  {
+    "name": "waytohey",
+    "url": "https://waytohey.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Unfortunately, this page doesn\u0026#039;t exist.",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Weasyl",
+    "url": "https://www.weasyl.com/~{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "This user doesn't seem to be in our database.",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "Weblancer",
+    "url": "https://www.weblancer.net/users/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"page\":\"/404\"",
+    "titleContains": "\"user\":",
+    "weight": 7
+  },
+  {
+    "name": "Weblate",
+    "url": "https://hosted.weblate.org/user/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ch2\u003ePage Not Found\u003c/h2\u003e",
+    "titleContains": "class=\"user-page text-center\"",
+    "weight": 6
+  },
+  {
+    "name": "wego",
+    "url": "https://wego.social/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "Sorry, page not found!",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "weheartit",
+    "url": "https://weheartit.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "(404)\u003c/title\u003e",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Weibo",
+    "url": "https://weibo.com/ajax/profile/info?custom={}",
+    "errorType": "status_code",
+    "errorCode": 400,
+    "errorMsg": "\u003ch2\u003e400 Bad Request\u003c/h2\u003e",
+    "titleContains": "\"user\":",
+    "weight": 7
+  },
+  {
+    "name": "WeTransfer",
+    "url": "https://wepresent.wetransfer.com/artists/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "text-display-4\"\u003e404 error",
+    "titleContains": "name\":\"WePresent |",
+    "weight": 6
+  },
+  {
+    "name": "Wikidot",
+    "url": "https://www.wikidot.com/user:info/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\u003cdiv class=\"error-block\"\u003eUser does not exist.\u003c/div\u003e",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "Wikimapia",
+    "url": "https://wikimapia.org/user/register/?check=username\u0026value={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"ok\":true",
+    "titleContains": "\"ok\":false",
+    "weight": 7
+  },
+  {
+    "name": "Wimkin-PublicProfile",
+    "url": "https://wimkin.com/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "The page you are looking for cannot be found.",
+    "titleContains": "is on WIMKIN",
+    "weight": 6
+  },
+  {
+    "name": "Wireclub",
+    "url": "https://www.wireclub.com/users/{}",
+    "errorType": "status_code",
+    "errorCode": 301,
+    "errorMsg": "People - Wireclub",
+    "titleContains": "Chat With",
+    "weight": 7
+  },
+  {
+    "name": "Wishlistr",
+    "url": "https://www.wishlistr.com/sign-up/?rs=checkUserName\u0026rsargs[]={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "+:var res = parseInt(0);",
+    "titleContains": "+:var res = \"",
+    "weight": 6
+  },
+  {
+    "name": "wordnik",
+    "url": "https://www.wordnik.com/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Wordnik: Page Not Found",
+    "titleContains": "Welcome,",
+    "weight": 6
+  },
+  {
+    "name": "WordPress.com (Deleted)",
+    "url": "https://public-api.wordpress.com/rest/v1.1/sites/{}.wordpress.com",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":\"unknown_blog\"",
+    "titleContains": "\"message\":\"API calls to this endpoint have been disabled.\"",
+    "weight": 6
+  },
+  {
+    "name": "WordPress.com (Private)",
+    "url": "https://public-api.wordpress.com/rest/v1.1/sites/{}.wordpress.com",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":\"unknown_blog\"",
+    "titleContains": "\"message\":\"User cannot access this private blog.\"",
+    "weight": 6
+  },
+  {
+    "name": "WordPress.com (Public)",
+    "url": "https://public-api.wordpress.com/rest/v1.1/sites/{}.wordpress.com",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"error\":\"unknown_blog\"",
+    "titleContains": "\"ID\":",
+    "weight": 6
+  },
+  {
+    "name": "WordPress.org (Forums)",
+    "url": "https://login.wordpress.org/wp-json/wporg/v1/username-available/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"available\":true",
+    "titleContains": "\"error\":\"That username is already in use.",
+    "weight": 6
+  },
+  {
+    "name": "WordPress.org (Profiles)",
+    "url": "https://login.wordpress.org/wp-json/wporg/v1/username-available/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"available\":true",
+    "titleContains": "\"error\":\"That username is already in use.",
+    "weight": 6
+  },
+  {
+    "name": "Wowhead",
+    "url": "https://www.wowhead.com/user={}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Error - Wowhead",
+    "titleContains": "Profile - Wowhead",
+    "weight": 6
+  },
+  {
+    "name": "Wykop",
+    "url": "https://wykop.pl/ludzie/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Wystąpił błąd 404.",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "X",
+    "url": "https://api.x.com/i/users/username_available.json?username={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"reason\":\"available\"",
+    "titleContains": "\"reason\":\"taken\"",
+    "weight": 7
+  },
+  {
+    "name": "Xakep.ru",
+    "url": "https://xakep.ru/author/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Страница не найдена",
+    "titleContains": "authorBlock-avatar",
+    "weight": 8
+  },
+  {
+    "name": "Xbox Gamertag",
+    "url": "https://www.xboxgamertag.com/search/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Gamertag doesn't exist",
+    "titleContains": "Games Played",
+    "weight": 6
+  },
+  {
+    "name": "xHamster",
+    "url": "https://xhamster.com/users/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "User not found\u003c/title\u003e",
+    "titleContains": "and bio on xHamster",
+    "weight": 6
+  },
+  {
+    "name": "Xing",
+    "url": "https://www.xing.com/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "404 Not Found | XING",
+    "titleContains": "",
+    "weight": 7
+  },
+  {
+    "name": "XNXX",
+    "url": "https://www.xnxx.com/mobile/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 400,
+    "errorMsg": "\u003ctitle\u003eBad request",
+    "titleContains": "",
+    "weight": 6
+  },
+  {
+    "name": "XVideos",
+    "url": "https://www.xvideos.com/profiles/{}/feed/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"message\":\"Unknown user\"",
+    "titleContains": "\"result\":true",
+    "weight": 6
+  },
+  {
+    "name": "Yahoo! JAPAN Auction",
+    "url": "https://auctions.yahoo.co.jp/follow/list/{}",
+    "errorType": "status_code",
+    "errorCode": 500,
+    "errorMsg": "Yahoo! JAPAN IDが無効です。",
+    "titleContains": "出品者",
+    "weight": 6
+  },
+  {
+    "name": "yapishu",
+    "url": "https://yapishu.net/user/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "Not Found (#404)",
+    "titleContains": "for_profile",
+    "weight": 6
+  },
+  {
+    "name": "Yazawaj",
+    "url": "https://www.yazawaj.com/profile/{}",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "\u003ctitle\u003enodata",
+    "titleContains": "profile-description",
+    "weight": 6
+  },
+  {
+    "name": "YesWeHack",
+    "url": "https://api.yeswehack.com/hunters/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"code\":404",
+    "titleContains": "\"username\":",
+    "weight": 8
+  },
+  {
+    "name": "YouNow",
+    "url": "https://api.younow.com/php/api/broadcast/info/user={}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"errorMsg\":\"No users found\"",
+    "titleContains": "\"userId\":",
+    "weight": 7
+  },
+  {
+    "name": "youpic",
+    "url": "https://youpic.com/photographer/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003eYouPic — Not Found\u003c/title\u003e",
+    "titleContains": "",
+    "weight": 6
   },
   {
     "name": "YouTube",
     "url": "https://www.youtube.com/@{}",
     "errorType": "status_code",
     "errorCode": 404,
+    "errorMsg": "",
+    "titleContains": "",
+    "weight": 8
+  },
+  {
+    "name": "YouTube Channel",
+    "url": "https://www.youtube.com/c/{}/about",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003e404 Not Found",
+    "titleContains": "joinedDateText",
+    "weight": 6
+  },
+  {
+    "name": "YouTube User",
+    "url": "https://www.youtube.com/user/{}/about",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003e404 Not Found",
+    "titleContains": "joinedDateText",
+    "weight": 6
+  },
+  {
+    "name": "YouTube User2",
+    "url": "https://www.youtube.com/@{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003e404 Not Found\u003c/title\u003e",
+    "titleContains": "canonicalBaseUrl",
+    "weight": 6
+  },
+  {
+    "name": "Zbiornik",
+    "url": "https://mini.zbiornik.com/{}",
+    "errorType": "status_code",
+    "errorCode": 301,
+    "errorMsg": "",
+    "titleContains": "INFO",
+    "weight": 6
+  },
+  {
+    "name": "Zenn",
+    "url": "https://zenn.dev/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003cdiv class=\"ErrorContent_status__2Ykoq\"\u003e404\u003c/div\u003e",
+    "titleContains": "",
+    "weight": 8
+  },
+  {
+    "name": "Zepeto",
+    "url": "https://gw-napi.zepeto.io/profiles/{}",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "errorCode\":",
+    "titleContains": "zepetoId\":",
+    "weight": 7
+  },
+  {
+    "name": "zhihu",
+    "url": "https://api.zhihu.com/books/people/{}/publications?offset=0\u0026limit=5",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\"name\": \"NotFoundException\"",
+    "titleContains": "\"is_start\": true",
+    "weight": 7
+  },
+  {
+    "name": "Zillow",
+    "url": "https://www.zillow.com/profile/{}/",
+    "errorType": "status_code",
+    "errorCode": 302,
+    "errorMsg": "",
+    "titleContains": "- Real Estate Agent",
+    "weight": 6
+  },
+  {
+    "name": "zmarsa.com",
+    "url": "https://zmarsa.com/uzytkownik/{}",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003eError 404 - zMarsa.com\u003c",
+    "titleContains": "Statystyki",
+    "weight": 6
+  },
+  {
+    "name": "Znanija",
+    "url": "https://znanija.com/graphql/ru?operationName=NickAvailability\u0026query=query%20NickAvailability%28%24nick%3AString%21%29%7BnickAvailability%28nick%3A%24nick%29%7BisAvailable%7D%7D\u0026variables=%7B%22nick%22%3A%22{}%22%7D",
+    "errorType": "message",
+    "errorCode": 0,
+    "errorMsg": "\"isAvailable\":true",
+    "titleContains": "\"isAvailable\":false",
+    "weight": 6
+  },
+  {
+    "name": "Zomato",
+    "url": "https://www.zomato.com/{}/reviews",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "This is a 404 page and we think it's fairly clear",
     "titleContains": "",
     "weight": 7
   },
   {
-    "name": "Pinterest",
-    "url": "https://www.pinterest.com/{}",
-    "errorType": "message",
-    "errorMsg": "Sorry, this page isn't available.",
+    "name": "zoomitir",
+    "url": "https://www.zoomit.ir/user/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "\u003ctitle\u003eخطای ۴۰۴ - صفحه یافت نشد\u003c/title\u003e",
     "titleContains": "",
-    "weight": 9
+    "weight": 8
   },
   {
-    "name": "Snapchat",
-    "url": "https://www.snapchat.com/add/{}",
-    "errorType": "message",
-    "errorMsg": "Not Found",
-    "titleContains": "",
+    "name": "Военное обозрение",
+    "url": "https://topwar.ru/user/{}/",
+    "errorType": "status_code",
+    "errorCode": 404,
+    "errorMsg": "class=\"error-container\"",
+    "titleContains": "class=\"puser-info\"",
     "weight": 6
   },
   {
-    "name": "Medium",
-    "url": "https://medium.com/@{}",
+    "name": "Чатовка.net",
+    "url": "https://chatovka.net/search?user_nick=+{}\u0026user_sex_m=on\u0026user_sex_f=on",
     "errorType": "message",
-    "errorMsg": "Sorry, we couldn't find that page.",
-    "titleContains": "",
-    "weight": 8
-  },
-  {
-    "name": "Behance",
-    "url": "https://www.behance.net/{}",
-    "errorType": "message",
-    "errorMsg": "Sorry, this page isn't available.",
-    "titleContains": "",
-    "weight": 8
-  },
-  {
-    "name": "Twitch",
-    "url": "https://www.twitch.tv/{}",
-    "errorType": "message",
-    "errorMsg": "Sorry. Unless you've got a time machine, that content is unavailable.",
-    "titleContains": "",
-    "weight": 8
+    "errorCode": 0,
+    "errorMsg": "По Вашему запросу люди не найдены.",
+    "titleContains": "href=\"/user/",
+    "weight": 7
   }
 ]

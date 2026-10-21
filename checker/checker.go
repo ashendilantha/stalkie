@@ -1,9 +1,14 @@
 package checker
 
 import (
+	"context"
+	"fmt"
 	"io"
 	"net/http"
+	"regexp"
 	"strings"
+	"sync"
+	"sync/atomic"
 	"time"
 
 	"github.com/ashendilantha/stalkie/loader"
@@ -21,113 +26,185 @@ type Result struct {
 }
 
 var userAgents = []string{
-	"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36",
-	"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 Safari/605.1.15",
-	"Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/121.0",
+	"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+	"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+	"Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0",
+	"Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Safari/605.1.15",
+	"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0",
 }
 
-var uaIndex int
+var uaCounter uint64
 
 func nextUserAgent() string {
-	ua := userAgents[uaIndex%len(userAgents)]
-	uaIndex++
-	return ua
+	idx := atomic.AddUint64(&uaCounter, 1)
+	return userAgents[idx%uint64(len(userAgents))]
 }
 
 func Check(client *http.Client, site loader.Site, username string, maxRetries int, retryDelay time.Duration) Result {
-	url := loader.BuildURL(site.URL, username)
+	targetURL := loader.BuildURL(site.URL, username)
 	result := Result{
 		Username: username,
 		Site:     site.Name,
-		URL:      url,
+		URL:      targetURL,
 	}
 
-	var resp *http.Response
-	var body string
-	var err error
 	start := time.Now()
+	var resp *http.Response
+	var err error
+	var cancel context.CancelFunc
 
 	for attempt := 0; attempt <= maxRetries; attempt++ {
 		if attempt > 0 {
 			time.Sleep(retryDelay)
 		}
 
-		req, reqErr := http.NewRequest("GET", url, nil)
-		if reqErr != nil {
-			result.Error = reqErr.Error()
-			continue
+		var ctx context.Context
+		timeout := client.Timeout
+		if timeout <= 0 {
+			timeout = 10 * time.Second
 		}
+		ctx, cancel = context.WithTimeout(context.Background(), timeout)
+		req, reqErr := http.NewRequestWithContext(ctx, http.MethodGet, targetURL, nil)
+		if reqErr != nil {
+			cancel()
+			result.Error = reqErr.Error()
+			result.Duration = time.Since(start)
+			return result
+		}
+
 		req.Header.Set("User-Agent", nextUserAgent())
-		req.Header.Set("Accept", "text/html,application/xhtml+xml")
+		req.Header.Set("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8")
 		req.Header.Set("Accept-Language", "en-US,en;q=0.9")
+		req.Header.Set("Sec-Ch-Ua", `"Chromium";v="126", "Not/A)Brand";v="8"`)
+		req.Header.Set("Sec-Ch-Ua-Mobile", "?0")
+		req.Header.Set("Sec-Ch-Ua-Platform", `"Linux"`)
+		req.Header.Set("Sec-Fetch-Dest", "document")
+		req.Header.Set("Sec-Fetch-Mode", "navigate")
+		req.Header.Set("Sec-Fetch-Site", "none")
+		req.Header.Set("Sec-Fetch-User", "?1")
+		req.Header.Set("Upgrade-Insecure-Requests", "1")
 
 		resp, err = client.Do(req)
 		if err == nil {
 			break
 		}
+		cancel()
 	}
 
 	result.Duration = time.Since(start)
 
 	if err != nil {
+		if cancel != nil {
+			cancel()
+		}
 		result.Error = err.Error()
 		return result
 	}
 
-	defer resp.Body.Close()
+	defer func() {
+		io.Copy(io.Discard, resp.Body)
+		resp.Body.Close()
+		if cancel != nil {
+			cancel()
+		}
+	}()
 
-	bodyBytes, _ := io.ReadAll(io.LimitReader(resp.Body, 64*1024))
-	body = string(bodyBytes)
+	bodyBytes, readErr := io.ReadAll(io.LimitReader(resp.Body, 512*1024))
+	if readErr != nil && len(bodyBytes) == 0 {
+		result.Error = readErr.Error()
+		return result
+	}
+	body := string(bodyBytes)
 
-	
-	if isLoginWall(body) {
-		result.Error = "login wall detected — site blocked the request (try -browser or wait before retrying)"
+	if isBlockedOrChallenge(resp.StatusCode, body) {
+		result.Error = fmt.Sprintf("blocked by anti-bot protection (HTTP %d)", resp.StatusCode)
 		return result
 	}
 
-	result.Found, result.Confidence, result.Evidence = score(site, username, resp, body)
+	finalURL := targetURL
+	if resp.Request != nil && resp.Request.URL != nil {
+		finalURL = resp.Request.URL.String()
+	}
+
+	if isRedirectToLoginOrHome(targetURL, finalURL, body) {
+		result.Error = "redirected away from profile (authwall or missing account)"
+		return result
+	}
+
+	result.Found, result.Confidence, result.Evidence = evaluateResponse(site, username, resp.StatusCode, body, finalURL)
 	return result
 }
 
-func score(site loader.Site, username string, resp *http.Response, body string) (found bool, confidence int, evidence string) {
-	var signals []string
-	score := 0
-
-	
-	cleanBody := stripScripts(body)
-
-	if hasNotFoundContent(site, cleanBody) {
-		return false, 0, "profile not found (not-found markers detected)"
+func evaluateResponse(site loader.Site, username string, statusCode int, body string, finalURL string) (bool, int, string) {
+	if statusCode == 404 || statusCode == 410 {
+		return false, 0, fmt.Sprintf("HTTP %d", statusCode)
 	}
 
-	switch site.ErrorType {
-		case "status_code":
-			if resp.StatusCode == 200 {
-				score += 40
-				signals = append(signals, "HTTP 200")
-			} else if resp.StatusCode == site.ErrorCode {
-				return false, 0, "profile not found (status code)"
-			}
-		case "message":
-			if strings.Contains(normalizeForMatch(cleanBody), normalizeForMatch(site.ErrorMsg)) {
-				return false, 0, "profile not found (error message detected)"
-			}
-			score += 40
-			signals = append(signals, "no error msg")
-	}
-
-	if site.TitleContains != "" {
-		expected := strings.ReplaceAll(site.TitleContains, "{}", username)
-		if titleContains(body, expected) {
-			score += 35
-			signals = append(signals, "title match")
+	if site.ErrorType == "status_code" {
+		expectedErrCode := site.ErrorCode
+		if expectedErrCode == 0 {
+			expectedErrCode = 404
+		}
+		if statusCode == expectedErrCode {
+			return false, 0, fmt.Sprintf("HTTP %d error code", statusCode)
+		}
+		if statusCode != 200 {
+			return false, 0, fmt.Sprintf("non-200 status code: %d", statusCode)
+		}
+	} else if site.ErrorType == "message" {
+		if statusCode != 200 {
+			return false, 0, fmt.Sprintf("non-200 status code: %d", statusCode)
 		}
 	}
 
-	
-	if countUsernameMentions(body, username) >= 2 {
-		score += 15
-		signals = append(signals, "username in body")
+	normalizedBody := normalizeText(body)
+	if site.ErrorMsg != "" && strings.Contains(normalizedBody, normalizeText(site.ErrorMsg)) {
+		return false, 0, "profile not found (error message detected)"
+	}
+
+	cleanText := extractVisibleText(body)
+
+	if hasUniversalNotFoundMarkers(cleanText) || hasUniversalNotFoundMarkers(normalizedBody) {
+		return false, 0, "not found markers in body"
+	}
+
+	var signals []string
+	score := 0
+
+	if statusCode == 200 {
+		score += 30
+		signals = append(signals, "HTTP 200")
+	}
+
+	pageTitle := extractTagContent(body, "title")
+	ogTitle := extractMetaProperty(body, "og:title")
+	hasPositiveIdentifier := false
+
+	if site.TitleContains != "" {
+		expectedTitle := strings.ReplaceAll(site.TitleContains, "{}", username)
+		expectedNormalized := normalizeText(expectedTitle)
+		if strings.Contains(normalizeText(pageTitle), expectedNormalized) || strings.Contains(normalizeText(ogTitle), expectedNormalized) {
+			score += 35
+			hasPositiveIdentifier = true
+			signals = append(signals, "title match")
+		}
+	} else {
+		uLower := strings.ToLower(username)
+		if strings.Contains(strings.ToLower(pageTitle), uLower) || strings.Contains(strings.ToLower(ogTitle), uLower) {
+			score += 30
+			hasPositiveIdentifier = true
+			signals = append(signals, "username in title")
+		}
+	}
+
+	if containsWord(cleanText, username) {
+		score += 25
+		hasPositiveIdentifier = true
+		signals = append(signals, "username in body text")
+	}
+
+	if !hasPositiveIdentifier {
+		return false, score, strings.Join(signals, ", ")
 	}
 
 	if site.Weight > 0 {
@@ -138,80 +215,29 @@ func score(site loader.Site, username string, resp *http.Response, body string) 
 		score = 100
 	}
 
-	found = score >= 50
+	found := score >= 50
 	return found, score, strings.Join(signals, ", ")
 }
 
-
-func stripScripts(body string) string {
-	result := body
-	lower := strings.ToLower(result)
-	for {
-		start := strings.Index(lower, "<script")
-		if start == -1 {
-			break
-		}
-		end := strings.Index(lower[start:], "</script>")
-		if end == -1 {
-			break
-		}
-		end = start + end + 9 // len("</script>") == 9
-		result = result[:start] + result[end:]
-		lower = strings.ToLower(result)
+func isBlockedOrChallenge(statusCode int, body string) bool {
+	if statusCode == 403 || statusCode == 429 || statusCode == 503 || statusCode == 999 {
+		return true
 	}
-	return result
-}
-
-
-func hasNotFoundContent(site loader.Site, cleanBody string) bool {
-	normalizedBody := normalizeForMatch(cleanBody)
-
-	// Site-specific error message is the most reliable signal
-	if site.ErrorMsg != "" {
-		if strings.Contains(normalizedBody, normalizeForMatch(site.ErrorMsg)) {
-			return true
-		}
-
-		return false
-	}
-
-
-	conservativeMarkers := []string{
-		"page not found",
-		"profile not found",
-		"this page doesn't exist",
-		"this page does not exist",
-		"account doesn't exist",
-		"couldn't find the page",
-		"we couldn't find that page",
-	}
-
-	for _, marker := range conservativeMarkers {
-		if strings.Contains(normalizedBody, normalizeForMatch(marker)) {
-			return true
-		}
-	}
-
-	return false
-}
-
-
-func isLoginWall(body string) bool {
 	lower := strings.ToLower(body)
-	loginMarkers := []string{
-		"log in to instagram",
-		"log into instagram",
-		"log in to facebook",
-		"log into facebook",
-		"sign in to tiktok",
-		"join tiktok",
-		"join linkedin",
-		"sign in to linkedin",
-		"authwall",
-		"you must be logged in",
-		"please log in to continue",
+	blockMarkers := []string{
+		"just a moment...",
+		"attention required! | cloudflare",
+		"cloudflare ray id:",
+		"cf-error-details",
+		"/cdn-cgi/styles/cf.errors.css",
+		"please enable cookies",
+		"access denied",
+		"please verify you are a human",
+		"you've been blocked by network security",
+		"captcha-delivery",
+		"interstitial-challenge",
 	}
-	for _, marker := range loginMarkers {
+	for _, marker := range blockMarkers {
 		if strings.Contains(lower, marker) {
 			return true
 		}
@@ -219,66 +245,199 @@ func isLoginWall(body string) bool {
 	return false
 }
 
-func titleContains(body, expected string) bool {
-	start := strings.Index(body, "<title>")
-	end := strings.Index(body, "</title>")
-	if start == -1 || end == -1 {
+func isRedirectToLoginOrHome(targetURL, finalURL, body string) bool {
+	finalLower := strings.ToLower(finalURL)
+	targetLower := strings.ToLower(targetURL)
+
+	if finalLower != targetLower {
+		redirectIndicators := []string{
+			"/login",
+			"/signin",
+			"/accounts/login",
+			"/authwall",
+			"login.facebook.com",
+			"facebook.com/login",
+		}
+		for _, ind := range redirectIndicators {
+			if strings.Contains(finalLower, ind) {
+				return true
+			}
+		}
+	}
+
+	bodyLower := strings.ToLower(body)
+	loginMarkers := []string{
+		"log in to instagram",
+		"log into instagram",
+		"log in to facebook",
+		"log into facebook",
+		"sign in to tiktok",
+		"join tiktok",
+		"sign in to linkedin",
+		"join linkedin",
+	}
+	for _, marker := range loginMarkers {
+		if strings.Contains(bodyLower, marker) {
+			return true
+		}
+	}
+	return false
+}
+
+func hasUniversalNotFoundMarkers(cleanText string) bool {
+	normalized := normalizeText(cleanText)
+	markers := []string{
+		"page not found",
+		"profile not found",
+		"user not found",
+		"account not found",
+		"this account doesn't exist",
+		"this account does not exist",
+		"this page doesn't exist",
+		"this page does not exist",
+		"couldn't find this account",
+		"couldn't find that page",
+		"sorry, this page isn't available",
+		"nobody on reddit goes by that name",
+		"no such user",
+		"content is unavailable",
+		"an error occured",
+		"an error occurred",
+		"invalid username",
+	}
+	for _, marker := range markers {
+		if strings.Contains(normalized, marker) {
+			return true
+		}
+	}
+	return false
+}
+
+var (
+	scriptRegex  = regexp.MustCompile(`(?si)<(script|style|head|noscript)[^>]*>.*?</(script|style|head|noscript)>`)
+	tagRegex     = regexp.MustCompile(`(?s)<[^>]+>`)
+	metaOgRegex  = regexp.MustCompile(`(?i)<meta\s+[^>]*property=["']og:title["'][^>]*content=["']([^"']+)["'][^>]*>`)
+	metaAltRegex = regexp.MustCompile(`(?i)<meta\s+[^>]*content=["']([^"']+)["'][^>]*property=["']og:title["'][^>]*>`)
+)
+
+func extractVisibleText(html string) string {
+	noScripts := scriptRegex.ReplaceAllString(html, " ")
+	plain := tagRegex.ReplaceAllString(noScripts, " ")
+	return strings.Join(strings.Fields(plain), " ")
+}
+
+func extractTagContent(html, tagName string) string {
+	startTag := "<" + tagName
+	start := strings.Index(strings.ToLower(html), startTag)
+	if start == -1 {
+		return ""
+	}
+	tagClose := strings.Index(html[start:], ">")
+	if tagClose == -1 {
+		return ""
+	}
+	startContent := start + tagClose + 1
+	endTag := "</" + tagName + ">"
+	end := strings.Index(strings.ToLower(html[startContent:]), endTag)
+	if end == -1 {
+		return ""
+	}
+	return strings.TrimSpace(html[startContent : startContent+end])
+}
+
+func extractMetaProperty(html, property string) string {
+	if matches := metaOgRegex.FindStringSubmatch(html); len(matches) > 1 {
+		return strings.TrimSpace(matches[1])
+	}
+	if matches := metaAltRegex.FindStringSubmatch(html); len(matches) > 1 {
+		return strings.TrimSpace(matches[1])
+	}
+	return ""
+}
+
+func containsWord(text, word string) bool {
+	if word == "" {
 		return false
 	}
-	title := strings.ToLower(body[start+7 : end])
-	return strings.Contains(title, strings.ToLower(expected))
-}
-
-func countUsernameMentions(body, username string) int {
-	if username == "" {
-		return 0
+	tLower := strings.ToLower(text)
+	wLower := strings.ToLower(word)
+	idx := strings.Index(tLower, wLower)
+	if idx == -1 {
+		return false
 	}
-	return strings.Count(strings.ToLower(body), strings.ToLower(username))
+	beforeOk := idx == 0 || !isAlphaNumeric(tLower[idx-1])
+	afterOk := idx+len(wLower) == len(tLower) || !isAlphaNumeric(tLower[idx+len(wLower)])
+	return beforeOk && afterOk
 }
 
-func normalizeForMatch(text string) string {
+func isAlphaNumeric(b byte) bool {
+	return (b >= 'a' && b <= 'z') || (b >= '0' && b <= '9') || (b >= 'A' && b <= 'Z')
+}
+
+func normalizeText(text string) string {
 	normalized := strings.ToLower(text)
 	replacer := strings.NewReplacer(
 		"\u2019", "'",
 		"\u2018", "'",
-		"`",      "'",
-		"\u201c", "\"",
-		"\u201d", "\"",
+		"`", "'",
+		"\u201c", `"`,
+		"\u201d", `"`,
 		"\u00a0", " ",
+		"\n", " ",
+		"\r", " ",
+		"\t", " ",
 	)
 	normalized = replacer.Replace(normalized)
-	normalized = strings.Join(strings.Fields(normalized), " ")
-	return normalized
+	return strings.Join(strings.Fields(normalized), " ")
 }
 
-func CheckAll(client *http.Client, sites []loader.Site, username string, workers int, ratelimit time.Duration, maxRetries int) []Result {
-	type job struct {
-		site loader.Site
+func CheckAll(client *http.Client, sites []loader.Site, username string, workers int, ratelimit time.Duration, maxRetries int, onResult func(Result)) []Result {
+	if workers <= 0 {
+		workers = 10
 	}
 
-	jobs := make(chan job, len(sites))
-	results := make(chan Result, len(sites))
+	siteCount := len(sites)
+	results := make([]Result, siteCount)
+	jobs := make(chan struct {
+		index int
+		site  loader.Site
+	}, siteCount)
 
-	limiter := time.NewTicker(ratelimit)
-	defer limiter.Stop()
+	var wg sync.WaitGroup
+	var ticker *time.Ticker
+	var limiterChan <-chan time.Time
 
-	for i := 0; i < workers; i++ {
+	if ratelimit > 0 {
+		ticker = time.NewTicker(ratelimit)
+		defer ticker.Stop()
+		limiterChan = ticker.C
+	}
+
+	for w := 0; w < workers; w++ {
+		wg.Add(1)
 		go func() {
-			for j := range jobs {
-				<-limiter.C
-				results <- Check(client, j.site, username, maxRetries, 500*time.Millisecond)
+			defer wg.Done()
+			for job := range jobs {
+				if limiterChan != nil {
+					<-limiterChan
+				}
+				res := Check(client, job.site, username, maxRetries, 200*time.Millisecond)
+				results[job.index] = res
+				if onResult != nil {
+					onResult(res)
+				}
 			}
 		}()
 	}
 
-	for _, s := range sites {
-		jobs <- job{site: s}
+	for i, s := range sites {
+		jobs <- struct {
+			index int
+			site  loader.Site
+		}{index: i, site: s}
 	}
 	close(jobs)
 
-	var all []Result
-	for range sites {
-		all = append(all, <-results)
-	}
-	return all
+	wg.Wait()
+	return results
 }
