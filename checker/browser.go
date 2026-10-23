@@ -3,11 +3,13 @@ package checker
 import (
 	"context"
 	"fmt"
+	"net/http"
 	"strings"
 	"sync"
 	"time"
 
 	"github.com/ashendilantha/stalkie/loader"
+	"github.com/ashendilantha/stalkie/matcher"
 	"github.com/go-rod/rod"
 	"github.com/go-rod/rod/lib/launcher"
 )
@@ -21,6 +23,8 @@ func CheckAllWithBrowser(
 	timeout time.Duration,
 	proxyType string,
 	proxyAddr string,
+	refAvatar matcher.ImageFingerprint,
+	minSim int,
 	onResult func(Result),
 ) []Result {
 	if workers <= 0 {
@@ -71,7 +75,7 @@ func CheckAllWithBrowser(
 				if limiterChan != nil {
 					<-limiterChan
 				}
-				res := checkWithBrowser(browser, job.site, username, maxRetries, timeout)
+				res := checkWithBrowser(browser, job.site, username, maxRetries, timeout, refAvatar, minSim)
 				results[job.index] = res
 				if onResult != nil {
 					onResult(res)
@@ -92,7 +96,7 @@ func CheckAllWithBrowser(
 	return results
 }
 
-func checkWithBrowser(browser *rod.Browser, site loader.Site, username string, maxRetries int, timeout time.Duration) Result {
+func checkWithBrowser(browser *rod.Browser, site loader.Site, username string, maxRetries int, timeout time.Duration, refAvatar matcher.ImageFingerprint, minSim int) Result {
 	targetURL := loader.BuildURL(site.URL, username)
 	result := Result{
 		Username: username,
@@ -156,7 +160,18 @@ func checkWithBrowser(browser *rod.Browser, site loader.Site, username string, m
 
 	result.Found, result.Confidence, result.Evidence = evaluateBrowserRender(site, username, body)
 	if result.Found {
-		result.Metadata = ExtractProfileMetadata(body)
+		result.Metadata = ExtractProfileMetadata(body, finalURL)
+		if !refAvatar.IsZero() && result.Metadata.AvatarURL != "" {
+			sim, matched := refAvatar.FetchAndCompare(http.DefaultClient, result.Metadata.AvatarURL, 5*time.Second, minSim)
+			if sim > 0 {
+				result.VisualSimilarity = sim
+			}
+			if matched {
+				result.ImageMatched = true
+				result.Confidence = 100
+				result.Evidence += fmt.Sprintf(", visual avatar match: %d%%", sim)
+			}
+		}
 	}
 	return result
 }

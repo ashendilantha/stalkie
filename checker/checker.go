@@ -12,18 +12,21 @@ import (
 	"time"
 
 	"github.com/ashendilantha/stalkie/loader"
+	"github.com/ashendilantha/stalkie/matcher"
 )
 
 type Result struct {
-	Username   string          `json:"username"`
-	Site       string          `json:"site"`
-	URL        string          `json:"url"`
-	Found      bool            `json:"found"`
-	Confidence int             `json:"confidence"`
-	Evidence   string          `json:"evidence"`
-	Metadata   ProfileMetadata `json:"metadata,omitempty"`
-	Error      string          `json:"error,omitempty"`
-	Duration   time.Duration   `json:"duration"`
+	Username         string          `json:"username"`
+	Site             string          `json:"site"`
+	URL              string          `json:"url"`
+	Found            bool            `json:"found"`
+	Confidence       int             `json:"confidence"`
+	Evidence         string          `json:"evidence"`
+	Metadata         ProfileMetadata `json:"metadata,omitempty"`
+	ImageMatched     bool            `json:"image_matched,omitempty"`
+	VisualSimilarity int             `json:"visual_similarity,omitempty"`
+	Error            string          `json:"error,omitempty"`
+	Duration         time.Duration   `json:"duration"`
 }
 
 type CircuitRenewer interface {
@@ -46,10 +49,14 @@ func nextUserAgent() string {
 }
 
 func Check(client *http.Client, site loader.Site, username string, maxRetries int, retryDelay time.Duration) Result {
-	return CheckWithRenewer(client, site, username, maxRetries, retryDelay, nil)
+	return CheckWithRenewerAndAvatar(client, site, username, maxRetries, retryDelay, nil, matcher.ImageFingerprint{}, 0)
 }
 
 func CheckWithRenewer(client *http.Client, site loader.Site, username string, maxRetries int, retryDelay time.Duration, renewer CircuitRenewer) Result {
+	return CheckWithRenewerAndAvatar(client, site, username, maxRetries, retryDelay, renewer, matcher.ImageFingerprint{}, 0)
+}
+
+func CheckWithRenewerAndAvatar(client *http.Client, site loader.Site, username string, maxRetries int, retryDelay time.Duration, renewer CircuitRenewer, refAvatar matcher.ImageFingerprint, minSim int) Result {
 	targetURL := loader.BuildURL(site.URL, username)
 	result := Result{
 		Username: username,
@@ -153,7 +160,18 @@ func CheckWithRenewer(client *http.Client, site loader.Site, username string, ma
 
 	result.Found, result.Confidence, result.Evidence = evaluateResponse(site, username, resp.StatusCode, body, finalURL)
 	if result.Found {
-		result.Metadata = ExtractProfileMetadata(body)
+		result.Metadata = ExtractProfileMetadata(body, finalURL)
+		if !refAvatar.IsZero() && result.Metadata.AvatarURL != "" {
+			sim, matched := refAvatar.FetchAndCompare(client, result.Metadata.AvatarURL, 5*time.Second, minSim)
+			if sim > 0 {
+				result.VisualSimilarity = sim
+			}
+			if matched {
+				result.ImageMatched = true
+				result.Confidence = 100
+				result.Evidence += fmt.Sprintf(", visual avatar match: %d%%", sim)
+			}
+		}
 	}
 	return result
 }
@@ -419,6 +437,10 @@ func CheckAll(client *http.Client, sites []loader.Site, username string, workers
 }
 
 func CheckAllWithRenewer(client *http.Client, sites []loader.Site, username string, workers int, ratelimit time.Duration, maxRetries int, renewer CircuitRenewer, onResult func(Result)) []Result {
+	return CheckAllWithOptions(client, sites, username, workers, ratelimit, maxRetries, renewer, matcher.ImageFingerprint{}, 0, onResult)
+}
+
+func CheckAllWithOptions(client *http.Client, sites []loader.Site, username string, workers int, ratelimit time.Duration, maxRetries int, renewer CircuitRenewer, refAvatar matcher.ImageFingerprint, minSim int, onResult func(Result)) []Result {
 	if workers <= 0 {
 		workers = 10
 	}
@@ -448,7 +470,7 @@ func CheckAllWithRenewer(client *http.Client, sites []loader.Site, username stri
 				if limiterChan != nil {
 					<-limiterChan
 				}
-				res := CheckWithRenewer(client, job.site, username, maxRetries, 200*time.Millisecond, renewer)
+				res := CheckWithRenewerAndAvatar(client, job.site, username, maxRetries, 200*time.Millisecond, renewer, refAvatar, minSim)
 				results[job.index] = res
 				if onResult != nil {
 					onResult(res)

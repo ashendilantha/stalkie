@@ -14,6 +14,7 @@
 
 ## Features
 
+- **Visual Avatar & Face Matching (`-face-match`)** - Correlate reference photos with discovered profiles using Multi-Scale Concentric & Adaptive Feature Hashing with 4-quadrant Euclidean chrominance distribution running entirely on CPU (<0.5ms per image, zero GPU required). In `-face-match` mode, non-matching profiles are strictly filtered out to eliminate false matches on common first names.
 - **Automated Upstream Sync** - Synchronize and normalize 650+ platform signatures directly from the WhatsMyName project via `-update-db`.
 - **Target Categorization & Selective Enumeration** - Platforms tagged with categories (`coding`, `social`, `design`, `gaming`, `finance`). Filter scans with `-category coding,design` to reduce scan times and minimize footprint.
 - **Interactive Graph Visualization** - Export interactive network graphs via `-html graph.html` mapping target entities to verified accounts, profile avatars, cross-platform handles, and metadata with physics controls and node inspection.
@@ -69,6 +70,12 @@ Pull and normalize the latest platform database from WhatsMyName:
 # Adjust concurrency and rate limiting
 ./stalkie -u ashendilantha -w 40 -rate 10
 
+# Search with partial or full name and reference photo for visual matching
+./stalkie -name "ashen dilantha" -avatar photo.jpg -min-sim 75
+
+# Strict face matching: filter out accounts whose profile pictures do not match the target photo
+./stalkie -name "ashen" -avatar photo.jpeg -face-match -min-sim 75
+
 # Route traffic through Tor with automatic circuit rotation
 ./stalkie -u ashendilantha -proxy tor -tor-control 127.0.0.1:9051
 
@@ -95,6 +102,10 @@ Pull and normalize the latest platform database from WhatsMyName:
 | Flag | Default | Description |
 |---|---|---|
 | `-u` | - | Single username to enumerate |
+| `-name` | - | Full or partial name to expand into candidate usernames |
+| `-avatar` | - | Path to reference photo/avatar for visual correlation |
+| `-min-sim` | `75` | Minimum visual similarity threshold percentage for avatar match |
+| `-face-match` | `false` | Strict face matching mode: only report profiles whose avatar matches reference photo |
 | `-f` | - | Text file containing usernames (one per line) |
 | `-update-db` | `false` | Pull and normalize upstream database from WhatsMyName |
 | `-sites` | `sites.json` | Path to platform database JSON |

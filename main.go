@@ -10,6 +10,7 @@ import (
 
 	"github.com/ashendilantha/stalkie/checker"
 	"github.com/ashendilantha/stalkie/loader"
+	"github.com/ashendilantha/stalkie/matcher"
 	"github.com/ashendilantha/stalkie/output"
 	"github.com/ashendilantha/stalkie/proxy"
 	"github.com/ashendilantha/stalkie/syncer"
@@ -18,6 +19,10 @@ import (
 
 func main() {
 	username := flag.String("u", "", "Single username to search")
+	fullName := flag.String("name", "", "Full or partial target name to expand into username variations")
+	avatarPath := flag.String("avatar", "", "Reference photo/avatar image path for visual correlation")
+	minSim := flag.Int("min-sim", 75, "Minimum visual similarity percentage for avatar match")
+	faceMatch := flag.Bool("face-match", false, "Strict face matching mode: only report profiles whose avatar matches the reference photo")
 	bulkFile := flag.String("f", "", "Text file with one username per line")
 	sitesFile := flag.String("sites", "sites.json", "Sites database file")
 	category := flag.String("category", "", "Filter platforms by comma-separated categories (e.g. coding,social,design,gaming,finance)")
@@ -39,6 +44,11 @@ func main() {
 	useBrowser := flag.Bool("browser", false, "Use headless browser mode for JS-heavy sites")
 	noUTLS := flag.Bool("no-utls", false, "Disable uTLS fingerprint spoofing")
 	flag.Parse()
+
+	if *faceMatch && *avatarPath == "" {
+		fmt.Println("[!] -face-match requires -avatar <image-path>")
+		os.Exit(1)
+	}
 
 	if *updateDB {
 		output.PrintBanner()
@@ -62,6 +72,11 @@ func main() {
 	if *username != "" {
 		usernames = append(usernames, *username)
 	}
+	if *fullName != "" {
+		nameCandidates := matcher.ExpandName(*fullName)
+		usernames = append(usernames, nameCandidates...)
+		fmt.Printf("[*] Expanded name '%s' into %d candidate usernames\n", *fullName, len(nameCandidates))
+	}
 	if *bulkFile != "" {
 		names, err := loader.LoadUsernames(*bulkFile)
 		if err != nil {
@@ -71,8 +86,10 @@ func main() {
 		usernames = append(usernames, names...)
 	}
 
+	usernames = loader.DedupeUsernames(usernames)
+
 	if len(usernames) == 0 {
-		fmt.Println("Usage: stalkie -u <username> OR -f <usernames.txt> OR -update-db")
+		fmt.Println("Usage: stalkie -u <username> OR -name <full name> OR -f <usernames.txt> OR -update-db")
 		flag.PrintDefaults()
 		os.Exit(1)
 	}
@@ -84,6 +101,21 @@ func main() {
 		}
 		usernames = loader.DedupeUsernames(expanded)
 		fmt.Printf("[*] Permutations enabled: scanning %d username variations\n", len(usernames))
+	}
+
+	var refAvatar matcher.ImageFingerprint
+	if *avatarPath != "" {
+		var err error
+		refAvatar, err = matcher.HashFile(*avatarPath)
+		if err != nil {
+			fmt.Printf("[!] Failed loading reference avatar (%s): %v\n", *avatarPath, err)
+			os.Exit(1)
+		}
+		if *faceMatch {
+			fmt.Printf("[*] Loaded reference avatar: %s (strict face matching enabled, min similarity: %d%%)\n", *avatarPath, *minSim)
+		} else {
+			fmt.Printf("[*] Loaded reference avatar: %s (visual matching enabled)\n", *avatarPath)
+		}
 	}
 
 	sites, err := loader.Load(*sitesFile)
@@ -157,20 +189,26 @@ func main() {
 				time.Duration(*timeout)*time.Second,
 				*proxyType,
 				*proxyAddr,
+				refAvatar,
+				*minSim,
 				onResult,
 			)
 		} else {
-			results = checker.CheckAllWithRenewer(httpClient, sites, uname, *workers, rateLimit, *retries, torRenewer, onResult)
+			results = checker.CheckAllWithOptions(httpClient, sites, uname, *workers, rateLimit, *retries, torRenewer, refAvatar, *minSim, onResult)
 		}
 
 		bar.Finish()
 
-		for _, r := range results {
-			if r.Confidence < *minScore && r.Found {
-				r.Found = false
+		for i := range results {
+			if *faceMatch {
+				if !results[i].ImageMatched {
+					results[i].Found = false
+				}
+			} else if results[i].Confidence < *minScore && results[i].Found {
+				results[i].Found = false
 			}
-			output.PrintResult(r)
-			allResults = append(allResults, r)
+			output.PrintResult(results[i])
+			allResults = append(allResults, results[i])
 		}
 
 		output.PrintSummary(results, uname, time.Since(start))
@@ -209,7 +247,9 @@ func main() {
 
 	if *outHTML != "" {
 		primaryTarget := *username
-		if primaryTarget == "" && len(usernames) > 0 {
+		if primaryTarget == "" && *fullName != "" {
+			primaryTarget = *fullName
+		} else if primaryTarget == "" && len(usernames) > 0 {
 			primaryTarget = usernames[0]
 		}
 		if err := output.SaveHTML(allResults, primaryTarget, *outHTML); err != nil {

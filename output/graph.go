@@ -102,9 +102,15 @@ func BuildGraphPayload(results []checker.Result, target string) GraphPayload {
 			borderColor = "#0891b2"
 		}
 
+		label := fmt.Sprintf("%s\n%d%%", r.Site, r.Confidence)
+		if r.ImageMatched {
+			borderColor = "#a855f7"
+			label = fmt.Sprintf("%s\n%d%% [Match]", r.Site, r.Confidence)
+		}
+
 		payload.Nodes = append(payload.Nodes, GraphNode{
 			ID:    nodeID,
-			Label: fmt.Sprintf("%s\n%d%%", r.Site, r.Confidence),
+			Label: label,
 			Group: "platform",
 			Shape: shape,
 			Image: r.Metadata.AvatarURL,
@@ -115,17 +121,19 @@ func BuildGraphPayload(results []checker.Result, target string) GraphPayload {
 				"highlight":  "#38ef7d",
 			},
 			Properties: map[string]interface{}{
-				"type":        "Platform Account",
-				"site":        r.Site,
-				"url":         r.URL,
-				"confidence":  r.Confidence,
-				"evidence":    r.Evidence,
-				"displayName": r.Metadata.DisplayName,
-				"avatarUrl":   r.Metadata.AvatarURL,
-				"bio":         r.Metadata.Bio,
-				"followers":   r.Metadata.Followers,
-				"createdAt":   r.Metadata.CreatedAt,
-				"location":    r.Metadata.Location,
+				"type":             "Platform Account",
+				"site":             r.Site,
+				"url":              r.URL,
+				"confidence":       r.Confidence,
+				"evidence":         r.Evidence,
+				"imageMatched":     r.ImageMatched,
+				"visualSimilarity": r.VisualSimilarity,
+				"displayName":      r.Metadata.DisplayName,
+				"avatarUrl":        r.Metadata.AvatarURL,
+				"bio":              r.Metadata.Bio,
+				"followers":        r.Metadata.Followers,
+				"createdAt":        r.Metadata.CreatedAt,
+				"location":         r.Metadata.Location,
 			},
 		})
 
@@ -240,6 +248,11 @@ html += '<div class="node-subtitle">' + escapeHTML(props.displayName) + '</div>'
 html += '<div class="meta-field"><span class="meta-label">Confidence Score</span>' +
 '<span class="meta-value">' + props.confidence + '%</span>' +
 '<div class="score-bar"><div class="score-fill" style="width:' + props.confidence + '%;"></div></div></div>';
+
+if (props.imageMatched) {
+html += '<div class="meta-field"><span class="meta-label">Visual Avatar Correlation</span>' +
+'<span class="meta-value" style="color:#a855f7;font-weight:700;">CONFIRMED PHOTO MATCH (' + props.visualSimilarity + '%)</span></div>';
+}
 
 if (props.url) {
 html += '<a class="link-btn" href="' + escapeHTML(props.url) + '" target="_blank" rel="noopener noreferrer">Open Target Profile</a>';

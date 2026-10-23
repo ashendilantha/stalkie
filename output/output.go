@@ -59,8 +59,16 @@ func PrintResult(r checker.Result) {
 	fmt.Printf("      %sconfidence:%s %s  %s(%s)%s\n",
 		cyan, reset, confidenceBar(r.Confidence),
 		yellow, r.Evidence, reset)
+	if r.ImageMatched {
+		fmt.Printf("      %svisual match:%s %s  %s(%d%% avatar correlation)%s\n",
+			cyan, reset, confidenceBar(r.VisualSimilarity),
+			green, r.VisualSimilarity, reset)
+	}
 	if r.Metadata.DisplayName != "" {
 		fmt.Printf("      %sname:%s %s\n", cyan, reset, r.Metadata.DisplayName)
+	}
+	if r.Metadata.AvatarURL != "" {
+		fmt.Printf("      %savatar:%s %s\n", cyan, reset, r.Metadata.AvatarURL)
 	}
 	if r.Metadata.Bio != "" {
 		fmt.Printf("      %sbio:%s %s\n", cyan, reset, r.Metadata.Bio)
@@ -76,20 +84,27 @@ func PrintResult(r checker.Result) {
 func PrintSummary(results []checker.Result, username string, elapsed time.Duration) {
 	found := 0
 	blocked := 0
+	faceMatches := 0
 	for _, r := range results {
 		if r.Found {
 			found++
+		}
+		if r.ImageMatched {
+			faceMatches++
 		}
 		if r.Error != "" {
 			blocked++
 		}
 	}
-	fmt.Printf("\n%s[*]%s Username  : %s%s%s\n", cyan, reset, bold, username, reset)
-	fmt.Printf("%s[*]%s Found     : %s%d%s / %d sites\n", cyan, reset, green, found, reset, len(results))
-	if blocked > 0 {
-		fmt.Printf("%s[*]%s Blocked   : %s%d%s (anti-bot / rate-limit / network)\n", cyan, reset, yellow, blocked, reset)
+	fmt.Printf("\n%s[*]%s Username     : %s%s%s\n", cyan, reset, bold, username, reset)
+	fmt.Printf("%s[*]%s Found        : %s%d%s / %d sites\n", cyan, reset, green, found, reset, len(results))
+	if faceMatches > 0 {
+		fmt.Printf("%s[*]%s Face Matches: %s%d%s confirmed\n", cyan, reset, green, faceMatches, reset)
 	}
-	fmt.Printf("%s[*]%s Duration  : %s\n\n", cyan, reset, elapsed.Round(time.Millisecond))
+	if blocked > 0 {
+		fmt.Printf("%s[*]%s Blocked      : %s%d%s (anti-bot / rate-limit / network)\n", cyan, reset, yellow, blocked, reset)
+	}
+	fmt.Printf("%s[*]%s Duration     : %s\n\n", cyan, reset, elapsed.Round(time.Millisecond))
 }
 
 func SaveTXT(results []checker.Result, username, path string) error {
@@ -102,8 +117,14 @@ func SaveTXT(results []checker.Result, username, path string) error {
 	for _, r := range results {
 		if r.Found {
 			line := fmt.Sprintf("[+] %-20s %s (confidence: %d%%)", r.Site, r.URL, r.Confidence)
+			if r.ImageMatched {
+				line += fmt.Sprintf(" [face match: %d%%]", r.VisualSimilarity)
+			}
 			if r.Metadata.DisplayName != "" {
 				line += fmt.Sprintf(" | name: %s", r.Metadata.DisplayName)
+			}
+			if r.Metadata.AvatarURL != "" {
+				line += fmt.Sprintf(" | avatar: %s", r.Metadata.AvatarURL)
 			}
 			if r.Metadata.Followers != "" {
 				line += fmt.Sprintf(" | followers: %s", r.Metadata.Followers)
@@ -131,6 +152,8 @@ func SaveCSV(results []checker.Result, path string) error {
 		"found",
 		"confidence",
 		"evidence",
+		"image_matched",
+		"visual_similarity",
 		"display_name",
 		"avatar_url",
 		"bio",
@@ -151,6 +174,8 @@ func SaveCSV(results []checker.Result, path string) error {
 			strconv.FormatBool(r.Found),
 			strconv.Itoa(r.Confidence),
 			r.Evidence,
+			strconv.FormatBool(r.ImageMatched),
+			strconv.Itoa(r.VisualSimilarity),
 			r.Metadata.DisplayName,
 			r.Metadata.AvatarURL,
 			r.Metadata.Bio,
