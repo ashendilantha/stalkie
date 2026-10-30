@@ -14,6 +14,7 @@
 
 ## Features
 
+- **Zero-Reference Cross-Platform Avatar Clustering** - Automatically hashes every discovered profile avatar during a scan (even when `-avatar` is not provided) and performs pairwise perceptual similarity clustering across all found accounts. Disambiguates common handles into unsupervised identity groups (`Identity Group A`, `Identity Group B`, etc.) and color-codes clusters in the `-html` graph.
 - **Visual Avatar & Face Matching (`-face-match`)** - Correlate reference photos with discovered profiles using Multi-Scale Concentric & Adaptive Feature Hashing with 4-quadrant Euclidean chrominance distribution running entirely on CPU (<0.5ms per image, zero GPU required). In `-face-match` mode, non-matching profiles are strictly filtered out to eliminate false matches on common first names.
 - **Automated Upstream Sync** - Synchronize and normalize 650+ platform signatures directly from the WhatsMyName project via `-update-db`.
 - **Target Categorization & Selective Enumeration** - Platforms tagged with categories (`coding`, `social`, `design`, `gaming`, `finance`). Filter scans with `-category coding,design` to reduce scan times and minimize footprint.

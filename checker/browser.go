@@ -161,15 +161,20 @@ func checkWithBrowser(browser *rod.Browser, site loader.Site, username string, m
 	result.Found, result.Confidence, result.Evidence = evaluateBrowserRender(site, username, body)
 	if result.Found {
 		result.Metadata = ExtractProfileMetadata(body, finalURL)
-		if !refAvatar.IsZero() && result.Metadata.AvatarURL != "" {
-			sim, matched := refAvatar.FetchAndCompare(http.DefaultClient, result.Metadata.AvatarURL, 5*time.Second, minSim)
-			if sim > 0 {
-				result.VisualSimilarity = sim
-			}
-			if matched {
-				result.ImageMatched = true
-				result.Confidence = 100
-				result.Evidence += fmt.Sprintf(", visual avatar match: %d%%", sim)
+		if result.Metadata.AvatarURL != "" {
+			if remoteFp, fpErr := matcher.FetchFingerprint(http.DefaultClient, result.Metadata.AvatarURL, 5*time.Second); fpErr == nil && !remoteFp.IsZero() {
+				result.AvatarFingerprint = remoteFp
+				if !refAvatar.IsZero() {
+					sim := refAvatar.Similarity(remoteFp)
+					if sim > 0 {
+						result.VisualSimilarity = sim
+					}
+					if sim >= minSim {
+						result.ImageMatched = true
+						result.Confidence = 100
+						result.Evidence += fmt.Sprintf(", visual avatar match: %d%%", sim)
+					}
+				}
 			}
 		}
 	}

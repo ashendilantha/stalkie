@@ -1,6 +1,7 @@
 package matcher
 
 import (
+	"fmt"
 	"image"
 	_ "image/gif"
 	_ "image/jpeg"
@@ -10,6 +11,7 @@ import (
 	"math/bits"
 	"net/http"
 	"os"
+	"sort"
 	"strings"
 	"time"
 
@@ -112,7 +114,6 @@ func (f ImageFingerprint) Similarity(other ImageFingerprint) int {
 	if finalScore > 100 {
 		return 100
 	}
-	return finalScore
 	return finalScore
 }
 
@@ -270,29 +271,32 @@ func HashFile(path string) (ImageFingerprint, error) {
 	return HashReader(f)
 }
 
-func (f ImageFingerprint) FetchAndCompare(client *http.Client, avatarURL string, timeout time.Duration, minSim int) (int, bool) {
-	if f.IsZero() || avatarURL == "" {
-		return 0, false
+func FetchFingerprint(client *http.Client, avatarURL string, timeout time.Duration) (ImageFingerprint, error) {
+	if avatarURL == "" {
+		return ImageFingerprint{}, io.EOF
 	}
 
 	req, err := http.NewRequest(http.MethodGet, avatarURL, nil)
 	if err != nil {
-		return 0, false
+		return ImageFingerprint{}, err
 	}
 	req.Header.Set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
 	req.Header.Set("Accept", "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8")
 
 	fetchClient := client
+	if fetchClient == nil {
+		fetchClient = http.DefaultClient
+	}
 	if timeout > 0 {
 		fetchClient = &http.Client{
-			Transport: client.Transport,
+			Transport: fetchClient.Transport,
 			Timeout:   timeout,
 		}
 	}
 
 	resp, err := fetchClient.Do(req)
 	if err != nil {
-		return 0, false
+		return ImageFingerprint{}, err
 	}
 	defer func() {
 		io.Copy(io.Discard, resp.Body)
@@ -300,11 +304,19 @@ func (f ImageFingerprint) FetchAndCompare(client *http.Client, avatarURL string,
 	}()
 
 	if resp.StatusCode != http.StatusOK {
-		return 0, false
+		return ImageFingerprint{}, io.ErrUnexpectedEOF
 	}
 
 	limited := io.LimitReader(resp.Body, 8*1024*1024)
-	remoteFp, err := HashReader(limited)
+	return HashReader(limited)
+}
+
+func (f ImageFingerprint) FetchAndCompare(client *http.Client, avatarURL string, timeout time.Duration, minSim int) (int, bool) {
+	if f.IsZero() || avatarURL == "" {
+		return 0, false
+	}
+
+	remoteFp, err := FetchFingerprint(client, avatarURL, timeout)
 	if err != nil {
 		return 0, false
 	}
@@ -410,3 +422,115 @@ func ExpandName(fullName string) []string {
 
 	return candidates
 }
+
+type ClusterAssignment struct {
+	ClusterID   string
+	ClusterSize int
+	Similarity  int
+}
+
+func ClusterFingerprints(fps []ImageFingerprint, minSim int) []ClusterAssignment {
+	n := len(fps)
+	assignments := make([]ClusterAssignment, n)
+	if n < 2 {
+		return assignments
+	}
+	if minSim <= 0 {
+		minSim = 75
+	}
+
+	parent := make([]int, n)
+	bestSim := make([]int, n)
+	for i := 0; i < n; i++ {
+		parent[i] = i
+	}
+
+	var find func(int) int
+	find = func(x int) int {
+		if parent[x] != x {
+			parent[x] = find(parent[x])
+		}
+		return parent[x]
+	}
+
+	union := func(a, b int) {
+		ra, rb := find(a), find(b)
+		if ra != rb {
+			if ra < rb {
+				parent[rb] = ra
+			} else {
+				parent[ra] = rb
+			}
+		}
+	}
+
+	for i := 0; i < n; i++ {
+		if fps[i].IsZero() {
+			continue
+		}
+		for j := i + 1; j < n; j++ {
+			if fps[j].IsZero() {
+				continue
+			}
+			sim := fps[i].Similarity(fps[j])
+			if sim >= minSim {
+				union(i, j)
+				if sim > bestSim[i] {
+					bestSim[i] = sim
+				}
+				if sim > bestSim[j] {
+					bestSim[j] = sim
+				}
+			}
+		}
+	}
+
+	groups := make(map[int][]int)
+	for i := 0; i < n; i++ {
+		if fps[i].IsZero() {
+			continue
+		}
+		r := find(i)
+		groups[r] = append(groups[r], i)
+	}
+
+	type groupEntry struct {
+		root    int
+		members []int
+	}
+	var validGroups []groupEntry
+	for r, members := range groups {
+		if len(members) >= 2 {
+			validGroups = append(validGroups, groupEntry{root: r, members: members})
+		}
+	}
+
+	sort.Slice(validGroups, func(i, j int) bool {
+		if len(validGroups[i].members) != len(validGroups[j].members) {
+			return len(validGroups[i].members) > len(validGroups[j].members)
+		}
+		return validGroups[i].root < validGroups[j].root
+	})
+
+	for idx, g := range validGroups {
+		label := formatClusterLabel(idx)
+		size := len(g.members)
+		for _, m := range g.members {
+			assignments[m] = ClusterAssignment{
+				ClusterID:   label,
+				ClusterSize: size,
+				Similarity:  bestSim[m],
+			}
+		}
+	}
+
+	return assignments
+}
+
+func formatClusterLabel(idx int) string {
+	if idx < 26 {
+		return fmt.Sprintf("Identity Group %c", 'A'+idx)
+	}
+	return fmt.Sprintf("Identity Group %c%d", 'A'+(idx%26), (idx/26)+1)
+}
+

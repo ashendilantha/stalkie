@@ -16,17 +16,21 @@ import (
 )
 
 type Result struct {
-	Username         string          `json:"username"`
-	Site             string          `json:"site"`
-	URL              string          `json:"url"`
-	Found            bool            `json:"found"`
-	Confidence       int             `json:"confidence"`
-	Evidence         string          `json:"evidence"`
-	Metadata         ProfileMetadata `json:"metadata,omitempty"`
-	ImageMatched     bool            `json:"image_matched,omitempty"`
-	VisualSimilarity int             `json:"visual_similarity,omitempty"`
-	Error            string          `json:"error,omitempty"`
-	Duration         time.Duration   `json:"duration"`
+	Username          string                   `json:"username"`
+	Site              string                   `json:"site"`
+	URL               string                   `json:"url"`
+	Found             bool                     `json:"found"`
+	Confidence        int                      `json:"confidence"`
+	Evidence          string                   `json:"evidence"`
+	Metadata          ProfileMetadata          `json:"metadata,omitempty"`
+	ImageMatched      bool                     `json:"image_matched,omitempty"`
+	VisualSimilarity  int                      `json:"visual_similarity,omitempty"`
+	AvatarFingerprint matcher.ImageFingerprint `json:"-"`
+	ClusterID         string                   `json:"cluster_id,omitempty"`
+	ClusterSize       int                      `json:"cluster_size,omitempty"`
+	ClusterSimilarity int                      `json:"cluster_similarity,omitempty"`
+	Error             string                   `json:"error,omitempty"`
+	Duration          time.Duration            `json:"duration"`
 }
 
 type CircuitRenewer interface {
@@ -161,15 +165,20 @@ func CheckWithRenewerAndAvatar(client *http.Client, site loader.Site, username s
 	result.Found, result.Confidence, result.Evidence = evaluateResponse(site, username, resp.StatusCode, body, finalURL)
 	if result.Found {
 		result.Metadata = ExtractProfileMetadata(body, finalURL)
-		if !refAvatar.IsZero() && result.Metadata.AvatarURL != "" {
-			sim, matched := refAvatar.FetchAndCompare(client, result.Metadata.AvatarURL, 5*time.Second, minSim)
-			if sim > 0 {
-				result.VisualSimilarity = sim
-			}
-			if matched {
-				result.ImageMatched = true
-				result.Confidence = 100
-				result.Evidence += fmt.Sprintf(", visual avatar match: %d%%", sim)
+		if result.Metadata.AvatarURL != "" {
+			if remoteFp, fpErr := matcher.FetchFingerprint(client, result.Metadata.AvatarURL, 5*time.Second); fpErr == nil && !remoteFp.IsZero() {
+				result.AvatarFingerprint = remoteFp
+				if !refAvatar.IsZero() {
+					sim := refAvatar.Similarity(remoteFp)
+					if sim > 0 {
+						result.VisualSimilarity = sim
+					}
+					if sim >= minSim {
+						result.ImageMatched = true
+						result.Confidence = 100
+						result.Evidence += fmt.Sprintf(", visual avatar match: %d%%", sim)
+					}
+				}
 			}
 		}
 	}
@@ -489,4 +498,51 @@ func CheckAllWithOptions(client *http.Client, sites []loader.Site, username stri
 
 	wg.Wait()
 	return results
+}
+
+func ClusterResults(results []Result, minSim int) int {
+	if len(results) < 2 {
+		return 0
+	}
+
+	var activeIndices []int
+	var fps []matcher.ImageFingerprint
+
+	for i := range results {
+		results[i].ClusterID = ""
+		results[i].ClusterSize = 0
+		results[i].ClusterSimilarity = 0
+		if results[i].Found && !results[i].AvatarFingerprint.IsZero() {
+			activeIndices = append(activeIndices, i)
+			fps = append(fps, results[i].AvatarFingerprint)
+		}
+	}
+
+	if len(fps) < 2 {
+		return 0
+	}
+
+	assignments := matcher.ClusterFingerprints(fps, minSim)
+	clusterSet := make(map[string]bool)
+
+	for k, a := range assignments {
+		if a.ClusterID != "" && a.ClusterSize >= 2 {
+			idx := activeIndices[k]
+			results[idx].ClusterID = a.ClusterID
+			results[idx].ClusterSize = a.ClusterSize
+			results[idx].ClusterSimilarity = a.Similarity
+			if results[idx].Confidence < 95 {
+				results[idx].Confidence += 10
+				if results[idx].Confidence > 95 {
+					results[idx].Confidence = 95
+				}
+			}
+			if !strings.Contains(results[idx].Evidence, a.ClusterID) {
+				results[idx].Evidence += fmt.Sprintf(", %s (%d accounts, %d%% avatar match)", a.ClusterID, a.ClusterSize, a.Similarity)
+			}
+			clusterSet[a.ClusterID] = true
+		}
+	}
+
+	return len(clusterSet)
 }

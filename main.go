@@ -207,11 +207,20 @@ func main() {
 			} else if results[i].Confidence < *minScore && results[i].Found {
 				results[i].Found = false
 			}
+		}
+
+		checker.ClusterResults(results, *minSim)
+
+		for i := range results {
 			output.PrintResult(results[i])
 			allResults = append(allResults, results[i])
 		}
 
 		output.PrintSummary(results, uname, time.Since(start))
+	}
+
+	if len(usernames) > 1 {
+		checker.ClusterResults(allResults, *minSim)
 	}
 
 	if *outTXT != "" {

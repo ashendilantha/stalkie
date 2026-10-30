@@ -103,6 +103,11 @@ func BuildGraphPayload(results []checker.Result, target string) GraphPayload {
 		}
 
 		label := fmt.Sprintf("%s\n%d%%", r.Site, r.Confidence)
+		if r.ClusterID != "" {
+			bgColor, borderColor = clusterPalette(r.ClusterID)
+			shortGroup := strings.TrimPrefix(r.ClusterID, "Identity ")
+			label = fmt.Sprintf("%s\n%d%% [%s]", r.Site, r.Confidence, shortGroup)
+		}
 		if r.ImageMatched {
 			borderColor = "#a855f7"
 			label = fmt.Sprintf("%s\n%d%% [Match]", r.Site, r.Confidence)
@@ -121,32 +126,63 @@ func BuildGraphPayload(results []checker.Result, target string) GraphPayload {
 				"highlight":  "#38ef7d",
 			},
 			Properties: map[string]interface{}{
-				"type":             "Platform Account",
-				"site":             r.Site,
-				"url":              r.URL,
-				"confidence":       r.Confidence,
-				"evidence":         r.Evidence,
-				"imageMatched":     r.ImageMatched,
-				"visualSimilarity": r.VisualSimilarity,
-				"displayName":      r.Metadata.DisplayName,
-				"avatarUrl":        r.Metadata.AvatarURL,
-				"bio":              r.Metadata.Bio,
-				"followers":        r.Metadata.Followers,
-				"createdAt":        r.Metadata.CreatedAt,
-				"location":         r.Metadata.Location,
+				"type":              "Platform Account",
+				"site":              r.Site,
+				"url":               r.URL,
+				"confidence":        r.Confidence,
+				"evidence":          r.Evidence,
+				"imageMatched":      r.ImageMatched,
+				"visualSimilarity":  r.VisualSimilarity,
+				"clusterId":         r.ClusterID,
+				"clusterSize":       r.ClusterSize,
+				"clusterSimilarity": r.ClusterSimilarity,
+				"clusterColor":      borderColor,
+				"displayName":       r.Metadata.DisplayName,
+				"avatarUrl":         r.Metadata.AvatarURL,
+				"bio":               r.Metadata.Bio,
+				"followers":         r.Metadata.Followers,
+				"createdAt":         r.Metadata.CreatedAt,
+				"location":          r.Metadata.Location,
 			},
 		})
 
+		edgeColor := "#475569"
+		if r.ClusterID != "" {
+			_, edgeColor = clusterPalette(r.ClusterID)
+		}
 		payload.Edges = append(payload.Edges, GraphEdge{
 			From:  "user:" + r.Username,
 			To:    nodeID,
 			Label: fmt.Sprintf("%d%%", r.Confidence),
-			Color: "#475569",
+			Color: edgeColor,
 			Width: 2,
 		})
 	}
 
 	return payload
+}
+
+func clusterPalette(clusterID string) (string, string) {
+	palettes := [][2]string{
+		{"#ec4899", "#db2777"}, // Group A: Pink
+		{"#8b5cf6", "#7c3aed"}, // Group B: Violet
+		{"#3b82f6", "#2563eb"}, // Group C: Blue
+		{"#14b8a6", "#0d9488"}, // Group D: Teal
+		{"#eab308", "#ca8a04"}, // Group E: Yellow
+		{"#f97316", "#ea580c"}, // Group F: Orange
+		{"#ef4444", "#dc2626"}, // Group G: Red
+		{"#6366f1", "#4f46e5"}, // Group H: Indigo
+	}
+	trimmed := strings.TrimSpace(strings.TrimPrefix(clusterID, "Identity Group"))
+	idx := 0
+	if len(trimmed) > 0 {
+		ch := trimmed[0]
+		if ch >= 'A' && ch <= 'Z' {
+			idx = int(ch - 'A')
+		}
+	}
+	pair := palettes[idx%len(palettes)]
+	return pair[0], pair[1]
 }
 
 func SaveHTML(results []checker.Result, target, path string) error {
@@ -252,6 +288,12 @@ html += '<div class="meta-field"><span class="meta-label">Confidence Score</span
 if (props.imageMatched) {
 html += '<div class="meta-field"><span class="meta-label">Visual Avatar Correlation</span>' +
 '<span class="meta-value" style="color:#a855f7;font-weight:700;">CONFIRMED PHOTO MATCH (' + props.visualSimilarity + '%)</span></div>';
+}
+
+if (props.clusterId) {
+const cColor = props.clusterColor || "#ec4899";
+html += '<div class="meta-field"><span class="meta-label">Unsupervised Identity Cluster</span>' +
+'<span class="meta-value" style="color:' + escapeHTML(cColor) + ';font-weight:700;">' + escapeHTML(props.clusterId) + ' (' + props.clusterSize + ' accounts, ' + props.clusterSimilarity + '% match)</span></div>';
 }
 
 if (props.url) {
